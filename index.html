@@ -1,0 +1,2042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Reynolds Mansion | Historic Asheville Bed &amp; Breakfast</title>
+<meta name="description" content="The Reynolds Mansion is a top-rated Asheville bed and breakfast with Blue Ridge Mountain views, four-course gourmet breakfast by a classically trained chef, and romantic historic guest rooms. Book direct for best rates.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Libre+Franklin:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+/* ============================================================
+   RESET & ROOT
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+img { max-width: 100%; display: block; }
+a { text-decoration: none; }
+
+:root {
+  --crimson:       #7B1515;
+  --crimson-hover: #5E1010;
+  --crimson-light: #9B2020;
+  --gold:          #C4943A;
+  --gold-soft:     #D4A84A;
+  --gold-muted:    rgba(196,148,58,0.18);
+  --gold-line:     rgba(196,148,58,0.30);
+  --cream:         #F7F2EA;
+  --cream-alt:     #F0E8D5;
+  --ivory:         #FDFAF5;
+  --charcoal:      #1A1208;
+  --dark:          #0E0B05;
+  --text-dark:     #2A1E0F;
+  --text-mid:      #5A4830;
+  --text-soft:     #8A7560;
+  --text-cream:    #F0E4CE;
+  --text-cream-dim:#B8A888;
+  --ff-display:    'Cormorant Garamond', Georgia, serif;
+  --ff-body:       'Libre Franklin', 'Helvetica Neue', sans-serif;
+  --nav-h:         80px;
+  --topbar-h:      36px;
+}
+
+body {
+  font-family: var(--ff-body);
+  color: var(--text-dark);
+  background: var(--ivory);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================================
+   DAMASK TEXTURE (light sections)
+   ============================================================ */
+.damask-bg {
+  background-color: var(--cream);
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cpath d='M50 8 L92 50 L50 92 L8 50 Z' stroke='%23C4943A' stroke-width='0.6' opacity='0.12'/%3E%3Cpath d='M50 22 L78 50 L50 78 L22 50 Z' stroke='%23C4943A' stroke-width='0.4' opacity='0.08'/%3E%3Ccircle cx='50' cy='8' r='1.5' fill='%23C4943A' opacity='0.14'/%3E%3Ccircle cx='50' cy='92' r='1.5' fill='%23C4943A' opacity='0.14'/%3E%3Ccircle cx='8' cy='50' r='1.5' fill='%23C4943A' opacity='0.14'/%3E%3Ccircle cx='92' cy='50' r='1.5' fill='%23C4943A' opacity='0.14'/%3E%3Ccircle cx='50' cy='50' r='2.5' fill='none' stroke='%23C4943A' stroke-width='0.5' opacity='0.1'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ============================================================
+   FILIGREE TEXTURE (dark sections)
+   ============================================================ */
+.filigree-bg {
+  background-color: var(--dark);
+  background-image: none;
+  position: relative;
+}
+
+/* ── Ornamental border bands (top + bottom) on dark sections ── */
+/* Mimics the gold botanical scrollwork on Paul's menu card      */
+.filigree-bg::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 48px;
+  z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='48' viewBox='0 0 240 48'%3E%3Cg fill='none' stroke='%23C4943A' stroke-linecap='round' stroke-linejoin='round'%3E%3C!-- Horizontal rule lines --%3E%3Cline x1='0' y1='6' x2='240' y2='6' stroke-width='0.5' opacity='0.35'/%3E%3Cline x1='0' y1='42' x2='240' y2='42' stroke-width='0.5' opacity='0.35'/%3E%3C!-- === REPEATING SCROLL UNIT (every 120px, mirrored) === --%3E%3C!-- Left scroll unit (0-120) --%3E%3C!-- Main stem --%3E%3Cpath d='M0 24 C20 24 30 24 40 24' stroke-width='0.8' opacity='0.5'/%3E%3C!-- Large curl left --%3E%3Cpath d='M20 24 C20 14 28 8 36 12 C44 16 44 24 36 26 C30 28 26 24 28 20' stroke-width='0.9' opacity='0.55'/%3E%3C!-- Small leaf top --%3E%3Cpath d='M28 20 C24 12 18 10 16 14 C14 18 18 22 22 20' stroke-width='0.7' opacity='0.45'/%3E%3C!-- Tendril top right --%3E%3Cpath d='M40 24 C50 24 54 16 50 12 C46 8 40 12 42 18' stroke-width='0.8' opacity='0.5'/%3E%3C!-- Small leaf off tendril --%3E%3Cpath d='M46 14 C48 8 54 8 54 14 C54 18 50 20 48 18' stroke-width='0.65' opacity='0.4'/%3E%3C!-- Tendril lower --%3E%3Cpath d='M40 24 C50 24 54 32 50 36 C46 40 40 36 42 30' stroke-width='0.8' opacity='0.5'/%3E%3C!-- Leaf lower --%3E%3Cpath d='M46 34 C48 40 54 40 54 34 C54 30 50 28 48 30' stroke-width='0.65' opacity='0.4'/%3E%3C!-- Large curl lower --%3E%3Cpath d='M20 24 C20 34 28 40 36 36 C44 32 44 24 36 22 C30 20 26 24 28 28' stroke-width='0.9' opacity='0.55'/%3E%3C!-- Small leaf lower --%3E%3Cpath d='M28 28 C24 36 18 38 16 34 C14 30 18 26 22 28' stroke-width='0.7' opacity='0.45'/%3E%3C!-- Center diamond ornament --%3E%3Cpath d='M116 20 L120 16 L124 20 L120 24 Z' stroke-width='0.7' opacity='0.55' fill='%23C4943A' fill-opacity='0.25'/%3E%3Ccircle cx='120' cy='20' r='1.2' fill='%23C4943A' opacity='0.5' stroke-width='0'/%3E%3Cline x1='96' y1='24' x2='112' y2='24' stroke-width='0.5' opacity='0.3'/%3E%3Cline x1='128' y1='24' x2='144' y2='24' stroke-width='0.5' opacity='0.3'/%3E%3C!-- Right scroll unit (120-240, mirror of left) --%3E%3C!-- Main stem --%3E%3Cpath d='M240 24 C220 24 210 24 200 24' stroke-width='0.8' opacity='0.5'/%3E%3C!-- Large curl right --%3E%3Cpath d='M220 24 C220 14 212 8 204 12 C196 16 196 24 204 26 C210 28 214 24 212 20' stroke-width='0.9' opacity='0.55'/%3E%3C!-- Small leaf top --%3E%3Cpath d='M212 20 C216 12 222 10 224 14 C226 18 222 22 218 20' stroke-width='0.7' opacity='0.45'/%3E%3C!-- Tendril top left --%3E%3Cpath d='M200 24 C190 24 186 16 190 12 C194 8 200 12 198 18' stroke-width='0.8' opacity='0.5'/%3E%3C!-- Small leaf off tendril --%3E%3Cpath d='M194 14 C192 8 186 8 186 14 C186 18 190 20 192 18' stroke-width='0.65' opacity='0.4'/%3E%3C!-- Tendril lower --%3E%3Cpath d='M200 24 C190 24 186 32 190 36 C194 40 200 36 198 30' stroke-width='0.8' opacity='0.5'/%3E%3C!-- Leaf lower --%3E%3Cpath d='M194 34 C192 40 186 40 186 34 C186 30 190 28 192 30' stroke-width='0.65' opacity='0.4'/%3E%3C!-- Large curl lower --%3E%3Cpath d='M220 24 C220 34 212 40 204 36 C196 32 196 24 204 22 C210 20 214 24 212 28' stroke-width='0.9' opacity='0.55'/%3E%3C!-- Small leaf lower --%3E%3Cpath d='M212 28 C216 36 222 38 224 34 C226 30 222 26 218 28' stroke-width='0.7' opacity='0.45'/%3E%3C!-- Corner leaf accents far left --%3E%3Cpath d='M0 18 C4 10 10 10 10 18 C10 24 6 26 4 24' stroke-width='0.6' opacity='0.4'/%3E%3Cpath d='M0 30 C4 38 10 38 10 30 C10 24 6 22 4 24' stroke-width='0.6' opacity='0.4'/%3E%3C!-- Corner leaf accents far right --%3E%3Cpath d='M240 18 C236 10 230 10 230 18 C230 24 234 26 236 24' stroke-width='0.6' opacity='0.4'/%3E%3Cpath d='M240 30 C236 38 230 38 230 30 C230 24 234 22 236 24' stroke-width='0.6' opacity='0.4'/%3E%3C!-- Mid-point smaller accent scrolls --%3E%3Cpath d='M66 24 C70 18 76 18 76 24 C76 30 70 30 68 26' stroke-width='0.6' opacity='0.35'/%3E%3Cpath d='M174 24 C170 18 164 18 164 24 C164 30 170 30 172 26' stroke-width='0.6' opacity='0.35'/%3E%3C!-- Dot accents along stem --%3E%3Ccircle cx='60' cy='24' r='1' fill='%23C4943A' opacity='0.3' stroke-width='0'/%3E%3Ccircle cx='80' cy='24' r='1' fill='%23C4943A' opacity='0.3' stroke-width='0'/%3E%3Ccircle cx='160' cy='24' r='1' fill='%23C4943A' opacity='0.3' stroke-width='0'/%3E%3Ccircle cx='180' cy='24' r='1' fill='%23C4943A' opacity='0.3' stroke-width='0'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 240px 48px;
+  background-repeat: repeat-x;
+  pointer-events: none;
+}
+.filigree-bg::before { top: 0; }
+/* bottom band removed per design direction */
+
+/* Ensure content inside dark sections sits above the border pseudo-elements */
+.filigree-bg > * { position: relative; z-index: 1; }
+
+/* ============================================================
+   ORNAMENT UTILITIES
+   ============================================================ */
+.ornament-rule {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 auto 28px;
+  max-width: 260px;
+}
+.ornament-rule::before,
+.ornament-rule::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.55;
+}
+.ornament-rule-dark::before,
+.ornament-rule-dark::after { background: var(--gold); opacity: 0.35; }
+.ornament-diamond {
+  width: 7px; height: 7px;
+  background: var(--gold);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+  opacity: 0.75;
+}
+.section-label {
+  font-family: var(--ff-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-align: center;
+  display: block;
+  margin-bottom: 16px;
+}
+.section-label-dark { color: var(--gold-soft); }
+
+/* ============================================================
+   TOPBAR
+   ============================================================ */
+.topbar {
+  background: var(--charcoal);
+  min-height: var(--topbar-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 32px;
+  font-family: var(--ff-body);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: var(--text-cream-dim);
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.topbar a { color: var(--text-cream-dim); transition: color 0.2s; }
+.topbar a:hover { color: var(--gold); }
+.topbar-left { display: flex; align-items: center; gap: 20px; }
+.topbar-right { display: flex; align-items: center; gap: 16px; }
+.topbar-social a {
+  width: 26px; height: 26px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 50%;
+  font-size: 11px;
+  transition: border-color 0.2s, color 0.2s;
+}
+.topbar-social a:hover { border-color: var(--gold); color: var(--gold); }
+.topbar-divider { width: 1px; height: 14px; background: rgba(255,255,255,0.12); }
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+.nav-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--ivory);
+  border-bottom: 1px solid var(--gold-line);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+}
+nav {
+  max-width: 1320px;
+  margin: 0 auto;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  gap: 24px;
+}
+.nav-logo img {
+  height: 52px;
+  width: auto;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+}
+.nav-links > li { position: relative; }
+.nav-links > li > a {
+  display: block;
+  padding: 8px 13px;
+  font-family: var(--ff-body);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.nav-links > li > a:hover { color: var(--crimson); }
+.nav-links > li > a .caret {
+  margin-left: 4px;
+  font-size: 9px;
+  opacity: 0.5;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+.nav-links > li:hover > a .caret { transform: rotate(180deg); }
+
+/* Dropdowns */
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--ivory);
+  border: 1px solid var(--gold-line);
+  border-top: 2px solid var(--crimson);
+  min-width: 190px;
+  list-style: none;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
+  transform: translateX(-50%) translateY(8px);
+  pointer-events: none;
+}
+.nav-links > li:hover .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+.nav-dropdown li a {
+  display: block;
+  padding: 10px 18px;
+  font-family: var(--ff-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-mid);
+  transition: color 0.2s, background 0.2s;
+  border-bottom: 1px solid rgba(196,148,58,0.10);
+}
+.nav-dropdown li:last-child a { border-bottom: none; }
+.nav-dropdown li a:hover { color: var(--crimson); background: rgba(196,148,58,0.05); }
+
+.btn-reserve {
+  background: var(--crimson);
+  color: #fff !important;
+  padding: 11px 22px !important;
+  font-size: 11px !important;
+  letter-spacing: 0.14em !important;
+  border-radius: 1px;
+  transition: background 0.2s !important;
+  white-space: nowrap;
+}
+.btn-reserve:hover { background: var(--crimson-hover) !important; color: #fff !important; }
+
+/* Mobile hamburger */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 6px;
+  background: none;
+  border: none;
+}
+.nav-hamburger span {
+  display: block;
+  width: 24px; height: 2px;
+  background: var(--text-dark);
+  transition: all 0.3s;
+}
+.mobile-nav {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--ivory);
+  z-index: 200;
+  overflow-y: auto;
+  padding: 24px;
+}
+.mobile-nav.open { display: block; }
+.mobile-nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.mobile-nav-close {
+  background: none; border: none; cursor: pointer;
+  font-size: 28px; color: var(--text-dark); line-height: 1;
+}
+.mobile-nav-links { list-style: none; }
+.mobile-nav-links > li {
+  border-bottom: 1px solid var(--gold-line);
+}
+.mobile-nav-links > li > a {
+  display: block;
+  padding: 14px 0;
+  font-family: var(--ff-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+}
+.mobile-nav-sub {
+  list-style: none;
+  padding: 0 0 10px 16px;
+}
+.mobile-nav-sub li a {
+  display: block;
+  padding: 8px 0;
+  font-size: 12px;
+  color: var(--text-mid);
+  letter-spacing: 0.06em;
+}
+.mobile-btn-reserve {
+  display: block;
+  margin-top: 28px;
+  background: var(--crimson);
+  color: #fff;
+  text-align: center;
+  padding: 16px;
+  font-family: var(--ff-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  position: relative;
+  height: calc(100svh - var(--nav-h) - var(--topbar-h));
+  min-height: 560px;
+  max-height: 900px;
+  overflow: hidden;
+}
+.hero-slides {
+  position: absolute;
+  inset: 0;
+}
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.4s ease-in-out;
+}
+.hero-slide.active { opacity: 1; }
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10,7,3,0.25) 0%,
+    rgba(10,7,3,0.35) 40%,
+    rgba(10,7,3,0.65) 100%
+  );
+  z-index: 1;
+}
+.hero-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 24px 40px;
+  text-align: center;
+  overflow: visible;
+}
+.hero-eyebrow {
+  font-family: var(--ff-body);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+.hero-title {
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 4.5vw, 4.2rem);
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.13;
+  letter-spacing: 0.01em;
+  max-width: 820px;
+  margin-bottom: 18px;
+}
+.hero-title em { font-style: italic; font-weight: 400; }
+.hero-sub {
+  font-family: var(--ff-body);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.10em;
+  color: rgba(255,255,255,0.72);
+  margin-bottom: 34px;
+  text-transform: uppercase;
+}
+.hero-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 36px;
+}
+.btn-primary {
+  background: var(--crimson);
+  color: #fff;
+  font-family: var(--ff-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 15px 34px;
+  border-radius: 1px;
+  transition: background 0.2s, transform 0.15s;
+  display: inline-block;
+}
+.btn-primary:hover { background: var(--crimson-hover); transform: translateY(-1px); }
+.btn-ghost {
+  color: rgba(255,255,255,0.82);
+  font-family: var(--ff-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.35);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.btn-ghost:hover { color: #fff; border-color: rgba(255,255,255,0.7); }
+.hero-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--ff-body);
+  font-size: 11px;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.08em;
+}
+.hero-rating strong { color: rgba(255,255,255,0.85); }
+.hero-stars { color: var(--gold); font-size: 12px; letter-spacing: 1px; }
+.hero-dots {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  gap: 8px;
+}
+.hero-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.35);
+  cursor: pointer;
+  transition: background 0.2s;
+  border: none;
+  padding: 0;
+}
+.hero-dot.active { background: var(--gold); }
+
+/* ============================================================
+   PROMO BANNER
+   ============================================================ */
+.promo-banner {
+  background: var(--crimson);
+  padding: 14px 24px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.promo-banner p {
+  font-family: var(--ff-body);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.9);
+}
+.promo-banner strong { color: #fff; font-weight: 700; }
+.promo-banner-link {
+  font-family: var(--ff-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+  border-bottom: 1px solid rgba(212,168,74,0.5);
+  padding-bottom: 1px;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.promo-banner-link:hover { color: #fff; }
+
+/* ============================================================
+   SECTION SHARED
+   ============================================================ */
+.section-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.section-inner-wide {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ============================================================
+   INTRO / THREE PILLARS
+   ============================================================ */
+.intro-section {
+  padding: 90px 0 80px;
+}
+.intro-section .section-inner { text-align: center; }
+.intro-headline {
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--text-dark);
+  max-width: 680px;
+  margin: 0 auto 22px;
+}
+.intro-headline em { font-style: italic; color: var(--crimson); }
+.intro-body {
+  font-family: var(--ff-body);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--text-mid);
+  max-width: 620px;
+  margin: 0 auto 44px;
+}
+.pillar-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 1px solid var(--gold-line);
+  margin-top: 20px;
+}
+.pillar {
+  padding: 36px 30px;
+  text-align: center;
+  border-right: 1px solid var(--gold-line);
+  position: relative;
+}
+.pillar:last-child { border-right: none; }
+.pillar-icon {
+  font-size: 24px;
+  margin-bottom: 12px;
+  display: block;
+  color: var(--gold);
+}
+.pillar-title {
+  font-family: var(--ff-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  letter-spacing: 0.01em;
+}
+.pillar-text {
+  font-family: var(--ff-body);
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: var(--text-soft);
+}
+
+/* ============================================================
+   BREAKFAST SECTION (DARK)
+   ============================================================ */
+.breakfast-section {
+  padding: 100px 0;
+  position: relative;
+}
+.breakfast-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.breakfast-content {}
+.breakfast-title {
+  font-family: var(--ff-display);
+  font-size: clamp(2.2rem, 3.8vw, 3.6rem);
+  font-weight: 300;
+  line-height: 1.15;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.breakfast-title em { font-style: italic; display: block; }
+.breakfast-title strong {
+  display: block;
+  font-size: clamp(1rem, 1.8vw, 1.5rem);
+  font-weight: 400;
+  font-style: normal;
+  font-family: var(--ff-body);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+.breakfast-divider {
+  width: 48px; height: 1px;
+  background: var(--gold);
+  margin: 24px 0;
+  opacity: 0.5;
+}
+.breakfast-body {
+  font-family: var(--ff-body);
+  font-size: 14.5px;
+  line-height: 1.8;
+  color: var(--text-cream-dim);
+  margin-bottom: 28px;
+}
+.chef-credit {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 32px 0;
+}
+.chef-photo {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(196,148,58,0.4);
+  flex-shrink: 0;
+}
+.chef-info {}
+.chef-name {
+  font-family: var(--ff-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+.chef-cred {
+  font-family: var(--ff-body);
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+.btn-primary-outline {
+  display: inline-block;
+  border: 1px solid rgba(196,148,58,0.5);
+  color: var(--gold);
+  font-family: var(--ff-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 12px 26px;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.btn-primary-outline:hover {
+  background: var(--crimson);
+  border-color: var(--crimson);
+  color: #fff;
+}
+
+/* Food photo grid */
+.breakfast-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 10px;
+}
+.breakfast-photos img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  filter: brightness(0.88) contrast(1.05);
+  transition: filter 0.3s;
+}
+.breakfast-photos img:hover { filter: brightness(1.0) contrast(1.05); }
+.breakfast-photos .photo-tall {
+  grid-row: span 2;
+  height: 100%;
+  min-height: 450px;
+}
+.breakfast-photos .photo-wide {
+  grid-column: span 2;
+}
+
+/* ============================================================
+   ROOMS SECTION
+   ============================================================ */
+.rooms-section {
+  padding: 90px 0;
+}
+.rooms-header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+.rooms-title {
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 400;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+.rooms-sub {
+  font-family: var(--ff-body);
+  font-size: 13px;
+  color: var(--text-soft);
+  letter-spacing: 0.06em;
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.65;
+}
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.room-card {
+  background: var(--ivory);
+  border: 1px solid var(--gold-line);
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.room-card:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.10);
+  transform: translateY(-3px);
+}
+.room-card-img {
+  position: relative;
+  overflow: hidden;
+}
+.room-card-img img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.room-card:hover .room-card-img img { transform: scale(1.04); }
+.room-card-floor {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(10,7,3,0.72);
+  color: rgba(255,255,255,0.82);
+  font-family: var(--ff-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+}
+.room-card-body {
+  padding: 24px 24px 28px;
+}
+.room-card-name {
+  font-family: var(--ff-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 5px;
+  letter-spacing: 0.01em;
+}
+.room-card-type {
+  font-family: var(--ff-body);
+  font-size: 11.5px;
+  color: var(--text-soft);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.room-card-features {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+.room-tag {
+  font-family: var(--ff-body);
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-mid);
+  background: var(--cream-alt);
+  padding: 4px 9px;
+  border-radius: 1px;
+}
+.room-card-review {
+  font-family: var(--ff-display);
+  font-size: 14px;
+  font-style: italic;
+  color: var(--text-mid);
+  line-height: 1.6;
+  border-left: 2px solid var(--gold);
+  padding-left: 12px;
+  margin-bottom: 20px;
+}
+.room-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid var(--gold-line);
+}
+.room-card-rate {
+  font-family: var(--ff-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+.room-card-rate span {
+  font-family: var(--ff-body);
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--text-soft);
+}
+.btn-room {
+  font-family: var(--ff-body);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--crimson);
+  border-bottom: 1px solid rgba(123,21,21,0.3);
+  padding-bottom: 2px;
+  transition: border-color 0.2s;
+}
+.btn-room:hover { border-color: var(--crimson); }
+.rooms-footer {
+  text-align: center;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn-secondary {
+  display: inline-block;
+  background: var(--crimson);
+  color: #fff;
+  font-family: var(--ff-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 13px 28px;
+  border-radius: 1px;
+  transition: background 0.2s;
+}
+.btn-secondary:hover { background: var(--crimson-hover); }
+.btn-secondary-outline {
+  display: inline-block;
+  border: 1px solid var(--crimson);
+  color: var(--crimson);
+  font-family: var(--ff-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 13px 28px;
+  border-radius: 1px;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-secondary-outline:hover { background: var(--crimson); color: #fff; }
+
+/* ============================================================
+   HISTORY SECTION
+   ============================================================ */
+.history-section {
+  padding: 90px 0;
+  background: var(--cream-alt);
+}
+.history-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.history-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 10px;
+}
+.history-images img {
+  width: 100%;
+  object-fit: cover;
+}
+.history-images img:first-child {
+  grid-column: span 2;
+  height: 280px;
+}
+.history-images img:not(:first-child) {
+  height: 180px;
+}
+.history-content {}
+.history-title {
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 400;
+  color: var(--text-dark);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.history-title em { font-style: italic; color: var(--crimson); }
+.history-body {
+  font-family: var(--ff-body);
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text-mid);
+  margin: 20px 0 28px;
+}
+.history-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 1px solid var(--gold-line);
+  margin: 28px 0;
+}
+.history-stat {
+  padding: 20px 16px;
+  text-align: center;
+  border-right: 1px solid var(--gold-line);
+}
+.history-stat:last-child { border-right: none; }
+.history-stat-num {
+  font-family: var(--ff-display);
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--crimson);
+  line-height: 1;
+}
+.history-stat-label {
+  font-family: var(--ff-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  margin-top: 4px;
+}
+.history-register {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--ff-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--text-mid);
+  margin-bottom: 24px;
+}
+.history-register-badge {
+  width: 8px; height: 8px;
+  background: var(--gold);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   LOCATION SECTION
+   ============================================================ */
+.location-section {
+  position: relative;
+  padding: 120px 0;
+  overflow: hidden;
+}
+.location-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://thereynoldsmansion.com/wp-content/uploads/2019/11/Front-Reynolds-Village.jpg');
+  background-size: cover;
+  background-position: center 30%;
+}
+.location-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10,7,3,0.62);
+}
+.location-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.location-title {
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.2;
+  max-width: 700px;
+  margin: 0 auto 16px;
+}
+.location-title em { font-style: italic; font-weight: 400; }
+.location-body {
+  font-family: var(--ff-body);
+  font-size: 14.5px;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.8;
+  max-width: 540px;
+  margin: 0 auto 36px;
+}
+.location-callouts {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.location-callout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--ff-body);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.72);
+}
+.location-callout-dot {
+  width: 6px; height: 6px;
+  background: var(--gold);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   REVIEWS SECTION
+   ============================================================ */
+.reviews-section {
+  padding: 90px 0;
+}
+.reviews-header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+.reviews-title {
+  font-family: var(--ff-display);
+  font-size: clamp(1.8rem, 2.8vw, 2.8rem);
+  font-weight: 400;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+.reviews-meta {
+  font-family: var(--ff-body);
+  font-size: 12px;
+  color: var(--text-soft);
+  letter-spacing: 0.06em;
+}
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.review-card {
+  background: var(--ivory);
+  border: 1px solid var(--gold-line);
+  padding: 36px 30px;
+  position: relative;
+}
+.review-card::before {
+  content: '\201C';
+  position: absolute;
+  top: 16px;
+  left: 24px;
+  font-family: var(--ff-display);
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--gold);
+  opacity: 0.22;
+}
+.review-stars {
+  color: var(--gold);
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+.review-quote {
+  font-family: var(--ff-display);
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+}
+.review-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid var(--gold-line);
+}
+.review-attribution {
+  font-family: var(--ff-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+.review-source {
+  font-family: var(--ff-body);
+  font-size: 10px;
+  color: var(--text-cream-dim);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ============================================================
+   REYNOLDS VILLAGE MENTION
+   ============================================================ */
+.village-section {
+  padding: 70px 0;
+  background: var(--charcoal);
+  text-align: center;
+}
+.village-title {
+  font-family: var(--ff-display);
+  font-size: clamp(1.8rem, 2.8vw, 2.8rem);
+  font-weight: 300;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.village-title em { font-style: italic; }
+.village-body {
+  font-family: var(--ff-body);
+  font-size: 14px;
+  color: var(--text-cream-dim);
+  line-height: 1.75;
+  max-width: 560px;
+  margin: 0 auto 28px;
+}
+.village-amenities {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+.village-amenity {
+  font-family: var(--ff-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--text-cream-dim);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.village-amenity::before {
+  content: '';
+  width: 5px; height: 5px;
+  background: var(--gold);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+.btn-ghost-gold {
+  display: inline-block;
+  border: 1px solid rgba(196,148,58,0.4);
+  color: var(--gold);
+  font-family: var(--ff-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 12px 26px;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.btn-ghost-gold:hover {
+  background: var(--crimson);
+  border-color: var(--crimson);
+  color: #fff;
+}
+
+/* ============================================================
+   FINAL CTA
+   ============================================================ */
+.cta-section {
+  padding: 100px 0;
+  text-align: center;
+}
+.cta-title {
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 3.5vw, 3.4rem);
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.2;
+  max-width: 580px;
+  margin: 0 auto 16px;
+}
+.cta-title em { font-style: italic; }
+.cta-body {
+  font-family: var(--ff-body);
+  font-size: 13px;
+  color: var(--text-cream-dim);
+  letter-spacing: 0.06em;
+  margin-bottom: 36px;
+}
+.cta-sub {
+  margin-top: 18px;
+  font-family: var(--ff-body);
+  font-size: 12px;
+  color: var(--text-cream-dim);
+}
+.cta-sub a { color: var(--gold); }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+  background: var(--charcoal);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 60px 0 32px;
+}
+.footer-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  margin-bottom: 32px;
+}
+.footer-brand-logo img {
+  height: 44px;
+  width: auto;
+  margin-bottom: 16px;
+  filter: brightness(0) invert(1);
+  opacity: 0.7;
+}
+.footer-brand-desc {
+  font-family: var(--ff-body);
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--text-cream-dim);
+  margin-bottom: 20px;
+}
+.footer-social {
+  display: flex;
+  gap: 10px;
+}
+.footer-social a {
+  width: 32px; height: 32px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 50%;
+  font-family: var(--ff-body);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-cream-dim);
+  letter-spacing: 0;
+  transition: border-color 0.2s, color 0.2s;
+}
+.footer-social a:hover { border-color: var(--gold); color: var(--gold); }
+.footer-col-title {
+  font-family: var(--ff-body);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer-links li a {
+  font-family: var(--ff-body);
+  font-size: 12.5px;
+  color: var(--text-cream-dim);
+  transition: color 0.2s;
+  letter-spacing: 0.02em;
+}
+.footer-links li a:hover { color: var(--gold); }
+.footer-contact-item {
+  font-family: var(--ff-body);
+  font-size: 12.5px;
+  color: var(--text-cream-dim);
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+.footer-contact-item a { color: var(--text-cream-dim); transition: color 0.2s; }
+.footer-contact-item a:hover { color: var(--gold); }
+.footer-newsletter-label {
+  font-family: var(--ff-body);
+  font-size: 12px;
+  color: var(--text-cream-dim);
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.footer-newsletter-form {
+  display: flex;
+  gap: 8px;
+}
+.footer-newsletter-form input {
+  flex: 1;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #fff;
+  font-family: var(--ff-body);
+  font-size: 12px;
+  padding: 10px 14px;
+  outline: none;
+  transition: border-color 0.2s;
+  min-width: 0;
+}
+.footer-newsletter-form input::placeholder { color: rgba(255,255,255,0.3); }
+.footer-newsletter-form input:focus { border-color: var(--gold); }
+.footer-newsletter-form button {
+  background: var(--crimson);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: var(--ff-body);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 10px 14px;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.footer-newsletter-form button:hover { background: var(--crimson-hover); }
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-copyright {
+  font-family: var(--ff-body);
+  font-size: 11px;
+  color: rgba(255,255,255,0.25);
+}
+.footer-legal {
+  display: flex;
+  gap: 20px;
+}
+.footer-legal a {
+  font-family: var(--ff-body);
+  font-size: 11px;
+  color: rgba(255,255,255,0.25);
+  transition: color 0.2s;
+}
+.footer-legal a:hover { color: var(--gold); }
+.footer-badges {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.ta-badge {
+  font-family: var(--ff-body);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 5px 10px;
+  transition: color 0.2s;
+}
+.ta-badge:hover { color: var(--gold); border-color: rgba(196,148,58,0.3); }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) {
+  .breakfast-layout,
+  .history-layout { grid-template-columns: 1fr; gap: 48px; }
+  .history-images img:first-child { height: 240px; }
+  .pillar-row { grid-template-columns: 1fr; }
+  .pillar { border-right: none; border-bottom: 1px solid var(--gold-line); }
+  .pillar:last-child { border-bottom: none; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
+}
+@media (max-width: 768px) {
+  :root { --nav-h: 64px; --topbar-h: 32px; }
+  .topbar { padding: 0 16px; }
+  .topbar-left .address-hide { display: none; }
+  nav { padding: 0 16px; }
+  .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  .rooms-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .section-inner, .section-inner-wide { padding: 0 16px; }
+  .hero-content { padding: 40px 16px 60px; }
+  .breakfast-photos { grid-template-columns: 1fr; }
+  .breakfast-photos .photo-tall { min-height: 280px; height: 280px; grid-row: auto; }
+  .breakfast-photos img { height: 200px; }
+  .location-callouts { flex-direction: column; align-items: center; gap: 14px; }
+  .footer-top { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+  .history-stats { grid-template-columns: repeat(3, 1fr); }
+  .village-amenities { flex-direction: column; align-items: center; gap: 10px; }
+}
+@media (max-width: 480px) {
+  .hero { min-height: 480px; }
+  .pillar-row { border: none; }
+  .pillar { border: 1px solid var(--gold-line); margin-bottom: -1px; }
+  .breakfast-photos { gap: 6px; }
+}
+
+
+/* ============================================================
+   SKIP NAV (ADA)
+   ============================================================ */
+.skip-nav {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: var(--crimson);
+  color: #fff;
+  font-family: var(--ff-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 12px 20px;
+  z-index: 9999;
+  transition: top 0.2s;
+}
+.skip-nav:focus { top: 0; }
+
+/* Focus ring for keyboard users */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--crimson);
+  outline-offset: 3px;
+}
+
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+</style>
+</head>
+
+<body>
+
+<!-- SKIP NAV (ADA) -->
+<a class="skip-nav" href="#main-content">Skip to main content</a>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-left">
+    <span class="address-hide">100 Reynolds Heights, Asheville NC 28804</span>
+    <div class="topbar-divider address-hide"></div>
+    <a href="tel:8282581111">(828) 258-1111</a>
+  </div>
+  <div class="topbar-right">
+    <div class="topbar-social">
+      <a href="https://www.facebook.com/pages/Reynolds-Mansion-Bed-and-Breakfast-Inn/111523802270435" target="_blank" rel="noopener" aria-label="Facebook">fb</a>
+      <a href="https://www.instagram.com/thereynoldsmansion/" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAVIGATION -->
+<div class="nav-wrap">
+  <nav>
+    <a href="/" class="nav-logo" aria-label="The Reynolds Mansion Home">
+      <img src="https://thereynoldsmansion.com/wp-content/uploads/2019/11/Asheville-Bed-Breakfast-Luxury-Lodging.png"
+           alt="The Reynolds Mansion Bed and Breakfast Inn — Asheville NC" height="52">
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li>
+        <a href="/our-story/">About <span class="caret">▾</span></a>
+        <ul class="nav-dropdown">
+          <li><a href="/our-story/">Our Story</a></li>
+          <li><a href="/history/">History</a></li>
+          <li><a href="/reviews/">Reviews</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/reynolds-residence/">Stay <span class="caret">▾</span></a>
+        <ul class="nav-dropdown">
+          <li><a href="/reynolds-residence/">Reynolds Residence</a></li>
+          <li><a href="/carriage-house/">Carriage House</a></li>
+          <li><a href="/rooms/compare/">Compare Rooms</a></li>
+        </ul>
+      </li>
+      <li><a href="/breakfast/">Breakfast</a></li>
+      <li><a href="/explore-asheville/">Explore Asheville</a></li>
+      <li>
+        <a href="/plan-your-stay/">Plan Your Stay <span class="caret">▾</span></a>
+        <ul class="nav-dropdown">
+          <li><a href="/gift-certificates/">Gift Certificates</a></li>
+          <li><a href="/offers/">Special Offers</a></li>
+          <li><a href="/reynolds-village/">Reynolds Village</a></li>
+          <li><a href="/getting-here/">Getting Here</a></li>
+          <li><a href="/policies/">Policies</a></li>
+        </ul>
+      </li>
+      <li><a href="/contact/">Contact</a></li>
+      <li>
+        <a href="https://secure.thinkreservations.com/thereynoldsmansion/reservations/availability/"
+           class="btn-reserve" target="_blank" rel="noopener">Reserve Now</a>
+      </li>
+    </ul>
+
+    <button class="nav-hamburger" aria-label="Open menu" onclick="openMobileNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</div>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-header">
+    <img src="https://thereynoldsmansion.com/wp-content/uploads/2019/11/Asheville-Bed-Breakfast-Luxury-Lodging.png"
+         alt="The Reynolds Mansion" height="44">
+    <button class="mobile-nav-close" onclick="closeMobileNav()" aria-label="Close menu">×</button>
+  </div>
+  <ul class="mobile-nav-links">
+    <li><a href="/">Home</a></li>
+    <li>
+      <a href="/our-story/">About</a>
+      <ul class="mobile-nav-sub">
+        <li><a href="/our-story/">Our Story</a></li>
+        <li><a href="/history/">History</a></li>
+        <li><a href="/reviews/">Reviews</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="/reynolds-residence/">Stay</a>
+      <ul class="mobile-nav-sub">
+        <li><a href="/reynolds-residence/">Reynolds Residence</a></li>
+        <li><a href="/carriage-house/">Carriage House</a></li>
+        <li><a href="/rooms/compare/">Compare Rooms</a></li>
+      </ul>
+    </li>
+    <li><a href="/breakfast/">Breakfast</a></li>
+    <li><a href="/explore-asheville/">Explore Asheville</a></li>
+    <li>
+      <a href="/plan-your-stay/">Plan Your Stay</a>
+      <ul class="mobile-nav-sub">
+        <li><a href="/gift-certificates/">Gift Certificates</a></li>
+        <li><a href="/offers/">Special Offers</a></li>
+        <li><a href="/reynolds-village/">Reynolds Village</a></li>
+        <li><a href="/getting-here/">Getting Here</a></li>
+        <li><a href="/policies/">Policies</a></li>
+      </ul>
+    </li>
+    <li><a href="/contact/">Contact</a></li>
+  </ul>
+  <a href="https://secure.thinkreservations.com/thereynoldsmansion/reservations/availability/"
+     class="mobile-btn-reserve">Reserve Your Stay</a>
+</div>
+
+<!-- HERO -->
+<section id="main-content" class="hero" aria-label="The Reynolds Mansion — Asheville Bed and Breakfast">
+  <div class="hero-slides">
+    <div class="hero-slide active" style="background-image:url('./reynolds-residence-photo-4th-scrolling.jpg'); background-position: center 35%;"></div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Asheville, North Carolina &nbsp;·&nbsp; Est. 1847</p>
+    <h1 class="hero-title">Where a <em>classically trained chef</em><br>serves breakfast in a mansion<br>built before the Civil War</h1>
+    <p class="hero-sub">Blue Ridge Mountain Views &nbsp;·&nbsp; Four-Course Gourmet Breakfast &nbsp;·&nbsp; Private Mountain Setting</p>
+    <div class="hero-cta-row">
+      <a href="https://secure.thinkreservations.com/thereynoldsmansion/reservations/availability/"
+         class="btn-primary" target="_blank" rel="noopener">Check Availability</a>
+      <a href="/reynolds-residence/" class="btn-ghost">Explore Rooms</a>
+    </div>
+    <div class="hero-rating">
+      <span class="hero-stars">★★★★★</span>
+      <strong>4.9</strong>
+      <span>on TripAdvisor</span>
+      <span style="margin: 0 6px; opacity:0.3;">|</span>
+      <span>934 reviews</span>
+    </div>
+  </div>
+
+</section>
+
+<!-- PROMO BANNER (swappable slot) -->
+<div class="promo-banner">
+  <p><strong>Spring Availability Now Open</strong> — Book 3 nights and enjoy exclusive midweek savings.</p>
+  <a href="/offers/" class="promo-banner-link">View Packages →</a>
+</div>
+
+<!-- INTRO / PILLARS -->
+<section class="intro-section damask-bg">
+  <div class="section-inner">
+    <span class="section-label">Welcome to Reynolds Mansion</span>
+    <div class="ornament-rule"><div class="ornament-diamond"></div></div>
+    <h2 class="intro-headline">Nearly 180 years of history.<br><em>A world-class chef at the stove.</em></h2>
+    <p class="intro-body">
+      Built in 1847, The Reynolds Mansion is one of fewer than ten pre-Civil War brick homes surviving
+      in western North Carolina. Perched in a private mountain setting with panoramic Blue Ridge views,
+      this is not a neighborhood inn — it is a retreat. Your innkeepers Paul and Mirlin Manshon bring
+      over three decades of luxury hospitality experience to every detail of your stay.
+    </p>
+    <div class="pillar-row">
+      <div class="pillar">
+        <span class="pillar-icon">✦</span>
+        <div class="pillar-title">The Chef's Table</div>
+        <p class="pillar-text">A classically trained chef-innkeeper serves a new four-course gourmet breakfast every morning. No eggs and toast. No buffet. A genuine culinary experience, included with every room.</p>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">◈</span>
+        <div class="pillar-title">Built in 1847</div>
+        <p class="pillar-text">The oldest property in our competitive set, by 44 years. One of fewer than ten pre-Civil War brick homes surviving in western North Carolina. On the National Register of Historic Places.</p>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">❧</span>
+        <div class="pillar-title">Warm &amp; Personal</div>
+        <p class="pillar-text">From the moment you arrive, Paul and Mirlin bring the warmth of genuine hospitality — not scripted service. Guests become returning friends. That is the Reynolds Mansion difference.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BREAKFAST SECTION (DARK) -->
+<section class="breakfast-section filigree-bg" aria-labelledby="breakfast-heading">
+  <div class="section-inner">
+    <div class="breakfast-layout">
+      <div class="breakfast-content">
+        <span class="section-label section-label-dark">The Breakfast Experience</span>
+        <div class="ornament-rule ornament-rule-dark"><div class="ornament-diamond"></div></div>
+        <h2 class="breakfast-title" id="breakfast-heading">
+          <strong>Not Eggs on Toast.</strong>
+          <span>A Four-Course</span>
+          <em>Culinary Event.</em>
+        </h2>
+        <div class="breakfast-divider"></div>
+        <p class="breakfast-body">
+          Every morning, Chef Paul crafts a four-course gourmet breakfast that transforms a meal
+          into a memory. Each dish is composed with the technique and creativity of someone who spent
+          decades in world-class kitchens — and who chose to pour that expertise into a table for
+          twenty-eight instead of eight hundred.
+        </p>
+        <p class="breakfast-body">
+          Stunning table settings, fresh seasonal ingredients, and a new menu daily.
+          Guests don't just eat breakfast at The Reynolds Mansion — they anticipate it.
+        </p>
+        <div class="chef-credit">
+          <img src="https://thereynoldsmansion.com/wp-content/uploads/2024/09/Paul-Manshon-with-tray.webp"
+               alt="Chef Paul Manshon, innkeeper at The Reynolds Mansion" class="chef-photo">
+          <div class="chef-info">
+            <div class="chef-name">Chef Paul Manshon</div>
+            <div class="chef-cred">Classically trained &nbsp;·&nbsp; 30+ years luxury hospitality</div>
+          </div>
+        </div>
+        <a href="/breakfast/" class="btn-primary-outline">Explore the Breakfast →</a>
+      </div>
+
+      <div class="breakfast-photos">
+        <img src="https://thereynoldsmansion.com/wp-content/uploads/2024/08/ReynoldsHouse066.jpg"
+             alt="Chef Paul preparing breakfast at The Reynolds Mansion"
+             class="photo-tall"
+             style="height:100%; min-height:460px;">
+        <img src="https://thereynoldsmansion.com/wp-content/uploads/2024/08/ReynoldsHouse092.jpg"
+             alt="Four-course gourmet breakfast plated at The Reynolds Mansion">
+        <img src="https://thereynoldsmansion.com/wp-content/uploads/2024/09/ReynoldsHouse082-2024.webp"
+             alt="Fresh breakfast course at The Reynolds Mansion">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROOMS SECTION -->
+<section class="rooms-section damask-bg" aria-labelledby="rooms-heading">
+  <div class="section-inner">
+    <div class="rooms-header">
+      <span class="section-label">Reynolds Residence</span>
+      <div class="ornament-rule"><div class="ornament-diamond"></div></div>
+      <h2 class="rooms-title" id="rooms-heading">Eight Unique Rooms.<br>One Unforgettable Stay.</h2>
+      <p class="rooms-sub">
+        Period antiques, private baths, and gas fireplaces throughout.
+        Every stay includes the four-course gourmet breakfast.
+      </p>
+    </div>
+
+    <div class="rooms-grid">
+      <!-- Room 1: Katie -->
+      <div class="room-card">
+        <div class="room-card-img">
+          <img src="https://thereynoldsmansion.com/wp-content/uploads/2024/09/ReynoldsHouse023-katie.webp"
+               alt="Katie room — queen bed with claw-foot tub at The Reynolds Mansion">
+          <div class="room-card-floor">Second Floor</div>
+        </div>
+        <div class="room-card-body">
+          <div class="room-card-name">Katie</div>
+          <div class="room-card-type">Queen Bed · Claw-foot Tub &amp; Overhead Shower</div>
+          <div class="room-card-features">
+            <span class="room-tag">Gas Fireplace</span>
+            <span class="room-tag">Mountain Views</span>
+            <span class="room-tag">Keurig</span>
+          </div>
+          <div class="room-card-review">"The claw-foot tub and fireplace made this feel like a scene out of a novel. We never wanted to leave."</div>
+          <div class="room-card-footer">
+            <div class="room-card-rate">from $298 <span>/ night</span></div>
+            <a href="https://secure.thinkreservations.com/thereynoldsmansion/reservations/availability/"
+               class="btn-room" target="_blank" rel="noopener">Book Now →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Room 2: Linda -->
+      <div class="room-card">
+        <div class="room-card-img">
+          <img src="https://thereynoldsmansion.com/wp-content/uploads/2024/08/ReynoldsHouse038.jpg"
+               alt="Linda room — king canopy bed at The Reynolds Mansion">
+          <div class="room-card-floor">Second Floor</div>
+        </div>
+        <div class="room-card-body">
+          <div class="room-card-name">Linda</div>
+          <div class="room-card-type">King Canopy Bed · Private Bath with Shower</div>
+          <div class="room-card-features">
+            <span class="room-tag">Gas Fireplace</span>
+            <span class="room-tag">Writing Desk</span>
+            <span class="room-tag">Illy Espresso</span>
+          </div>
+          <div class="room-card-review">"The canopy bed in Linda's room is absolutely magnificent. We slept beautifully and woke up to the most incredible breakfast."</div>
+          <div class="room-card-footer">
+            <div class="room-card-rate">from $318 <span>/ night</span></div>
+            <a href="https://secure.thinkreservations.com/thereynoldsmansion/reservations/availability/"
+               class="btn-room" target="_blank" rel="noopener">Book Now →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Room 3: Lila -->
+      <div class="room-card">
+        <div class="room-card-img">
+          <img src="https://thereynoldsmansion.com/wp-content/uploads/2024/09/ReynoldsHouse010.webp"
+               alt="Lila guest room with fireplace at The Reynolds Mansion">
+          <div class="room-card-floor">First Floor</div>
+        </div>
+        <div class="room-card-body">
+          <div class="room-card-name">Lila</div>
+          <div class="room-card-type">Queen Bed · Private Bath with Shower</div>
+          <div class="room-card-features">
+            <span class="room-tag">Gas Fireplace</span>
+            <span class="room-tag">12' Ceilings</span>
+            <span class="room-tag">Keurig</span>
+          </div>
+          <div class="room-card-review">"Beautiful room on the main floor — convenient and gorgeous. The toile wallpaper and working fireplace gave it such character."</div>
+          <div class="room-card-footer">
+            <div class="room-card-rate">from $278 <span>/ night</span></div>
+            <a href="https://secure.thinkreservations.com/thereynoldsmansion/reservations/availability/"
+               class="btn-room" target="_blank" rel="noopener">Book Now →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rooms-footer">
+      <a href="/reynolds-residence/" class="btn-secondary">View All Rooms</a>
+      <a href="/carriage-house/" class="btn-secondary-outline">Pet-Friendly Carriage House</a>
+    </div>
+  </div>
+</section>
+
+<!-- HISTORY SECTION -->
+<section class="history-section" aria-labelledby="history-heading">
+  <div class="section-inner">
+    <div class="history-layout">
+      <div class="history-images">
+        <img src="https://thereynoldsmansion.com/wp-content/uploads/2019/11/our-story-featured-img.jpg"
+             alt="Library with fireplace at The Reynolds Mansion, built 1847">
+        <img src="https://thereynoldsmansion.com/wp-content/uploads/2024/08/ReynoldsHouse174.jpg"
+             alt="National Register of Historic Places plaque at The Reynolds Mansion">
+        <img src="https://thereynoldsmansion.com/wp-content/uploads/2024/08/ReynoldsHouse065.jpg"
+             alt="Antique door detail at The Reynolds Mansion">
+      </div>
+      <div class="history-content">
+        <span class="section-label">Since 1847</span>
+        <div class="ornament-rule"><div class="ornament-diamond"></div></div>
+        <h2 class="history-title" id="history-heading">The <em>oldest property</em><br>in our class. By 44 years.</h2>
+        <div class="history-register">
+          <div class="history-register-badge"></div>
+          National Register of Historic Places
+        </div>
+        <p class="history-body">
+          "Colonel" Daniel Reynolds built this imposing brick home on a knoll of Reynolds Mountain in 1847.
+          One of fewer than ten pre-Civil War brick homes surviving in western North Carolina, it has endured
+          nearly two centuries of storms, restorations, and the passage of time — and today it stands proud,
+          in the hands of people who trained at the highest levels of global hospitality.
+        </p>
+        <p class="history-body">
+          Guests aren't just sleeping in an old house. They're being personally hosted in a home that has
+          witnessed nearly two centuries of American history.
+        </p>
+        <div class="history-stats">
+          <div class="history-stat">
+            <div class="history-stat-num">1847</div>
+            <div class="history-stat-label">Year Built</div>
+          </div>
+          <div class="history-stat">
+            <div class="history-stat-num">178</div>
+            <div class="history-stat-label">Years Standing</div>
+          </div>
+          <div class="history-stat">
+            <div class="history-stat-num">4.9</div>
+            <div class="history-stat-label">Star Rating</div>
+          </div>
+        </div>
+        <a href="/history/" class="btn-secondary-outline">Explore Our History</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION / MOUNTAIN SETTING -->
+<section class="location-section" aria-label="Private mountain setting">
+  <div class="location-bg"></div>
+  <div class="location-overlay"></div>
+  <div class="section-inner location-content">
+    <span class="section-label section-label-dark">Your Private Mountain Retreat</span>
+    <div class="ornament-rule ornament-rule-dark"><div class="ornament-diamond"></div></div>
+    <h2 class="location-title">You came for <em>the mountains.</em><br>We put you among them.</h2>
+    <p class="location-body">
+      Perched in a private mountain setting with panoramic Blue Ridge views, The Reynolds Mansion
+      offers the seclusion and setting a downtown inn cannot. Downtown Asheville's restaurants,
+      breweries, and galleries are 10 minutes away when you want them.
+      The mountain view from the porch is there when you don't.
+    </p>
+    <a href="https://secure.thinkreservations.com/thereynoldsmansion/reservations/availability/"
+       class="btn-primary" target="_blank" rel="noopener">Check Availability</a>
+    <div class="location-callouts">
+      <div class="location-callout"><div class="location-callout-dot"></div>10 min to downtown Asheville</div>
+      <div class="location-callout"><div class="location-callout-dot"></div>Near Biltmore Estate</div>
+      <div class="location-callout"><div class="location-callout-dot"></div>Blue Ridge Parkway at your doorstep</div>
+      <div class="location-callout"><div class="location-callout-dot"></div>Free private parking</div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section damask-bg" aria-labelledby="reviews-heading">
+  <div class="section-inner">
+    <div class="reviews-header">
+      <span class="section-label">What Our Guests Say</span>
+      <div class="ornament-rule"><div class="ornament-diamond"></div></div>
+      <h2 class="reviews-title" id="reviews-heading">Hospitality guests<br>don't expect — and never forget.</h2>
+      <p class="reviews-meta">4.9 stars &nbsp;·&nbsp; 934 TripAdvisor Reviews &nbsp;·&nbsp; 178 Google Reviews</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">"Paul and Mirlin are the most gracious and generous hosts. They welcomed us as if we were old friends, although we were just meeting them for the first time."</p>
+        <div class="review-footer">
+          <span class="review-attribution">Whitney &amp; Josh</span>
+          <span class="review-source">TripAdvisor</span>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">"I rarely encounter hospitality of this caliber. Five stars, five stars. Paul went above and beyond in every way — late check-in, local recommendations, history lessons. All of it."</p>
+        <div class="review-footer">
+          <span class="review-attribution">Verified Guest</span>
+          <span class="review-source">TripAdvisor</span>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-quote">"Paul's breakfasts are the most interesting we have had at any B&amp;B worldwide. Visual masterpieces. The flavors were perfectly blended. We only wish we lived closer."</p>
+        <div class="review-footer">
+          <span class="review-attribution">Returning Guest</span>
+          <span class="review-source">Booking.com 9.9</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REYNOLDS VILLAGE -->
+<section class="village-section filigree-bg" aria-label="Reynolds Village neighborhood">
+  <div class="section-inner" style="text-align:center;">
+    <span class="section-label section-label-dark">Reynolds Village</span>
+    <div class="ornament-rule ornament-rule-dark"><div class="ornament-diamond"></div></div>
+    <h2 class="village-title">Private setting. <em>Walkable neighborhood.</em></h2>
+    <p class="village-body">
+      Reynolds Village is right at your door — a charming walkable neighborhood with dining,
+      boutique shops, fitness studios, and more. You're in the mountains. You're not in the boonies.
+    </p>
+    <div class="village-amenities">
+      <div class="village-amenity">Quench Bistro</div>
+      <div class="village-amenity">Village Porch</div>
+      <div class="village-amenity">Asheville Y</div>
+      <div class="village-amenity">Scorch Fitness</div>
+      <div class="village-amenity">Boutique Shops</div>
+    </div>
+    <a href="/reynolds-village/" class="btn-ghost-gold">Explore the Neighborhood</a>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-section filigree-bg" aria-label="Book your stay">
+  <div class="section-inner" style="text-align:center;">
+    <span class="section-label section-label-dark">Your Mountain Retreat Awaits</span>
+    <div class="ornament-rule ornament-rule-dark"><div class="ornament-diamond"></div></div>
+    <h2 class="cta-title">Book direct for the<br><em>best rates.</em></h2>
+    <p class="cta-body">No third-party fees. Personal service from the moment you reserve.</p>
+    <a href="https://secure.thinkreservations.com/thereynoldsmansion/reservations/availability/"
+       class="btn-primary" target="_blank" rel="noopener">Check Availability</a>
+    <p class="cta-sub">Or call us directly: <a href="tel:8282581111">(828) 258-1111</a></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-logo">
+          <img src="https://thereynoldsmansion.com/wp-content/uploads/2019/11/Asheville-Bed-Breakfast-Luxury-Lodging.png"
+               alt="The Reynolds Mansion" height="44">
+        </div>
+        <p class="footer-brand-desc">
+          A top-rated Asheville bed and breakfast where a classically trained chef-innkeeper serves
+          a four-course gourmet breakfast each morning in a pre-Civil War mansion with Blue Ridge Mountain views.
+        </p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/pages/Reynolds-Mansion-Bed-and-Breakfast-Inn/111523802270435"
+             target="_blank" rel="noopener" aria-label="Facebook">fb</a>
+          <a href="https://www.instagram.com/thereynoldsmansion/"
+             target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Stay</div>
+        <ul class="footer-links">
+          <li><a href="/reynolds-residence/">Reynolds Residence</a></li>
+          <li><a href="/carriage-house/">Carriage House</a></li>
+          <li><a href="/rooms/compare/">Compare Rooms</a></li>
+          <li><a href="/breakfast/">Breakfast</a></li>
+          <li><a href="/offers/">Special Offers</a></li>
+          <li><a href="/gift-certificates/">Gift Certificates</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Explore</div>
+        <ul class="footer-links">
+          <li><a href="/our-story/">Our Story</a></li>
+          <li><a href="/history/">History</a></li>
+          <li><a href="/explore-asheville/">Asheville Attractions</a></li>
+          <li><a href="/reynolds-village/">Reynolds Village</a></li>
+          <li><a href="/reviews/">Guest Reviews</a></li>
+          <li><a href="/blog/">Blog</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <p class="footer-contact-item">100 Reynolds Heights<br>Asheville, NC 28804</p>
+        <p class="footer-contact-item"><a href="tel:8282581111">(828) 258-1111</a></p>
+        <p class="footer-contact-item" style="margin-bottom:24px;"><a href="/cdn-cgi/l/email-protection#91f8fffffaf4f4e1f4e3d1e5f9f4e3f4e8fffefdf5e2fcf0ffe2f8feffbff2fefc"><span class="__cf_email__" data-cfemail="573e39393c323227322517233f3225322e39383b33243a3639243e38397934383a">[email&#160;protected]</span></a></p>
+        <div class="footer-col-title" style="margin-top:24px;">Stay in Touch</div>
+        <p class="footer-newsletter-label">Seasonal offers and availability updates.</p>
+        <div class="footer-newsletter-form">
+          <label for="newsletter-email" class="sr-only">Email address for newsletter updates</label>
+          <input type="email" id="newsletter-email" name="email" placeholder="Your email address" aria-label="Email address for newsletter updates" autocomplete="email">
+          <button type="button">Join</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copyright">© 2026 The Reynolds Mansion Bed &amp; Breakfast Inn. All rights reserved.</p>
+      <div class="footer-badges">
+        <a href="https://www.tripadvisor.com/Hotel_Review-g60742-d80357-Reviews-The_Reynolds_Mansion-Asheville_North_Carolina.html"
+           class="ta-badge" target="_blank" rel="noopener">TripAdvisor ★ 4.9</a>
+        <a href="https://www.google.com/maps/search/The+Reynolds+Mansion+Asheville"
+           class="ta-badge" target="_blank" rel="noopener">Google Reviews</a>
+      </div>
+      <div class="footer-legal">
+        <a href="/policies/">Policies</a>
+        <a href="/getting-here/">Directions</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Static hero — no slideshow
+
+  // ── Mobile nav ──────────────────────────────────────────────
+  function openMobileNav() {
+    document.getElementById('mobileNav').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMobileNav() {
+    document.getElementById('mobileNav').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('mobileNav').addEventListener('click', function(e) {
+    if (e.target === this) closeMo
