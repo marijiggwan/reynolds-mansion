@@ -66,36 +66,49 @@ body {
   position: relative;
 }
 
-/* ── Scrollwork content frame ─────────────────────────────── */
-/* The .scrollwork-frame div wraps section content.           */
-/* scrollwork-border.jpg (black on white) is filtered to      */
-/* appear as gold-toned on dark, used as a decorative border. */
-.scrollwork-frame {
+/* ── Dark section content wrapper with inner scrollwork ───── */
+.dark-section-inner {
   position: relative;
-  margin: 0 auto;
   max-width: 1096px;
-  padding: 0 32px;
+  margin: 0 auto;
+  padding: 72px 80px;
+  border: 1px solid rgba(196,148,58,0.20);
+  overflow: hidden;
 }
-.scrollwork-frame::before {
+
+/* Four corner SVG scrollwork flourishes — inside the box */
+.dark-section-inner::before,
+.dark-section-inner::after {
   content: '';
   position: absolute;
-  inset: -8px -8px -8px -8px;
-  background-image: url('./scrollwork-border.jpg');
-  background-size: 100% 100%;
+  width: 180px;
+  height: 180px;
   background-repeat: no-repeat;
-  /* Invert white→black, then shift hue toward gold */
-  filter: invert(1) sepia(0.6) saturate(1.8) hue-rotate(5deg) brightness(0.65) opacity(0.55);
+  background-size: contain;
   pointer-events: none;
-  z-index: 0;
-  border-radius: 1px;
+  opacity: 0.32;
 }
-.scrollwork-frame-inner {
-  position: relative;
-  z-index: 1;
-  background: rgba(10, 7, 3, 0.92);
-  padding: 72px 64px;
-  border: 1px solid rgba(196,148,58,0.12);
+/* Top-left corner */
+.dark-section-inner::before {
+  top: 0; left: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Cg fill='none' stroke='%23C4943A' stroke-linecap='round' stroke-linejoin='round'%3E%3C!-- Main stem from corner --%3E%3Cpath d='M8 8 C8 8 20 10 35 25 C50 40 55 60 55 80' stroke-width='2.2' opacity='0.9'/%3E%3C!-- Large spiral upper --%3E%3Cpath d='M35 25 C45 15 62 14 68 22 C74 30 70 42 60 44 C52 46 44 38 48 30 C52 22 62 22 65 28' stroke-width='1.8' opacity='0.85'/%3E%3C!-- Leaf off upper spiral --%3E%3Cpath d='M60 20 C55 10 44 8 40 14 C36 20 40 28 48 26' stroke-width='1.4' opacity='0.75'/%3E%3C!-- Small tendril from upper stem --%3E%3Cpath d='M50 35 C58 28 66 30 66 38 C66 44 60 46 56 42' stroke-width='1.2' opacity='0.7'/%3E%3C!-- Secondary stem branches right --%3E%3Cpath d='M55 55 C68 50 80 52 84 62 C88 72 80 80 70 78 C62 76 58 66 64 60' stroke-width='1.8' opacity='0.85'/%3E%3C!-- Leaf off secondary --%3E%3Cpath d='M78 52 C86 44 96 46 94 56 C92 64 82 64 80 56' stroke-width='1.3' opacity='0.7'/%3E%3C!-- Lower stem continues down --%3E%3Cpath d='M55 80 C52 96 54 110 62 118' stroke-width='2' opacity='0.85'/%3E%3C!-- Lower spiral --%3E%3Cpath d='M62 118 C70 112 82 114 84 124 C86 132 78 138 70 134 C64 130 64 122 70 120 C76 118 82 122 80 128' stroke-width='1.6' opacity='0.8'/%3E%3C!-- Leaf lower left --%3E%3Cpath d='M55 95 C44 92 36 98 38 108 C40 116 52 116 54 106' stroke-width='1.3' opacity='0.7'/%3E%3C!-- Tiny curl detail --%3E%3Cpath d='M44 30 C38 24 32 26 32 34 C32 40 38 42 42 38' stroke-width='1.1' opacity='0.6'/%3E%3Cpath d='M25 50 C18 46 14 52 16 60 C18 66 26 66 26 58' stroke-width='1.1' opacity='0.6'/%3E%3C!-- Corner anchor line --%3E%3Cpath d='M8 8 L30 8' stroke-width='1' opacity='0.4'/%3E%3Cpath d='M8 8 L8 30' stroke-width='1' opacity='0.4'/%3E%3C/g%3E%3C/svg%3E");
 }
+/* Bottom-right corner — mirrored */
+.dark-section-inner::after {
+  bottom: 0; right: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Cg fill='none' stroke='%23C4943A' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M172 172 C172 172 160 170 145 155 C130 140 125 120 125 100' stroke-width='2.2' opacity='0.9'/%3E%3Cpath d='M145 155 C135 165 118 166 112 158 C106 150 110 138 120 136 C128 134 136 142 132 150 C128 158 118 158 115 152' stroke-width='1.8' opacity='0.85'/%3E%3Cpath d='M120 160 C125 170 136 172 140 166 C144 160 140 152 132 154' stroke-width='1.4' opacity='0.75'/%3E%3Cpath d='M130 145 C122 152 114 150 114 142 C114 136 120 134 124 138' stroke-width='1.2' opacity='0.7'/%3E%3Cpath d='M125 125 C112 130 100 128 96 118 C92 108 100 100 110 102 C118 104 122 114 116 120' stroke-width='1.8' opacity='0.85'/%3E%3Cpath d='M102 128 C94 136 84 134 86 124 C88 116 98 116 100 124' stroke-width='1.3' opacity='0.7'/%3E%3Cpath d='M125 100 C128 84 126 70 118 62' stroke-width='2' opacity='0.85'/%3E%3Cpath d='M118 62 C110 68 98 66 96 56 C94 48 102 42 110 46 C116 50 116 58 110 60 C104 62 98 58 100 52' stroke-width='1.6' opacity='0.8'/%3E%3Cpath d='M125 85 C136 88 144 82 142 72 C140 64 128 64 126 74' stroke-width='1.3' opacity='0.7'/%3E%3Cpath d='M136 150 C142 156 148 154 148 146 C148 140 142 138 138 142' stroke-width='1.1' opacity='0.6'/%3E%3Cpath d='M155 130 C162 134 166 128 164 120 C162 114 154 114 154 122' stroke-width='1.1' opacity='0.6'/%3E%3Cpath d='M172 172 L150 172' stroke-width='1' opacity='0.4'/%3E%3Cpath d='M172 172 L172 150' stroke-width='1' opacity='0.4'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Content sits above the corner decorations */
+.dark-section-inner > * { position: relative; z-index: 1; }
+
+@media (max-width: 768px) {
+  .dark-section-inner { padding: 48px 24px; }
+  .dark-section-inner::before,
+  .dark-section-inner::after { width: 110px; height: 110px; opacity: 0.25; }
+}
+
+
 
 /* ============================================================
    ORNAMENT UTILITIES
@@ -611,7 +624,7 @@ nav {
    BREAKFAST SECTION (DARK)
    ============================================================ */
 .breakfast-section {
-  padding: 60px 0;
+  padding: 48px 0;
   position: relative;
 }
 .breakfast-layout {
@@ -1155,8 +1168,7 @@ nav {
    REYNOLDS VILLAGE MENTION
    ============================================================ */
 .village-section {
-  padding: 60px 0;
-  background: transparent;
+  padding: 48px 0;
 }
 .village-title {
   font-family: var(--ff-display);
@@ -1221,7 +1233,7 @@ nav {
    FINAL CTA
    ============================================================ */
 .cta-section {
-  padding: 60px 0;
+  padding: 48px 0;
   text-align: center;
 }
 .cta-title {
@@ -1427,9 +1439,6 @@ footer {
   .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
 }
 @media (max-width: 768px) {
-  .scrollwork-frame { padding: 0 8px; }
-  .scrollwork-frame-inner { padding: 40px 20px; }
-
   :root { --nav-h: 64px; --topbar-h: 32px; }
   .topbar { padding: 0 16px; }
   .topbar-left .address-hide { display: none; }
@@ -1678,7 +1687,7 @@ input:focus-visible {
 <!-- BREAKFAST SECTION (DARK) -->
 <section class="breakfast-section filigree-bg" aria-labelledby="breakfast-heading">
   <div class="section-inner">
-    <div class="scrollwork-frame-inner">
+    <div class="dark-section-inner">
     <div class="breakfast-layout">
       <div class="breakfast-content">
         <span class="section-label section-label-dark">The Breakfast Experience</span>
@@ -1933,7 +1942,7 @@ input:focus-visible {
 
 <!-- REYNOLDS VILLAGE -->
 <section class="village-section filigree-bg" aria-label="Reynolds Village neighborhood">
-  <div class="scrollwork-frame"><div class="scrollwork-frame-inner" style="text-align:center;">
+  <div class="dark-section-inner" style="text-align:center;">
     <span class="section-label section-label-dark">Reynolds Village</span>
     <div class="ornament-rule ornament-rule-dark"><div class="ornament-diamond"></div></div>
     <h2 class="village-title">Private setting. <em>Walkable neighborhood.</em></h2>
@@ -1949,12 +1958,12 @@ input:focus-visible {
       <div class="village-amenity">Boutique Shops</div>
     </div>
     <a href="/reynolds-village/" class="btn-ghost-gold">Explore the Neighborhood</a>
-    </div></div><!-- /.scrollwork-frame -->
+    </div>
 </section>
 
 <!-- FINAL CTA -->
 <section class="cta-section filigree-bg" aria-label="Book your stay">
-  <div class="scrollwork-frame"><div class="scrollwork-frame-inner" style="text-align:center;">
+  <div class="dark-section-inner" style="text-align:center;">
     <span class="section-label section-label-dark">Your Mountain Retreat Awaits</span>
     <div class="ornament-rule ornament-rule-dark"><div class="ornament-diamond"></div></div>
     <h2 class="cta-title">Book direct for the<br><em>best rates.</em></h2>
@@ -1962,7 +1971,7 @@ input:focus-visible {
     <a href="https://secure.thinkreservations.com/thereynoldsmansion/reservations/availability/"
        class="btn-primary" target="_blank" rel="noopener">Check Availability</a>
     <p class="cta-sub">Or call us directly: <a href="tel:8282581111">(828) 258-1111</a></p>
-    </div></div><!-- /.scrollwork-frame -->
+    </div>
 </section>
 
 <!-- FOOTER -->
