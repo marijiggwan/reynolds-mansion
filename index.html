@@ -63,29 +63,39 @@ body {
    ============================================================ */
 .filigree-bg {
   background-color: var(--dark);
-  background-image: none;
   position: relative;
 }
 
-/* ── Ornamental border bands (top + bottom) on dark sections ── */
-/* Mimics the gold botanical scrollwork on Paul's menu card      */
-.filigree-bg::before {
+/* ── Scrollwork content frame ─────────────────────────────── */
+/* The .scrollwork-frame div wraps section content.           */
+/* scrollwork-border.jpg (black on white) is filtered to      */
+/* appear as gold-toned on dark, used as a decorative border. */
+.scrollwork-frame {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1096px;
+  padding: 0 32px;
+}
+.scrollwork-frame::before {
   content: '';
   position: absolute;
-  left: 0;
-  right: 0;
-  height: 48px;
-  z-index: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='48' viewBox='0 0 240 48'%3E%3Cg fill='none' stroke='%23C4943A' stroke-linecap='round' stroke-linejoin='round'%3E%3C!-- Horizontal rule lines --%3E%3Cline x1='0' y1='6' x2='240' y2='6' stroke-width='0.5' opacity='0.35'/%3E%3Cline x1='0' y1='42' x2='240' y2='42' stroke-width='0.5' opacity='0.35'/%3E%3C!-- === REPEATING SCROLL UNIT (every 120px, mirrored) === --%3E%3C!-- Left scroll unit (0-120) --%3E%3C!-- Main stem --%3E%3Cpath d='M0 24 C20 24 30 24 40 24' stroke-width='0.8' opacity='0.5'/%3E%3C!-- Large curl left --%3E%3Cpath d='M20 24 C20 14 28 8 36 12 C44 16 44 24 36 26 C30 28 26 24 28 20' stroke-width='0.9' opacity='0.55'/%3E%3C!-- Small leaf top --%3E%3Cpath d='M28 20 C24 12 18 10 16 14 C14 18 18 22 22 20' stroke-width='0.7' opacity='0.45'/%3E%3C!-- Tendril top right --%3E%3Cpath d='M40 24 C50 24 54 16 50 12 C46 8 40 12 42 18' stroke-width='0.8' opacity='0.5'/%3E%3C!-- Small leaf off tendril --%3E%3Cpath d='M46 14 C48 8 54 8 54 14 C54 18 50 20 48 18' stroke-width='0.65' opacity='0.4'/%3E%3C!-- Tendril lower --%3E%3Cpath d='M40 24 C50 24 54 32 50 36 C46 40 40 36 42 30' stroke-width='0.8' opacity='0.5'/%3E%3C!-- Leaf lower --%3E%3Cpath d='M46 34 C48 40 54 40 54 34 C54 30 50 28 48 30' stroke-width='0.65' opacity='0.4'/%3E%3C!-- Large curl lower --%3E%3Cpath d='M20 24 C20 34 28 40 36 36 C44 32 44 24 36 22 C30 20 26 24 28 28' stroke-width='0.9' opacity='0.55'/%3E%3C!-- Small leaf lower --%3E%3Cpath d='M28 28 C24 36 18 38 16 34 C14 30 18 26 22 28' stroke-width='0.7' opacity='0.45'/%3E%3C!-- Center diamond ornament --%3E%3Cpath d='M116 20 L120 16 L124 20 L120 24 Z' stroke-width='0.7' opacity='0.55' fill='%23C4943A' fill-opacity='0.25'/%3E%3Ccircle cx='120' cy='20' r='1.2' fill='%23C4943A' opacity='0.5' stroke-width='0'/%3E%3Cline x1='96' y1='24' x2='112' y2='24' stroke-width='0.5' opacity='0.3'/%3E%3Cline x1='128' y1='24' x2='144' y2='24' stroke-width='0.5' opacity='0.3'/%3E%3C!-- Right scroll unit (120-240, mirror of left) --%3E%3C!-- Main stem --%3E%3Cpath d='M240 24 C220 24 210 24 200 24' stroke-width='0.8' opacity='0.5'/%3E%3C!-- Large curl right --%3E%3Cpath d='M220 24 C220 14 212 8 204 12 C196 16 196 24 204 26 C210 28 214 24 212 20' stroke-width='0.9' opacity='0.55'/%3E%3C!-- Small leaf top --%3E%3Cpath d='M212 20 C216 12 222 10 224 14 C226 18 222 22 218 20' stroke-width='0.7' opacity='0.45'/%3E%3C!-- Tendril top left --%3E%3Cpath d='M200 24 C190 24 186 16 190 12 C194 8 200 12 198 18' stroke-width='0.8' opacity='0.5'/%3E%3C!-- Small leaf off tendril --%3E%3Cpath d='M194 14 C192 8 186 8 186 14 C186 18 190 20 192 18' stroke-width='0.65' opacity='0.4'/%3E%3C!-- Tendril lower --%3E%3Cpath d='M200 24 C190 24 186 32 190 36 C194 40 200 36 198 30' stroke-width='0.8' opacity='0.5'/%3E%3C!-- Leaf lower --%3E%3Cpath d='M194 34 C192 40 186 40 186 34 C186 30 190 28 192 30' stroke-width='0.65' opacity='0.4'/%3E%3C!-- Large curl lower --%3E%3Cpath d='M220 24 C220 34 212 40 204 36 C196 32 196 24 204 22 C210 20 214 24 212 28' stroke-width='0.9' opacity='0.55'/%3E%3C!-- Small leaf lower --%3E%3Cpath d='M212 28 C216 36 222 38 224 34 C226 30 222 26 218 28' stroke-width='0.7' opacity='0.45'/%3E%3C!-- Corner leaf accents far left --%3E%3Cpath d='M0 18 C4 10 10 10 10 18 C10 24 6 26 4 24' stroke-width='0.6' opacity='0.4'/%3E%3Cpath d='M0 30 C4 38 10 38 10 30 C10 24 6 22 4 24' stroke-width='0.6' opacity='0.4'/%3E%3C!-- Corner leaf accents far right --%3E%3Cpath d='M240 18 C236 10 230 10 230 18 C230 24 234 26 236 24' stroke-width='0.6' opacity='0.4'/%3E%3Cpath d='M240 30 C236 38 230 38 230 30 C230 24 234 22 236 24' stroke-width='0.6' opacity='0.4'/%3E%3C!-- Mid-point smaller accent scrolls --%3E%3Cpath d='M66 24 C70 18 76 18 76 24 C76 30 70 30 68 26' stroke-width='0.6' opacity='0.35'/%3E%3Cpath d='M174 24 C170 18 164 18 164 24 C164 30 170 30 172 26' stroke-width='0.6' opacity='0.35'/%3E%3C!-- Dot accents along stem --%3E%3Ccircle cx='60' cy='24' r='1' fill='%23C4943A' opacity='0.3' stroke-width='0'/%3E%3Ccircle cx='80' cy='24' r='1' fill='%23C4943A' opacity='0.3' stroke-width='0'/%3E%3Ccircle cx='160' cy='24' r='1' fill='%23C4943A' opacity='0.3' stroke-width='0'/%3E%3Ccircle cx='180' cy='24' r='1' fill='%23C4943A' opacity='0.3' stroke-width='0'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: 240px 48px;
-  background-repeat: repeat-x;
+  inset: -8px -8px -8px -8px;
+  background-image: url('./scrollwork-border.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  /* Invert white→black, then shift hue toward gold */
+  filter: invert(1) sepia(0.6) saturate(1.8) hue-rotate(5deg) brightness(0.65) opacity(0.55);
   pointer-events: none;
+  z-index: 0;
+  border-radius: 1px;
 }
-.filigree-bg::before { top: 0; }
-/* bottom band removed per design direction */
-
-/* Ensure content inside dark sections sits above the border pseudo-elements */
-.filigree-bg > * { position: relative; z-index: 1; }
+.scrollwork-frame-inner {
+  position: relative;
+  z-index: 1;
+  background: rgba(10, 7, 3, 0.92);
+  padding: 72px 64px;
+  border: 1px solid rgba(196,148,58,0.12);
+}
 
 /* ============================================================
    ORNAMENT UTILITIES
@@ -485,37 +495,42 @@ nav {
    PROMO BANNER
    ============================================================ */
 .promo-banner {
-  background: var(--crimson);
-  padding: 14px 24px;
+  background: var(--ivory);
+  padding: 20px 24px;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
+  gap: 0;
+  border-bottom: 1px solid var(--gold-line);
 }
-.promo-banner p {
-  font-family: var(--ff-body);
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.10em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.9);
-}
-.promo-banner strong { color: #fff; font-weight: 700; }
+.promo-banner p { display: none; }
 .promo-banner-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-family: var(--ff-body);
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--gold-soft);
-  border-bottom: 1px solid rgba(212,168,74,0.5);
-  padding-bottom: 1px;
-  transition: color 0.2s;
+  color: var(--crimson);
+  border: 1px solid rgba(123,21,21,0.35);
+  padding: 11px 28px;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
   white-space: nowrap;
 }
-.promo-banner-link:hover { color: #fff; }
+.promo-banner-link::before {
+  content: '✦';
+  font-size: 8px;
+  color: var(--gold);
+}
+.promo-banner-link:hover {
+  background: var(--crimson);
+  color: #fff;
+  border-color: var(--crimson);
+}
+.promo-banner-link:hover::before { color: rgba(255,255,255,0.7); }
 
 /* ============================================================
    SECTION SHARED
@@ -596,7 +611,7 @@ nav {
    BREAKFAST SECTION (DARK)
    ============================================================ */
 .breakfast-section {
-  padding: 100px 0;
+  padding: 60px 0;
   position: relative;
 }
 .breakfast-layout {
@@ -1140,9 +1155,8 @@ nav {
    REYNOLDS VILLAGE MENTION
    ============================================================ */
 .village-section {
-  padding: 70px 0;
-  background: var(--charcoal);
-  text-align: center;
+  padding: 60px 0;
+  background: transparent;
 }
 .village-title {
   font-family: var(--ff-display);
@@ -1207,7 +1221,7 @@ nav {
    FINAL CTA
    ============================================================ */
 .cta-section {
-  padding: 100px 0;
+  padding: 60px 0;
   text-align: center;
 }
 .cta-title {
@@ -1413,6 +1427,9 @@ footer {
   .footer-top { grid-template-columns: 1fr 1fr; gap: 36px; }
 }
 @media (max-width: 768px) {
+  .scrollwork-frame { padding: 0 8px; }
+  .scrollwork-frame-inner { padding: 40px 20px; }
+
   :root { --nav-h: 64px; --topbar-h: 32px; }
   .topbar { padding: 0 16px; }
   .topbar-left .address-hide { display: none; }
@@ -1623,8 +1640,7 @@ input:focus-visible {
 
 <!-- PROMO BANNER (swappable slot) -->
 <div class="promo-banner">
-  <p><strong>Spring Availability Now Open</strong> — Book 3 nights and enjoy exclusive midweek savings.</p>
-  <a href="/offers/" class="promo-banner-link">View Packages →</a>
+  <a href="/offers/" class="promo-banner-link">Spring Availability Now Open — View Packages</a>
 </div>
 
 <!-- INTRO / PILLARS -->
@@ -1662,6 +1678,7 @@ input:focus-visible {
 <!-- BREAKFAST SECTION (DARK) -->
 <section class="breakfast-section filigree-bg" aria-labelledby="breakfast-heading">
   <div class="section-inner">
+    <div class="scrollwork-frame-inner">
     <div class="breakfast-layout">
       <div class="breakfast-content">
         <span class="section-label section-label-dark">The Breakfast Experience</span>
@@ -1916,7 +1933,7 @@ input:focus-visible {
 
 <!-- REYNOLDS VILLAGE -->
 <section class="village-section filigree-bg" aria-label="Reynolds Village neighborhood">
-  <div class="section-inner" style="text-align:center;">
+  <div class="scrollwork-frame"><div class="scrollwork-frame-inner" style="text-align:center;">
     <span class="section-label section-label-dark">Reynolds Village</span>
     <div class="ornament-rule ornament-rule-dark"><div class="ornament-diamond"></div></div>
     <h2 class="village-title">Private setting. <em>Walkable neighborhood.</em></h2>
@@ -1932,12 +1949,12 @@ input:focus-visible {
       <div class="village-amenity">Boutique Shops</div>
     </div>
     <a href="/reynolds-village/" class="btn-ghost-gold">Explore the Neighborhood</a>
-  </div>
+    </div></div><!-- /.scrollwork-frame -->
 </section>
 
 <!-- FINAL CTA -->
 <section class="cta-section filigree-bg" aria-label="Book your stay">
-  <div class="section-inner" style="text-align:center;">
+  <div class="scrollwork-frame"><div class="scrollwork-frame-inner" style="text-align:center;">
     <span class="section-label section-label-dark">Your Mountain Retreat Awaits</span>
     <div class="ornament-rule ornament-rule-dark"><div class="ornament-diamond"></div></div>
     <h2 class="cta-title">Book direct for the<br><em>best rates.</em></h2>
@@ -1945,7 +1962,7 @@ input:focus-visible {
     <a href="https://secure.thinkreservations.com/thereynoldsmansion/reservations/availability/"
        class="btn-primary" target="_blank" rel="noopener">Check Availability</a>
     <p class="cta-sub">Or call us directly: <a href="tel:8282581111">(828) 258-1111</a></p>
-  </div>
+    </div></div><!-- /.scrollwork-frame -->
 </section>
 
 <!-- FOOTER -->
