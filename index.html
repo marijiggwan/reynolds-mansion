@@ -67,7 +67,7 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
-  padding: 48px 24px;
+  padding: 32px 24px;
 }
 
 /* ── Dark section content wrapper with inner scrollwork ───── */
@@ -75,7 +75,7 @@ body {
   position: relative;
   max-width: 1096px;
   margin: 0 auto;
-  padding: 72px 80px;
+  padding: 48px 60px;
   background: var(--dark);
   border: 1px solid rgba(196,148,58,0.22);
   overflow: hidden;
@@ -86,9 +86,9 @@ body {
   position: absolute;
   top: 12px;
   left: 16px;
-  width: 100px;
+  width: 50px;
   height: auto;
-  opacity: 0.55;
+  opacity: 0.30;
   mix-blend-mode: screen;
   pointer-events: none;
   z-index: 2;
@@ -97,7 +97,7 @@ body {
 .dark-section-inner > * { position: relative; z-index: 1; }
 
 @media (max-width: 768px) {
-  .dark-section-inner { padding: 48px 24px; }
+  .dark-section-inner { padding: 32px 20px; }
 
 }
 
@@ -287,11 +287,13 @@ nav {
   gap: 4px;
 }
 .btn-reserve .r-logo {
-  height: 30px;
+  height: 22px;
   width: auto;
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
   mix-blend-mode: screen;
-  opacity: 0.95;
+  opacity: 0.85;
+  margin-right: 2px;
 }
 .btn-reserve:hover { background: var(--crimson-hover) !important; color: #fff !important; }
 
@@ -363,6 +365,7 @@ nav {
   color: #fff;
   text-align: center;
   padding: 16px;
+  border-radius: 4px;
   font-family: var(--ff-body);
   font-size: 13px;
   font-weight: 600;
@@ -584,7 +587,7 @@ nav {
   max-width: 680px;
   margin: 0 auto 22px;
 }
-.intro-headline em { font-style: italic; color: var(--crimson); }
+.intro-headline em { font-style: italic; color: var(--text-dark); }
 .intro-body {
   font-family: var(--ff-body);
   font-size: 15px;
@@ -633,7 +636,7 @@ nav {
    BREAKFAST SECTION (DARK)
    ============================================================ */
 .breakfast-section {
-  padding: 48px 0;
+  padding: 0;
   position: relative;
 }
 .breakfast-layout {
@@ -715,6 +718,7 @@ nav {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   padding: 12px 26px;
+  border-radius: 4px;
   transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 .btn-primary-outline:hover {
@@ -978,13 +982,13 @@ nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
-  border: 1px solid var(--gold-line);
+  border: 3px solid var(--gold-line);
   margin: 28px 0;
 }
 .history-stat {
   padding: 20px 16px;
   text-align: center;
-  border-right: 1px solid var(--gold-line);
+  border-right: 3px solid var(--gold-line);
 }
 .history-stat:last-child { border-right: none; }
 .history-stat-num {
@@ -1190,7 +1194,7 @@ nav {
    REYNOLDS VILLAGE MENTION
    ============================================================ */
 .village-section {
-  padding: 48px 0;
+  padding: 0;
 }
 .village-title {
   font-family: var(--ff-display);
@@ -1243,6 +1247,7 @@ nav {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   padding: 12px 26px;
+  border-radius: 4px;
   transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 .btn-ghost-gold:hover {
@@ -1255,7 +1260,7 @@ nav {
    FINAL CTA
    ============================================================ */
 .cta-section {
-  padding: 48px 0;
+  padding: 0;
   text-align: center;
 }
 .cta-title {
@@ -1386,6 +1391,7 @@ footer {
   font-family: var(--ff-body);
   font-size: 12px;
   padding: 10px 14px;
+  border-radius: 4px;
   outline: none;
   transition: border-color 0.2s;
   min-width: 0;
@@ -1403,6 +1409,7 @@ footer {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   padding: 10px 14px;
+  border-radius: 4px;
   transition: background 0.2s;
   white-space: nowrap;
 }
@@ -1436,6 +1443,9 @@ footer {
   gap: 16px;
 }
 .ta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-family: var(--ff-body);
   font-size: 10px;
   font-weight: 700;
@@ -1444,8 +1454,10 @@ footer {
   color: rgba(255,255,255,0.35);
   border: 1px solid rgba(255,255,255,0.12);
   padding: 5px 10px;
-  transition: color 0.2s;
+  border-radius: 4px;
+  transition: color 0.2s, border-color 0.2s;
 }
+.ta-badge svg { flex-shrink: 0; }
 .ta-badge:hover { color: var(--gold); border-color: rgba(196,148,58,0.3); }
 
 /* ============================================================
@@ -1594,7 +1606,7 @@ input:focus-visible {
       <li><a href="/contact/">Contact</a></li>
       <li>
         <a href="https://secure.thinkreservations.com/thereynoldsmansion/reservations/availability/"
-           class="btn-reserve" target="_blank" rel="noopener"><img src="./reynolds-r-logo.png" class="r-logo" alt="">eserve Now</a>
+           class="btn-reserve" target="_blank" rel="noopener"><img src="./reynolds-r-logo.png" class="r-logo" alt="">Reserve Now</a>
       </li>
     </ul>
 
@@ -2019,9 +2031,13 @@ input:focus-visible {
         </p>
         <div class="footer-social">
           <a href="https://www.facebook.com/pages/Reynolds-Mansion-Bed-and-Breakfast-Inn/111523802270435"
-             target="_blank" rel="noopener" aria-label="Facebook">fb</a>
+             target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
           <a href="https://www.instagram.com/thereynoldsmansion/"
-             target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+             target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
         </div>
       </div>
 
@@ -2068,9 +2084,28 @@ input:focus-visible {
       <p class="footer-copyright">© 2026 The Reynolds Mansion Bed &amp; Breakfast Inn. All rights reserved.</p>
       <div class="footer-badges">
         <a href="https://www.tripadvisor.com/Hotel_Review-g60742-d80357-Reviews-The_Reynolds_Mansion-Asheville_North_Carolina.html"
-           class="ta-badge" target="_blank" rel="noopener">TripAdvisor ★ 4.9</a>
+           class="ta-badge" target="_blank" rel="noopener" aria-label="Read our TripAdvisor reviews">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="7.5" cy="14" r="3" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="7.5" cy="14" r="1" fill="currentColor"/>
+            <circle cx="16.5" cy="14" r="3" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="16.5" cy="14" r="1" fill="currentColor"/>
+            <path d="M4.5 14c0-4 3.5-7 7.5-7s7.5 3 7.5 7" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <path d="M12 7L12 4" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M10 4h4" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          <span>TripAdvisor</span>
+        </a>
         <a href="https://www.google.com/maps/search/The+Reynolds+Mansion+Asheville"
-           class="ta-badge" target="_blank" rel="noopener">Google Reviews</a>
+           class="ta-badge" target="_blank" rel="noopener" aria-label="Read our Google reviews">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" opacity=".6"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" opacity=".7"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" opacity=".5"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" opacity=".8"/>
+          </svg>
+          <span>Google</span>
+        </a>
       </div>
       <div class="footer-legal">
         <a href="/policies/">Policies</a>
@@ -2093,9 +2128,6 @@ input:focus-visible {
   function closeMobileNav() {
     document.getElementById('mobileNav').classList.remove('open');
     document.body.style.overflow = '';
-  }
-  document.getElementById('mobileNav').addEventListener('click', function(e) {
-    MobileNav();
   }
   document.getElementById('mobileNav').addEventListener('click', function(e) {
     if (e.target === this) closeMobileNav();
