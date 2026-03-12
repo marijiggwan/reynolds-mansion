@@ -62,8 +62,12 @@ body {
    FILIGREE TEXTURE (dark sections)
    ============================================================ */
 .filigree-bg {
-  background-color: var(--dark);
+  background-color: var(--cream);
+  background-image: url('./bg-filigree.png');
+  background-size: cover;
+  background-position: center;
   position: relative;
+  padding: 48px 24px;
 }
 
 /* ── Dark section content wrapper with inner scrollwork ───── */
@@ -72,21 +76,22 @@ body {
   max-width: 1096px;
   margin: 0 auto;
   padding: 72px 80px;
-  border: 1px solid rgba(196,148,58,0.20);
+  background: var(--dark);
+  border: 1px solid rgba(196,148,58,0.22);
   overflow: hidden;
 }
 
 /* R logo watermark — positioned in dark-section-inner */
 .dark-section-inner-r {
   position: absolute;
-  top: -8px;
-  left: -8px;
-  width: 120px;
+  top: 12px;
+  left: 16px;
+  width: 100px;
   height: auto;
-  opacity: 0.18;
+  opacity: 0.55;
   mix-blend-mode: screen;
   pointer-events: none;
-  z-index: 0;
+  z-index: 2;
 }
 /* Content sits above the corner decorations */
 .dark-section-inner > * { position: relative; z-index: 1; }
@@ -142,7 +147,8 @@ body {
    TOPBAR
    ============================================================ */
 .topbar {
-  background: var(--charcoal);
+  background-color: var(--ivory);
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cpath d='M50 8 L92 50 L50 92 L8 50 Z' stroke='%23C4943A' stroke-width='0.6' opacity='0.12'/%3E%3Cpath d='M50 22 L78 50 L50 78 L22 50 Z' stroke='%23C4943A' stroke-width='0.4' opacity='0.08'/%3E%3Ccircle cx='50' cy='8' r='1.5' fill='%23C4943A' opacity='0.14'/%3E%3Ccircle cx='50' cy='92' r='1.5' fill='%23C4943A' opacity='0.14'/%3E%3Ccircle cx='8' cy='50' r='1.5' fill='%23C4943A' opacity='0.14'/%3E%3Ccircle cx='92' cy='50' r='1.5' fill='%23C4943A' opacity='0.14'/%3E%3Ccircle cx='50' cy='50' r='2.5' fill='none' stroke='%23C4943A' stroke-width='0.5' opacity='0.1'/%3E%3C/g%3E%3C/svg%3E");
   min-height: var(--topbar-h);
   display: flex;
   align-items: center;
@@ -150,25 +156,27 @@ body {
   padding: 6px 32px;
   font-family: var(--ff-body);
   font-size: 11px;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.06em;
-  color: var(--text-cream-dim);
+  color: var(--text-dark);
   flex-wrap: wrap;
   gap: 6px;
+  /* No bottom border — merges with nav below */
 }
-.topbar a { color: var(--text-cream-dim); transition: color 0.2s; }
-.topbar a:hover { color: var(--gold); }
+.topbar a { color: var(--text-dark); transition: color 0.2s; }
+.topbar a:hover { color: var(--crimson); }
 .topbar-left { display: flex; align-items: center; gap: 20px; }
 .topbar-right { display: flex; align-items: center; gap: 16px; }
 .topbar-social a {
   width: 26px; height: 26px;
   display: inline-flex; align-items: center; justify-content: center;
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid rgba(14,11,5,0.20);
   border-radius: 50%;
-  font-size: 11px;
+  font-size: 13px;
+  color: var(--text-dark);
   transition: border-color 0.2s, color 0.2s;
 }
-.topbar-social a:hover { border-color: var(--gold); color: var(--gold); }
+.topbar-social a:hover { border-color: var(--crimson); color: var(--crimson); }
 .topbar-divider { width: 1px; height: 14px; background: rgba(14,11,5,0.15); }
 
 /* ============================================================
@@ -178,8 +186,9 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--ivory);
-  border-bottom: 1px solid var(--gold-line);
+  background-color: var(--ivory);
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cpath d='M50 8 L92 50 L50 92 L8 50 Z' stroke='%23C4943A' stroke-width='0.6' opacity='0.12'/%3E%3Cpath d='M50 22 L78 50 L50 78 L22 50 Z' stroke='%23C4943A' stroke-width='0.4' opacity='0.08'/%3E%3Ccircle cx='50' cy='8' r='1.5' fill='%23C4943A' opacity='0.14'/%3E%3Ccircle cx='50' cy='92' r='1.5' fill='%23C4943A' opacity='0.14'/%3E%3Ccircle cx='8' cy='50' r='1.5' fill='%23C4943A' opacity='0.14'/%3E%3Ccircle cx='92' cy='50' r='1.5' fill='%23C4943A' opacity='0.14'/%3E%3Ccircle cx='50' cy='50' r='2.5' fill='none' stroke='%23C4943A' stroke-width='0.5' opacity='0.1'/%3E%3C/g%3E%3C/svg%3E");
+  border-bottom: 1px solid rgba(196,148,58,0.25);
   box-shadow: 0 2px 20px rgba(0,0,0,0.06);
 }
 nav {
@@ -267,12 +276,22 @@ nav {
 .btn-reserve {
   background: var(--crimson);
   color: #fff !important;
-  padding: 11px 22px !important;
+  padding: 9px 18px 9px 8px !important;
   font-size: 11px !important;
   letter-spacing: 0.14em !important;
   border-radius: 4px;
   transition: background 0.2s !important;
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.btn-reserve .r-logo {
+  height: 30px;
+  width: auto;
+  display: block;
+  mix-blend-mode: screen;
+  opacity: 0.95;
 }
 .btn-reserve:hover { background: var(--crimson-hover) !important; color: #fff !important; }
 
@@ -516,8 +535,10 @@ nav {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--crimson);
-  border: 1px solid rgba(123,21,21,0.35);
+  background: var(--ivory);
+  border: 1px solid rgba(123,21,21,0.40);
   padding: 11px 28px;
+  border-radius: 4px;
   transition: background 0.2s, color 0.2s, border-color 0.2s;
   white-space: nowrap;
 }
@@ -528,7 +549,7 @@ nav {
 }
 .promo-banner-link:hover {
   background: var(--crimson);
-  color: #fff;
+  color: #fff !important;
   border-color: var(--crimson);
 }
 .promo-banner-link:hover::before { color: rgba(255,255,255,0.7); }
@@ -910,11 +931,8 @@ nav {
    HISTORY SECTION
    ============================================================ */
 .history-section {
-  background-image: url('./wallpaper-blue-damask.png');
-  background-size: cover;
-  background-position: center;
+  background: var(--cream) url('./bg-filigree.png') center/cover;
   padding: 90px 0;
-  background: var(--cream-alt);
 }
 .history-layout {
   display: grid;
@@ -1002,7 +1020,23 @@ nav {
 /* ============================================================
    LOCATION SECTION
    ============================================================ */
-.location-cta-row { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 32px; }
+.location-cta-row { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 32px; justify-content: center; }
+.btn-explore-village {
+  display: inline-block;
+  background: var(--ivory);
+  color: var(--text-dark);
+  font-family: var(--ff-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border: 1px solid rgba(196,148,58,0.40);
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+}
+.btn-explore-village:hover { background: var(--gold); color: #fff; border-color: var(--gold); }
 .location-section {
   position: relative;
   padding: 120px 0;
@@ -1048,16 +1082,17 @@ nav {
   gap: 40px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 12px;
+  margin: 24px auto;
+  max-width: 700px;
 }
 .location-callout {
   font-family: var(--ff-display);
-  font-style: italic;
+  font-style: normal;
   font-size: 1.05rem;
   display: flex;
   align-items: center;
   gap: 10px;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255,255,255,0.88);
   letter-spacing: 0.01em;
 }
 .location-callout-dot {
@@ -1508,8 +1543,12 @@ input:focus-visible {
   </div>
   <div class="topbar-right">
     <div class="topbar-social">
-      <a href="https://www.facebook.com/pages/Reynolds-Mansion-Bed-and-Breakfast-Inn/111523802270435" target="_blank" rel="noopener" aria-label="Facebook">fb</a>
-      <a href="https://www.instagram.com/thereynoldsmansion/" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+      <a href="https://www.facebook.com/pages/Reynolds-Mansion-Bed-and-Breakfast-Inn/111523802270435" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/thereynoldsmansion/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
     </div>
   </div>
 </div>
@@ -1555,7 +1594,7 @@ input:focus-visible {
       <li><a href="/contact/">Contact</a></li>
       <li>
         <a href="https://secure.thinkreservations.com/thereynoldsmansion/reservations/availability/"
-           class="btn-reserve" target="_blank" rel="noopener">Reserve Now</a>
+           class="btn-reserve" target="_blank" rel="noopener"><img src="./reynolds-r-logo.png" class="r-logo" alt="">eserve Now</a>
       </li>
     </ul>
 
@@ -1886,7 +1925,7 @@ input:focus-visible {
     <div class="location-cta-row">
       <a href="https://secure.thinkreservations.com/thereynoldsmansion/reservations/availability/"
          class="btn-primary" target="_blank" rel="noopener">Check Availability</a>
-      <a href="/reynolds-village/" class="btn-ghost">Explore Reynolds Village</a>
+      <a href="/reynolds-village/" class="btn-explore-village">Explore Reynolds Village</a>
     </div>
   </div>
 </section>
