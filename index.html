@@ -7,7 +7,7 @@
 <meta name="description" content="The Reynolds Mansion is a top-rated Asheville bed and breakfast with Blue Ridge Mountain views, four-course gourmet breakfast by a classically trained chef, and romantic historic guest rooms. Book direct for best rates.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Libre+Franklin:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Libre+Franklin:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 
 /* ============================================================
@@ -67,7 +67,7 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
-  padding: 32px 24px;
+  padding: 56px 24px;
 }
 
 /* ── Dark section content wrapper with inner scrollwork ───── */
@@ -75,7 +75,7 @@ body {
   position: relative;
   max-width: 1096px;
   margin: 0 auto;
-  padding: 48px 60px;
+  padding: 28px 60px 48px;
   background: var(--dark);
   border: 1px solid rgba(196,148,58,0.22);
   overflow: hidden;
@@ -247,13 +247,13 @@ nav {
   padding: 9px 18px 9px 8px !important;
   font-size: 11px !important;
   letter-spacing: 0.14em !important;
-  border-radius: 6px;
+  border-radius: 10px;
   transition: background 0.2s !important;
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  font-family: var(--ff-display);
+  font-family: 'EB Garamond', Georgia, serif;
 }
 .btn-reserve .r-logo {
   height: 22px;
@@ -334,7 +334,7 @@ nav {
   color: #fff;
   text-align: center;
   padding: 16px;
-  border-radius: 4px;
+  border-radius: 10px;
   font-family: var(--ff-body);
   font-size: 13px;
   font-weight: 600;
@@ -347,7 +347,7 @@ nav {
    ============================================================ */
 .hero {
   position: relative;
-  height: calc(100svh - var(--nav-h) - var(--topbar-h));
+  height: calc(100svh - var(--nav-h) - 36px);
   min-height: 560px;
   max-height: 900px;
   overflow: hidden;
@@ -371,8 +371,8 @@ nav {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(10,7,3,0.25) 0%,
-    rgba(10,7,3,0.35) 40%,
+    rgba(10,7,3,0.38) 0%,
+    rgba(10,7,3,0.42) 40%,
     rgba(10,7,3,0.65) 100%
   );
   z-index: 1;
@@ -435,7 +435,7 @@ nav {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   padding: 15px 34px;
-  border-radius: 6px;
+  border-radius: 10px;
   transition: background 0.2s, transform 0.15s;
   display: inline-block;
 }
@@ -687,7 +687,7 @@ nav {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   padding: 12px 26px;
-  border-radius: 6px;
+  border-radius: 10px;
   transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 .btn-primary-outline:hover {
@@ -881,7 +881,7 @@ nav {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   padding: 13px 28px;
-  border-radius: 6px;
+  border-radius: 10px;
   transition: background 0.2s;
 }
 .btn-secondary:hover { background: var(--crimson-hover); }
@@ -895,7 +895,7 @@ nav {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   padding: 13px 28px;
-  border-radius: 6px;
+  border-radius: 10px;
   transition: background 0.2s, color 0.2s;
 }
 .btn-secondary-outline:hover { background: var(--crimson); color: #fff; }
@@ -1005,7 +1005,7 @@ nav {
   text-transform: uppercase;
   padding: 14px 28px;
   border: 1px solid rgba(196,148,58,0.40);
-  border-radius: 6px;
+  border-radius: 10px;
   transition: background 0.2s, color 0.2s;
   text-decoration: none;
 }
@@ -1216,7 +1216,7 @@ nav {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   padding: 12px 26px;
-  border-radius: 6px;
+  border-radius: 10px;
   transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 .btn-ghost-gold:hover {
@@ -1604,6 +1604,48 @@ input:focus-visible {
 }
 .footer-expedia-badge:hover { opacity: 1; }
 
+/* ─── FILIGREE SPACER between Reynolds Village + CTA ───── */
+.filigree-spacer {
+  background-color: var(--cream);
+  background-image: url('./bg-filigree.png');
+  background-size: cover;
+  background-position: center;
+  height: 60px;
+}
+
+/* ─── LOCATION CALLOUT diamond dot ──────────────────────── */
+.lc-dot {
+  display: inline-block;
+  width: 6px; height: 6px;
+  background: var(--crimson);
+  transform: rotate(45deg);
+  margin-right: 8px;
+  flex-shrink: 0;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+.location-callouts--inline {
+  justify-content: center;
+  text-align: center;
+}
+
+/* ─── EB GARAMOND on .btn-reserve (nav button) ──────────── */
+.btn-reserve {
+  font-family: 'EB Garamond', Georgia, serif !important;
+  font-size: 15px !important;
+  letter-spacing: 0.06em !important;
+}
+.mobile-btn-reserve {
+  font-family: 'EB Garamond', Georgia, serif !important;
+}
+
+/* ─── Reduce excess black padding at top of village/CTA ── */
+.village-section .dark-section-inner,
+.cta-section .dark-section-inner {
+  padding-top: 32px;
+}
+
 </style>
 </head>
 
@@ -1724,7 +1766,7 @@ input:focus-visible {
 <!-- HERO -->
 <section id="main-content" class="hero" aria-label="The Reynolds Mansion — Asheville Bed and Breakfast">
   <div class="hero-slides">
-    <div class="hero-slide active" style="background-image:url('./the-reynolds-mansion.jpg'); background-position: center 35%;"></div>
+    <div class="hero-slide active" style="background-image:url('./the-reynolds-mansion.jpg'); background-position: center 55%;"></div>
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
@@ -1875,8 +1917,8 @@ input:focus-visible {
       <!-- Room 2: Linda -->
       <div class="room-card">
         <div class="room-card-img">
-          <img src="https://thereynoldsmansion.com/wp-content/uploads/2024/08/ReynoldsHouse038.jpg"
-               alt="Linda room — king canopy bed at The Reynolds Mansion">
+          <img src="./Linda.jpg"
+               alt="Linda room — king four-poster canopy bed with sitting area at The Reynolds Mansion">
           <div class="room-card-floor">Second Floor</div>
         </div>
         <div class="room-card-body">
@@ -1991,13 +2033,13 @@ input:focus-visible {
       or explore Reynolds Village right outside your door.
     </p>
     <div class="location-callouts location-callouts--inline">
-      <span class="location-callout-item">10 min to downtown Asheville</span>
+      <span class="location-callout-item"><span class="lc-dot"></span>10 min to downtown Asheville</span>
       <span class="location-callout-sep">·</span>
-      <span class="location-callout-item">Near Biltmore Estate</span>
+      <span class="location-callout-item"><span class="lc-dot"></span>Near Biltmore Estate</span>
       <span class="location-callout-sep">·</span>
-      <span class="location-callout-item">Blue Ridge Parkway</span>
+      <span class="location-callout-item"><span class="lc-dot"></span>Blue Ridge Parkway</span>
       <span class="location-callout-sep">·</span>
-      <span class="location-callout-item">Free private parking</span>
+      <span class="location-callout-item"><span class="lc-dot"></span>Free private parking</span>
     </div>
     <div class="location-cta-row">
       <a href="https://secure.thinkreservations.com/thereynoldsmansion/reservations/availability/"
