@@ -88,8 +88,9 @@ body {
   right: 16px;
   width: 50px;
   height: auto;
-  opacity: 0.55;
+  opacity: 1;
   mix-blend-mode: screen;
+  filter: brightness(2) saturate(1.2);
   pointer-events: none;
   z-index: 2;
 }
@@ -260,8 +261,8 @@ nav {
   width: auto;
   display: inline-block;
   vertical-align: middle;
-  mix-blend-mode: screen;
-  opacity: 0.85;
+  filter: brightness(0) invert(1);
+  opacity: 0.90;
   margin-right: 2px;
 }
 .btn-reserve:hover { background: var(--crimson-hover) !important; color: #fff !important; }
@@ -1549,6 +1550,7 @@ input:focus-visible {
   justify-content: center;
   margin: 28px 0;
   white-space: nowrap;
+  width: 100%;
 }
 .location-callout-item {
   font-family: var(--ff-body);
@@ -1582,14 +1584,8 @@ input:focus-visible {
    ============================================================ */
 
 
-/* Expedia badge in footer */
-.footer-expedia-badge {
-  height: 28px; width: auto;
-  opacity: 0.75;
-  filter: brightness(0) invert(1);
-  transition: opacity 0.2s;
-}
-.footer-expedia-badge:hover { opacity: 1; }
+/* Expedia in footer */
+.footer-expedia-text { cursor: default; }
 
 /* ─── FILIGREE SPACER between Reynolds Village + CTA ───── */
 .filigree-spacer {
@@ -1612,10 +1608,7 @@ input:focus-visible {
   position: relative;
   top: -1px;
 }
-.location-callouts--inline {
-  justify-content: center;
-  text-align: center;
-}
+
 
 /* ─── EB GARAMOND on .btn-reserve (nav button) ──────────── */
 .btn-reserve {
@@ -2200,8 +2193,7 @@ input:focus-visible {
           </svg>
           <span>Google</span>
         </a>
-        <img src="https://thereynoldsmansion.com/wp-content/uploads/2022/06/expedia-bages-photo-1.jpg"
-             alt="Expedia rating" class="footer-expedia-badge">
+        <span class="ta-badge footer-expedia-text" aria-label="Expedia rated">Expedia</span>
         <a href="https://www.ashevillebba.com/the-reynolds-mansion"
            class="ta-badge" target="_blank" rel="noopener" aria-label="Proud member of the Asheville Area Bed and Breakfast Association">
           <span>Asheville B&amp;B Association</span>
