@@ -88,13 +88,13 @@ body {
   right: 16px;
   width: 50px;
   height: auto;
-  opacity: 0.30;
+  opacity: 0.55;
   mix-blend-mode: screen;
   pointer-events: none;
   z-index: 2;
 }
 /* Content sits above the corner decorations */
-.dark-section-inner > * { position: relative; z-index: 1; }
+.dark-section-inner > *:not(.dark-section-inner-r) { position: relative; z-index: 1; }
 
 @media (max-width: 768px) {
   .dark-section-inner { padding: 32px 20px; }
@@ -371,8 +371,8 @@ nav {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(10,7,3,0.38) 0%,
-    rgba(10,7,3,0.42) 40%,
+    rgba(10,7,3,0.25) 0%,
+    rgba(10,7,3,0.35) 40%,
     rgba(10,7,3,0.65) 100%
   );
   z-index: 1;
@@ -605,7 +605,7 @@ nav {
    BREAKFAST SECTION (DARK)
    ============================================================ */
 .breakfast-section {
-  padding: 0;
+  padding: 56px 0;
   position: relative;
 }
 .breakfast-layout {
@@ -1163,7 +1163,7 @@ nav {
    REYNOLDS VILLAGE MENTION
    ============================================================ */
 .village-section {
-  padding: 0;
+  padding: 56px 0;
 }
 .village-title {
   font-family: var(--ff-display);
@@ -1229,7 +1229,7 @@ nav {
    FINAL CTA
    ============================================================ */
 .cta-section {
-  padding: 0;
+  padding: 56px 0;
   text-align: center;
 }
 .cta-title {
@@ -1544,10 +1544,11 @@ input:focus-visible {
 .location-callouts--inline {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 10px 0;
+  flex-wrap: nowrap;
+  gap: 0;
   justify-content: center;
   margin: 28px 0;
+  white-space: nowrap;
 }
 .location-callout-item {
   font-family: var(--ff-body);
@@ -1579,21 +1580,7 @@ input:focus-visible {
 /* ============================================================
    REVIEWS DARK SECTION — colors inside dark wrapper
    ============================================================ */
-.reviews-section .dark-section-inner { padding: 56px 60px; }
-.reviews-section .section-label { color: var(--gold); }
-.reviews-section .reviews-title { color: var(--text-cream); }
-.reviews-section .reviews-meta { color: var(--text-cream-dim); }
-.reviews-section .review-card {
-  background: rgba(255,255,255,0.04);
-  border-color: rgba(196,148,58,0.20);
-}
-.reviews-section .review-quote { color: var(--text-cream-dim); }
-.reviews-section .review-attribution { color: var(--text-cream); }
-.reviews-section .review-source { color: var(--gold); }
-.reviews-section a.review-source:hover { color: var(--gold-soft); text-decoration: underline; }
-.reviews-section .ornament-diamond { background: var(--gold); }
-.reviews-section .ornament-rule::before,
-.reviews-section .ornament-rule::after { background: rgba(196,148,58,0.35); }
+
 
 /* Expedia badge in footer */
 .footer-expedia-badge {
@@ -1766,7 +1753,7 @@ input:focus-visible {
 <!-- HERO -->
 <section id="main-content" class="hero" aria-label="The Reynolds Mansion — Asheville Bed and Breakfast">
   <div class="hero-slides">
-    <div class="hero-slide active" style="background-image:url('./the-reynolds-mansion.jpg'); background-position: center 55%;"></div>
+    <div class="hero-slide active" style="background-image:url('./reynolds-residence-photo-4th-scrolling.jpg'); background-position: center 35%;"></div>
   </div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
@@ -2050,10 +2037,8 @@ input:focus-visible {
 </section>
 
 <!-- REVIEWS -->
-<section class="reviews-section filigree-bg" aria-labelledby="reviews-heading">
+<section class="reviews-section damask-bg" aria-labelledby="reviews-heading">
   <div class="section-inner">
-    <div class="dark-section-inner">
-    <img src="./reynolds-r-logo.png" class="dark-section-inner-r" alt="">
     <div class="reviews-header">
       <span class="section-label">What Our Guests Say</span>
       <div class="ornament-rule"><div class="ornament-diamond"></div></div>
@@ -2086,7 +2071,6 @@ input:focus-visible {
         </div>
       </div>
     </div>
-    </div><!-- /.dark-section-inner -->
   </div>
 </section>
 
