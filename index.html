@@ -1545,12 +1545,13 @@ input:focus-visible {
 .location-callouts--inline {
   display: flex;
   align-items: center;
-  flex-wrap: nowrap;
-  gap: 0;
+  flex-wrap: wrap;
+  gap: 6px 0;
   justify-content: center;
-  margin: 28px 0;
-  white-space: nowrap;
+  margin: 28px auto;
+  max-width: 100%;
   width: 100%;
+  text-align: center;
 }
 .location-callout-item {
   font-family: var(--ff-body);
@@ -1610,7 +1611,9 @@ input:focus-visible {
 }
 
 
-/* ─── EB GARAMOND on .btn-reserve (nav button) ──────────── */
+.location-callouts.location-callouts--inline {
+  max-width: 100%;
+}
 .btn-reserve {
   font-family: 'EB Garamond', Georgia, serif !important;
   font-size: 15px !important;
