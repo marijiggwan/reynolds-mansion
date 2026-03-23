@@ -67,13 +67,13 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
-  padding: 56px 24px;
+  padding: 32px;
 }
 
 /* ── Dark section content wrapper with inner scrollwork ───── */
 .dark-section-inner {
   position: relative;
-  max-width: 1096px;
+  max-width: 1220px;
   margin: 0 auto;
   padding: 28px 60px 48px;
   background: var(--dark);
@@ -429,7 +429,7 @@ nav {
 .btn-primary {
   background: var(--crimson);
   color: #fff;
-  font-family: var(--ff-body);
+  font-family: 'EB Garamond', Georgia, serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.16em;
@@ -442,7 +442,7 @@ nav {
 .btn-primary:hover { background: var(--crimson-hover); transform: translateY(-1px); }
 .btn-ghost {
   color: rgba(255,255,255,0.82);
-  font-family: var(--ff-body);
+  font-family: 'EB Garamond', Georgia, serif;
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.14em;
@@ -501,7 +501,7 @@ nav {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: var(--ff-body);
+  font-family: 'EB Garamond', Georgia, serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -605,7 +605,6 @@ nav {
    BREAKFAST SECTION (DARK)
    ============================================================ */
 .breakfast-section {
-  padding: 56px 0;
   position: relative;
 }
 .breakfast-layout {
@@ -681,7 +680,7 @@ nav {
   display: inline-block;
   border: 1px solid rgba(196,148,58,0.5);
   color: var(--gold);
-  font-family: var(--ff-body);
+  font-family: 'EB Garamond', Georgia, serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -875,7 +874,7 @@ nav {
   display: inline-block;
   background: var(--crimson);
   color: #fff;
-  font-family: var(--ff-body);
+  font-family: 'EB Garamond', Georgia, serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -889,7 +888,7 @@ nav {
   display: inline-block;
   border: 1px solid var(--crimson);
   color: var(--crimson);
-  font-family: var(--ff-body);
+  font-family: 'EB Garamond', Georgia, serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -998,7 +997,7 @@ nav {
   display: inline-block;
   background: var(--ivory);
   color: var(--text-dark);
-  font-family: var(--ff-body);
+  font-family: 'EB Garamond', Georgia, serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -1163,7 +1162,6 @@ nav {
    REYNOLDS VILLAGE MENTION
    ============================================================ */
 .village-section {
-  padding: 56px 0;
 }
 .village-title {
   font-family: var(--ff-display);
@@ -1210,7 +1208,7 @@ nav {
   display: inline-block;
   border: 1px solid rgba(196,148,58,0.4);
   color: var(--gold);
-  font-family: var(--ff-body);
+  font-family: 'EB Garamond', Georgia, serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -1229,7 +1227,6 @@ nav {
    FINAL CTA
    ============================================================ */
 .cta-section {
-  padding: 56px 0;
   text-align: center;
 }
 .cta-title {
@@ -1519,8 +1516,8 @@ input:focus-visible {
   font-weight: 500;
   letter-spacing: 0.06em;
   color: var(--text-dark);
-  border-bottom: 1px solid rgba(196,148,58,0.12);
 }
+
 .nav-contact-left { display: flex; align-items: center; gap: 16px; }
 .nav-contact-address { color: var(--text-mid); }
 .nav-contact-divider { width: 1px; height: 12px; background: rgba(14,11,5,0.15); display: inline-block; }
@@ -1622,11 +1619,6 @@ input:focus-visible {
   font-family: 'EB Garamond', Georgia, serif !important;
 }
 
-/* ─── Reduce excess black padding at top of village/CTA ── */
-.village-section .dark-section-inner,
-.cta-section .dark-section-inner {
-  padding-top: 32px;
-}
 
 </style>
 </head>
@@ -1810,7 +1802,6 @@ input:focus-visible {
 
 <!-- BREAKFAST SECTION (DARK) -->
 <section class="breakfast-section filigree-bg" aria-labelledby="breakfast-heading">
-  <div class="section-inner">
     <div class="dark-section-inner">
     <img src="./ReynoldsR.png" class="dark-section-inner-r" alt="">
     <div class="breakfast-layout">
@@ -1855,7 +1846,7 @@ input:focus-visible {
              alt="Fresh breakfast course at The Reynolds Mansion">
       </div>
     </div>
-  </div>
+    </div>
 </section>
 
 <!-- ROOMS SECTION -->
