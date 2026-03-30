@@ -1761,6 +1761,10 @@ input:focus-visible {
   .feature-img { min-height: 280px; }
   .feature-text { padding: 36px 24px; }
   .comparison-teaser { padding: 48px 20px; }
+  .dark-section-inner [style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
 }
 
 /* ============================================================
