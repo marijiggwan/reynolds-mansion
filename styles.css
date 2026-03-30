@@ -1763,3 +1763,125 @@ input:focus-visible {
   .comparison-teaser { padding: 48px 20px; }
 }
 
+/* ============================================================
+   ROOM CARDS — interior room listing pages
+   ============================================================ */
+.floor-section {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.floor-heading {
+  font-family: var(--ff-display);
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--text-mid);
+  letter-spacing: 0.04em;
+  text-align: center;
+  padding: 40px 0 28px;
+  border-bottom: 1px solid var(--gold-line);
+  margin-bottom: 36px;
+}
+.floor-heading:first-of-type { padding-top: 12px; }
+.room-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  margin-bottom: 48px;
+}
+.room-card {
+  background: #fff;
+  border: 1px solid rgba(196,148,58,0.15);
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+}
+.room-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+}
+.room-card-img {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+}
+.room-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+.room-card:hover .room-card-img img {
+  transform: scale(1.03);
+}
+.room-card-floor {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(14,11,5,0.72);
+  color: var(--text-cream);
+  font-family: var(--ff-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 3px;
+}
+.room-card-body {
+  padding: 28px 28px 32px;
+}
+.room-card-name {
+  font-family: var(--ff-display);
+  font-size: 1.55rem;
+  font-weight: 400;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+.room-card-desc {
+  font-family: var(--ff-body);
+  font-size: 14px;
+  color: var(--text-mid);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+.room-card-features {
+  font-family: var(--ff-body);
+  font-size: 12.5px;
+  color: var(--text-soft);
+  line-height: 1.6;
+  margin-bottom: 22px;
+  padding-top: 14px;
+  border-top: 1px solid var(--gold-line);
+}
+.room-card-features span {
+  display: inline;
+}
+.room-card-features span::after {
+  content: ' · ';
+  color: var(--gold);
+}
+.room-card-features span:last-child::after {
+  content: '';
+}
+.room-card-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Single-column room card (for one-off rooms like Lila) */
+.room-grid-single {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 610px;
+  margin: 0 auto 48px;
+  gap: 36px;
+}
+
+@media (max-width: 768px) {
+  .floor-section { padding: 0 16px; }
+  .room-grid { grid-template-columns: 1fr; gap: 28px; }
+  .room-card-img { height: 220px; }
+  .room-card-body { padding: 22px 20px 28px; }
+}
+
