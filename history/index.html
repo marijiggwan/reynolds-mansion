@@ -45,6 +45,16 @@
   .timeline-year { font-family: var(--ff-display); font-size: 2rem; font-weight: 300; color: var(--gold-soft); margin-bottom: 8px; }
   .timeline-desc { font-family: var(--ff-body); font-size: 14px; color: var(--text-cream-dim); line-height: 1.75; }
 
+  /* "From the Archives" callout — light version (damask sections) */
+  .history-callout { max-width: 580px; margin: 32px auto; padding: 28px 32px; border-left: 3px solid var(--gold-line); background: rgba(139,109,63,0.05); }
+  .history-callout-label { font-family: var(--ff-body); font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--gold-soft, #8B6D3F); margin-bottom: 10px; font-weight: 600; }
+  .history-callout p { font-family: var(--ff-body); font-size: 14px; color: var(--text-mid); line-height: 1.75; margin-bottom: 0; }
+
+  /* "From the Archives" callout — dark version (filigree sections) */
+  .history-callout-dark { max-width: 580px; margin: 32px auto 0; padding: 28px 32px; border-left: 3px solid var(--gold-soft, #C4943A); background: rgba(196,148,58,0.08); }
+  .history-callout-dark .history-callout-label { color: var(--gold-soft, #C4943A); }
+  .history-callout-dark p { color: var(--text-cream-dim); }
+
   /* National Register badge */
   .nr-badge { display: inline-flex; align-items: center; gap: 10px; padding: 14px 24px; border: 1px solid var(--gold-line); background: rgba(139,109,63,0.06); margin: 8px 0 24px; }
   .nr-badge-text { font-family: var(--ff-body); font-size: 13px; color: var(--text-mid); letter-spacing: 0.04em; line-height: 1.4; }
@@ -56,6 +66,7 @@
     .history-portraits { grid-template-columns: 1fr; gap: 24px; }
     .history-portraits img { max-width: 260px; }
     .timeline-grid { grid-template-columns: 1fr; gap: 28px; }
+    .history-callout, .history-callout-dark { padding: 22px 20px; max-width: 100%; margin-left: 0; margin-right: 0; }
   }
 </style>
 </head>
@@ -122,6 +133,10 @@
       <p>The Reynolds Mansion is one of them.</p>
       <p>Colonel Daniel Reynolds — farmer, hotel keeper, and prominent Buncombe County citizen — built this substantial double-pile brick home on a ridge of Reynolds Mountain, three miles north of what was then a much smaller Asheville. The house faced west, commanding views across the French Broad River valley to the Blue Ridge beyond. It was, by the standards of western North Carolina, a significant statement: a two-story brick residence with internal chimneys and a central-hall plan, built on nearly five hundred acres of mountain land.</p>
       <p>Daniel and his wife, Susan Adelia Baird — a cousin of future North Carolina governor and U.S. Senator Zebulon Baird Vance — raised ten children within these walls. In 1854, Daniel had run against Vance himself for a seat in the North Carolina House of Commons. He lost, but the following year he purchased this land at public auction and set about building the home that still stands today.</p>
+      <div class="history-callout">
+        <div class="history-callout-label">From the Archives</div>
+        <p>The mountain surrounding the mansion was not the wooded landscape visitors see today. Reynolds Mountain was covered entirely in apple orchards — row after row of trees stretching across the ridgeline. The forested slopes are a far more recent chapter in the mountain's story.</p>
+      </div>
     </div>
   </section>
 
@@ -166,9 +181,17 @@
         <p style="font-family:var(--ff-body); font-size:15px; color:var(--text-cream-dim); line-height:1.85; margin-bottom:18px;">
           Known to nearly everyone as "Our Bob," Reynolds was elected to the United States Senate in 1932 and served until 1945. He circled the globe a dozen times. At one time or another he was a soldier of fortune, a professional wrestler, a football coach, a door-to-door book agent, an actor, a motion picture producer, a war correspondent, a ranch operator, and — it was said — a babysitter.
         </p>
+        <div class="history-callout-dark">
+          <div class="history-callout-label">From the Archives</div>
+          <p>The Blue Ridge Parkway passes through Asheville today because of Senator Reynolds. According to local accounts, he refused to vote for the Social Security Act unless the Parkway's route was redirected through western North Carolina. The road that now draws millions of visitors to these mountains each year runs along the ridge directly behind the mansion his grandfather built.</p>
+        </div>
         <p style="font-family:var(--ff-body); font-size:15px; color:var(--text-cream-dim); line-height:1.85; margin-bottom:18px;">
           He married five times. His final marriage, in 1941, was to the nineteen-year-old Evalyn Walsh McLean — whose mother owned the Hope Diamond. After his Senate years, Reynolds retired to a log and stone house on Reynolds Mountain, not far from the mansion his grandfather had built nearly a century earlier. He died in Asheville on February 13, 1963, at the age of seventy-eight.
         </p>
+        <div class="history-callout-dark">
+          <div class="history-callout-label">From the Archives</div>
+          <p>The Reynolds flair for the unconventional ran in the family. Senator Reynolds's daughter Mamie is said to have been the first woman to qualify for the Daytona 500 and to win a NASCAR race, in 1962 — a distinction as improbable and colorful as any chapter in her father's own extraordinary life.</p>
+        </div>
         <p style="font-family:var(--ff-body); font-size:15px; color:var(--text-cream-dim); line-height:1.85;">
           The National Register nomination notes that Reynolds visited the old home place frequently throughout his life, during the years it was owned and occupied by his mother and uncle. The family portraits that once hung in these hallways bore features, a newspaper observed, "not unlike Our Bob."
         </p>
@@ -190,7 +213,7 @@
         <p class="history-photo-caption">The Reynolds Mansion as photographed for the National Register of Historic Places nomination, 1984</p>
       </div>
 
-      <p>The house saw many lives within its walls. It served as a boarding house before the First World War. From 1919 to 1924, Dr. Elizabeth Smith leased the property and operated it as the Asheville Osteopathic Sanatorium, one of several medical facilities that drew patients to the mountain air during that era. Nathaniel and Mamie Reynolds moved permanently into the house around 1930 and remained there for the rest of their lives. The house stayed in the Reynolds family until 1973.</p>
+      <p>The house saw many lives within its walls. It served as a boarding house before the First World War. From 1919 to 1924, Dr. Elizabeth Smith — believed to have been Asheville's first female physician — leased the property and operated it as the Asheville Osteopathic Sanatorium, one of several medical facilities that drew patients to the mountain air during that era. Nathaniel and Mamie Reynolds moved permanently into the house around 1930 and remained there for the rest of their lives. The house stayed in the Reynolds family until 1973.</p>
       <p>In the years that followed, the mansion was purchased by Frederick and Helen Faber, who undertook a thorough restoration and successfully nominated the property for the National Register of Historic Places in 1984. That listing recognized the house under three separate criteria: its association with the antebellum prosperity of the Asheville area, its connection to Senator Robert Rice Reynolds, and its architectural significance as one of the rarest surviving pre-Civil War brick structures in the region.</p>
       <div style="text-align:center; margin: 28px 0;">
         <div class="nr-badge">
