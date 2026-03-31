@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>History Since 1847 | The Reynolds Mansion | Asheville B&amp;B</title>
+<meta name="description" content="Built in 1847, The Reynolds Mansion is one of fewer than ten pre-Civil War brick homes surviving in western North Carolina. Discover nearly 180 years of Asheville history on Reynolds Mountain.">
+<meta property="og:title" content="History Since 1847 | The Reynolds Mansion | Asheville Bed & Breakfast">
+<meta property="og:description" content="One of fewer than ten pre-Civil War brick homes surviving in western North Carolina. From Colonel Daniel Reynolds to a U.S. Senator and the Hope Diamond — explore our rich history.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://reynoldsmansion.netlify.app/history/">
+<link rel="canonical" href="https://reynoldsmansion.netlify.app/history/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Libre+Franklin:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<style>
+  .history-hero { position: relative; height: 480px; overflow: hidden; }
+  .history-hero img { width: 100%; height: 100%; object-fit: cover; object-position: center 50%; }
+  .history-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(14,11,5,0.08), rgba(14,11,5,0.55)); }
+  .history-hero-text { position: absolute; bottom: 44px; left: 0; right: 0; text-align: center; z-index: 2; }
+  .history-hero-text h1 { font-family: var(--ff-display); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 400; color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.3); margin-bottom: 6px; }
+  .history-hero-text p { font-family: var(--ff-body); font-size: 14px; color: rgba(255,255,255,0.85); letter-spacing: 0.08em; }
+
+  .history-prose { max-width: 740px; margin: 0 auto; padding: 56px 32px 48px; }
+  .history-prose h2 { font-family: var(--ff-display); font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 400; color: var(--text-dark); margin-bottom: 20px; line-height: 1.3; text-align: center; }
+  .history-prose p { font-family: var(--ff-body); font-size: 15px; color: var(--text-mid); line-height: 1.85; margin-bottom: 18px; }
+  .history-prose .pullquote { font-family: var(--ff-display); font-size: 1.4rem; font-style: italic; color: var(--text-dark); text-align: center; padding: 28px 0; margin: 28px 0; border-top: 1px solid var(--gold-line); border-bottom: 1px solid var(--gold-line); line-height: 1.5; }
+  .history-prose .photo-credit { font-family: var(--ff-body); font-size: 12px; color: var(--text-mid); text-align: center; margin-top: 8px; font-style: italic; opacity: 0.7; }
+
+  /* Historic photo treatment — sepia toned images with subtle border */
+  .history-photo-frame { max-width: 620px; margin: 0 auto 32px; text-align: center; }
+  .history-photo-frame img { width: 100%; border: 1px solid rgba(139,109,63,0.25); box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+  .history-photo-caption { font-family: var(--ff-display); font-size: 14px; color: var(--text-mid); margin-top: 12px; font-style: italic; line-height: 1.5; }
+
+  /* Two-photo row for portraits */
+  .history-portraits { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 620px; margin: 0 auto 32px; align-items: end; }
+  .history-portraits .portrait-item { text-align: center; }
+  .history-portraits img { width: 100%; max-width: 280px; border: 1px solid rgba(139,109,63,0.25); box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+  .history-portraits .history-photo-caption { font-size: 13px; }
+
+  /* Timeline callout for dark section */
+  .timeline-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 900px; margin: 0 auto; }
+  .timeline-item { text-align: left; }
+  .timeline-year { font-family: var(--ff-display); font-size: 2rem; font-weight: 300; color: var(--gold-soft); margin-bottom: 8px; }
+  .timeline-desc { font-family: var(--ff-body); font-size: 14px; color: var(--text-cream-dim); line-height: 1.75; }
+
+  /* National Register badge */
+  .nr-badge { display: inline-flex; align-items: center; gap: 10px; padding: 14px 24px; border: 1px solid var(--gold-line); background: rgba(139,109,63,0.06); margin: 8px 0 24px; }
+  .nr-badge-text { font-family: var(--ff-body); font-size: 13px; color: var(--text-mid); letter-spacing: 0.04em; line-height: 1.4; }
+  .nr-badge-year { font-family: var(--ff-display); font-size: 1.5rem; font-weight: 400; color: var(--text-dark); line-height: 1; }
+
+  @media (max-width: 768px) {
+    .history-hero { height: 360px; }
+    .history-prose { padding: 40px 20px 36px; }
+    .history-portraits { grid-template-columns: 1fr; gap: 24px; }
+    .history-portraits img { max-width: 260px; }
+    .timeline-grid { grid-template-columns: 1fr; gap: 28px; }
+  }
+</style>
+</head>
+
+<body>
+
+<a class="skip-nav" href="#main-content">Skip to main content</a>
+
+<div class="nav-wrap">
+  <div class="nav-contact-row"><div class="nav-contact-inner">
+    <span class="nav-contact-address">100 Reynolds Heights, Asheville, NC 28804</span>
+    <span class="nav-contact-right">
+      <a href="tel:8282581111" class="nav-contact-phone">(828) 258-1111</a>
+      <span class="nav-contact-social">
+        <a href="https://www.facebook.com/pages/Reynolds-Mansion-Bed-and-Breakfast-Inn/111523802270435" target="_blank" rel="noopener" aria-label="Facebook"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="https://www.instagram.com/thereynoldsmansion/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      </span>
+    </span>
+  </div></div>
+  <nav>
+    <a href="/" class="nav-logo" aria-label="The Reynolds Mansion Home"><img src="https://thereynoldsmansion.com/wp-content/uploads/2019/11/Asheville-Bed-Breakfast-Luxury-Lodging.png" alt="The Reynolds Mansion Bed and Breakfast Inn — Asheville NC" height="52"></a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/our-story/" class="active">About <span class="caret">▾</span></a><ul class="nav-dropdown"><li><a href="/our-story/">Our Story</a></li><li><a href="/history/">History</a></li><li><a href="/reviews/">Reviews</a></li></ul></li>
+      <li><a href="/stay/">Stay</a></li>
+      <li><a href="/breakfast/">Breakfast</a></li>
+      <li><a href="/explore-asheville/">Explore Asheville</a></li>
+      <li><a href="/plan-your-stay/">Plan Your Stay</a></li>
+      <li><a href="/contact/">Contact</a></li>
+      <li><a href="https://secure.thinkreservations.com/thereynoldsmansion/reservations/availability/" class="btn-reserve" target="_blank" rel="noopener"><img src="/ReynoldsR.png" class="r-logo" alt="R">eserve Now</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Open menu" onclick="openMobileNav()"><span></span><span></span><span></span></button>
+  </nav>
+</div>
+
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-header"><img src="https://thereynoldsmansion.com/wp-content/uploads/2019/11/Asheville-Bed-Breakfast-Luxury-Lodging.png" alt="The Reynolds Mansion" height="44"><button class="mobile-nav-close" onclick="closeMobileNav()" aria-label="Close menu">×</button></div>
+  <ul class="mobile-nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/our-story/">About</a><ul class="mobile-nav-sub"><li><a href="/our-story/">Our Story</a></li><li><a href="/history/">History</a></li><li><a href="/reviews/">Reviews</a></li></ul></li>
+    <li><a href="/stay/">Stay</a></li><li><a href="/breakfast/">Breakfast</a></li><li><a href="/explore-asheville/">Explore Asheville</a></li><li><a href="/plan-your-stay/">Plan Your Stay</a></li><li><a href="/contact/">Contact</a></li>
+  </ul>
+  <a href="https://secure.thinkreservations.com/thereynoldsmansion/reservations/availability/" class="mobile-btn-reserve">Reserve Your Stay</a>
+</div>
+
+<main id="main-content">
+
+  <!-- HERO -->
+  <div class="history-hero">
+    <img src="/history/images/historic-house-original.png" alt="Historic photograph of The Reynolds Mansion in Asheville, North Carolina — the original brick structure with wraparound porches, a horse and carriage in the foreground, circa early 1900s">
+    <div class="history-hero-overlay"></div>
+    <div class="history-hero-text">
+      <h1>A History Since 1847</h1>
+      <p>National Register of Historic Places &nbsp;·&nbsp; Asheville, North Carolina</p>
+    </div>
+  </div>
+
+  <!-- SECTION 1: THE FOUNDING -->
+  <section class="damask-bg">
+    <div class="history-prose">
+      <div class="ornament-rule"><span class="ornament-diamond"></span></div>
+      <h2>Built on a Mountain, Built to Last</h2>
+      <p>In the years before the Civil War, Asheville was a small mountain town just beginning to find its place in the world. The Buncombe Turnpike, completed in 1827, had turned a remote village into a stop along a major thoroughfare connecting South Carolina with Tennessee and Kentucky. Commerce was growing, summer visitors were discovering the cool mountain air, and a handful of the region's most prosperous citizens were building homes in brick — a material so scarce in the mountains that fewer than ten such houses would survive from the era.</p>
+      <p>The Reynolds Mansion is one of them.</p>
+      <p>Colonel Daniel Reynolds — farmer, hotel keeper, and prominent Buncombe County citizen — built this substantial double-pile brick home on a ridge of Reynolds Mountain, three miles north of what was then a much smaller Asheville. The house faced west, commanding views across the French Broad River valley to the Blue Ridge beyond. It was, by the standards of western North Carolina, a significant statement: a two-story brick residence with internal chimneys and a central-hall plan, built on nearly five hundred acres of mountain land.</p>
+      <p>Daniel and his wife, Susan Adelia Baird — a cousin of future North Carolina governor and U.S. Senator Zebulon Baird Vance — raised ten children within these walls. In 1854, Daniel had run against Vance himself for a seat in the North Carolina House of Commons. He lost, but the following year he purchased this land at public auction and set about building the home that still stands today.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 2: A FAMILY LEGACY -->
+  <section class="damask-bg" style="padding-top: 0;">
+    <div class="history-prose" style="padding-top: 12px;">
+      <div class="ornament-rule"><span class="ornament-diamond"></span></div>
+      <h2>The Reynolds Family</h2>
+      <p>The generations that followed Daniel left their own mark on both the house and the city. His son, William Taswell Reynolds, became one of Asheville's more versatile citizens — at various times a tobacco warehouseman, hotel owner, opera house manager, clerk of the superior court, and alderman for the City of Asheville. William married Mamie Spears, and together they had three children, one of whom would grow up to become one of the most colorful figures in the history of the United States Senate.</p>
+    </div>
+
+    <!-- Portraits -->
+    <div class="history-portraits">
+      <div class="portrait-item">
+        <img src="/history/images/reynolds-daughters-1884.jpg" alt="Formal portrait of the five daughters of Daniel Reynolds and Susan Adelia Baird Reynolds, taken circa 1884 in Asheville, North Carolina — seated left to right: Mollie Sevier, Susan Adelia; standing: Julia Morris, Annie Lee Reynolds, Susan Evelyn Weaver">
+        <p class="history-photo-caption">The five daughters of Daniel and Susan Adelia Baird Reynolds, circa 1884</p>
+      </div>
+      <div class="portrait-item">
+        <img src="/history/images/adeline-reynolds.jpg" alt="Oval portrait of young Adeline Reynolds in a white lace dress with ribbons in her hair, in an ornate silver frame">
+        <p class="history-photo-caption">Adeline Reynolds</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PULLQUOTE -->
+  <section class="damask-bg" style="padding: 0;">
+    <div class="history-prose" style="padding-top: 8px; padding-bottom: 8px;">
+      <p class="pullquote">"On the walls of the spacious hallway and parlor hang life-like portraits of some of these early men and women."<br><span style="font-size:0.75em; font-style:normal; color:var(--text-mid);">— Greensboro Daily News, 1932</span></p>
+    </div>
+  </section>
+
+  <!-- SECTION 3: OUR BOB AND THE HOPE DIAMOND (DARK) -->
+  <div class="filigree-bg">
+    <div class="dark-section-inner" style="padding: 52px 32px;">
+      <img src="/ReynoldsR.png" alt="" class="dark-section-inner-r" aria-hidden="true">
+      <div style="max-width: 740px; margin: 0 auto;">
+        <span class="section-label section-label-dark" style="text-align:center; display:block;">The Most Colorful Reynolds of All</span>
+        <h2 style="font-family:var(--ff-display); font-size:clamp(1.6rem,3.5vw,2.4rem); font-weight:400; color:var(--text-cream); margin-bottom:24px; line-height:1.3; text-align:center;"><em>"Our Bob"</em> &amp; the Hope Diamond</h2>
+        <p style="font-family:var(--ff-body); font-size:15px; color:var(--text-cream-dim); line-height:1.85; margin-bottom:18px;">
+          Robert Rice Reynolds was born in Asheville on June 18, 1884 — the son of William Taswell Reynolds and grandson of the man who built this house. Educated at Weaverville College and the University of North Carolina, he was admitted to the bar in 1907 and began practicing law in Asheville. But law was only one chapter in a life that defied every expectation.
+        </p>
+        <p style="font-family:var(--ff-body); font-size:15px; color:var(--text-cream-dim); line-height:1.85; margin-bottom:18px;">
+          Known to nearly everyone as "Our Bob," Reynolds was elected to the United States Senate in 1932 and served until 1945. He circled the globe a dozen times. At one time or another he was a soldier of fortune, a professional wrestler, a football coach, a door-to-door book agent, an actor, a motion picture producer, a war correspondent, a ranch operator, and — it was said — a babysitter.
+        </p>
+        <p style="font-family:var(--ff-body); font-size:15px; color:var(--text-cream-dim); line-height:1.85; margin-bottom:18px;">
+          He married five times. His final marriage, in 1941, was to the nineteen-year-old Evalyn Walsh McLean — whose mother owned the Hope Diamond. After his Senate years, Reynolds retired to a log and stone house on Reynolds Mountain, not far from the mansion his grandfather had built nearly a century earlier. He died in Asheville on February 13, 1963, at the age of seventy-eight.
+        </p>
+        <p style="font-family:var(--ff-body); font-size:15px; color:var(--text-cream-dim); line-height:1.85;">
+          The National Register nomination notes that Reynolds visited the old home place frequently throughout his life, during the years it was owned and occupied by his mother and uncle. The family portraits that once hung in these hallways bore features, a newspaper observed, "not unlike Our Bob."
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: TRANSFORMATIONS -->
+  <section class="damask-bg">
+    <div class="history-prose">
+      <div class="ornament-rule"><span class="ornament-diamond"></span></div>
+      <h2>A House That Kept Evolving</h2>
+      <p>After Daniel Reynolds's death in 1878, the house passed through his family for nearly another century. His son Nathaniel Augustus Reynolds — known affectionately as "Uncle Gus" — undertook the most dramatic transformation the house had seen since its construction. Beginning around 1905, he added a finished third floor within the distinctive mansard roof and dormers that crown the building today. He installed bathrooms, expanded the dining room by removing an original partition, and outfitted the interior with the Colonial Revival woodwork — turned balusters, modillioned cornices, floral-embossed door hardware — that guests still admire when they walk through the front door.</p>
+      <p>The wraparound Colonial Revival porches, supported by Tuscan columns and carrying elegant entablatures at both the first and second stories, were added shortly after — giving the mansion the stately presence it carries to this day.</p>
+
+      <!-- National Register Photo -->
+      <div class="history-photo-frame">
+        <img src="/history/images/national-register-photo.png" alt="Black and white photograph of The Reynolds Mansion from the National Register of Historic Places nomination, circa 1984 — showing the full Colonial Revival facade with wraparound porches, mansard roof, and dormers">
+        <p class="history-photo-caption">The Reynolds Mansion as photographed for the National Register of Historic Places nomination, 1984</p>
+      </div>
+
+      <p>The house saw many lives within its walls. It served as a boarding house before the First World War. From 1919 to 1924, Dr. Elizabeth Smith leased the property and operated it as the Asheville Osteopathic Sanatorium, one of several medical facilities that drew patients to the mountain air during that era. Nathaniel and Mamie Reynolds moved permanently into the house around 1930 and remained there for the rest of their lives. The house stayed in the Reynolds family until 1973.</p>
+      <p>In the years that followed, the mansion was purchased by Frederick and Helen Faber, who undertook a thorough restoration and successfully nominated the property for the National Register of Historic Places in 1984. That listing recognized the house under three separate criteria: its association with the antebellum prosperity of the Asheville area, its connection to Senator Robert Rice Reynolds, and its architectural significance as one of the rarest surviving pre-Civil War brick structures in the region.</p>
+      <div style="text-align:center; margin: 28px 0;">
+        <div class="nr-badge">
+          <div class="nr-badge-year">1984</div>
+          <div class="nr-badge-text">Listed on the<br><strong>National Register of Historic Places</strong></div>
+        </div>
+      </div>
+      <p>Over the decades that followed, the mansion was cared for by a succession of owners who each left their mark — restoring the grounds, clearing overgrown pathways, reopening the doors to guests, and building the loyal following that first drew Paul and Mirlin to the property in 2019.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 5: A NEW CHAPTER (CLOSING) -->
+  <section class="damask-bg" style="padding-top: 0;">
+    <div class="feature-row">
+      <div class="feature-img">
+        <img src="/history/images/fall-grounds.jpg" alt="The Reynolds Mansion grounds in autumn — brilliant orange and gold foliage against a deep blue sky on Reynolds Mountain in Asheville, North Carolina">
+      </div>
+      <div class="feature-text">
+        <span class="section-label">A New Chapter</span>
+        <h2>Nearly 180 Years and Counting</h2>
+        <p>The original estate has changed over the years. The five hundred acres have become four. Reynolds Mountain and Reynolds Village — with their shops, restaurants, and residences — now surround the property where cattle once grazed and crops once grew. But the house itself endures, sitting exactly where Daniel Reynolds placed it on that western-facing ridge, the Blue Ridge Parkway now winding along the mountain behind it.</p>
+        <p>Paul and Mirlin Manshon became the mansion's stewards in October 2019, bringing decades of world-class hospitality experience to an intimate mountain setting. Within months came a global pandemic. Then structural challenges. Then Hurricane Helene. Through all of it, they restored, rebuilt, and reopened — because a house that has survived nearly two centuries does not get to disappear on anyone's watch.</p>
+        <p>Today, The Reynolds Mansion stands as it always has: a substantial brick home on a quiet ridge, built by people who believed this place was worth building well. The original frame-sawn timbers still carry the floors. The load-bearing brick walls still hold firm. And every morning, a classically trained chef prepares a four-course gourmet breakfast in a dining room that Nathaniel Reynolds himself created — for guests who have come to the mountains looking for something they cannot find anywhere else.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARRIAGE HOUSE PHOTO + CTA -->
+  <section class="damask-bg" style="padding-top: 0;">
+    <div class="feature-row reverse">
+      <div class="feature-img">
+        <img src="/history/images/carriage-house-exterior.jpg" alt="The Carriage House at The Reynolds Mansion — a brick building with white wraparound balcony, garden courtyard, and mature landscaping in Asheville, North Carolina">
+      </div>
+      <div class="feature-text">
+        <span class="section-label">The Property Today</span>
+        <h2>Come Walk These Halls</h2>
+        <p>Eleven guest rooms across two historic buildings. The original Reynolds Residence and the Carriage House, each with its own character and quiet comforts. Every room carries a piece of the history you have just read — from the quatrefoil-carved mantels to the wide-plank floors to the doorknobs embossed with Victorian florals that still turn under your hand, exactly as they did more than a century ago.</p>
+        <p style="margin-top: 24px;">
+          <a href="/stay/" class="btn-primary" style="padding:14px 36px; font-size:15px;">Explore Our Rooms</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-logo"><img src="https://thereynoldsmansion.com/wp-content/uploads/2019/11/Asheville-Bed-Breakfast-Luxury-Lodging.png" alt="The Reynolds Mansion" height="44"></div>
+        <p class="footer-brand-desc">A top-rated Asheville bed and breakfast where a classically trained chef-innkeeper serves a four-course gourmet breakfast each morning in a pre-Civil War mansion with Blue Ridge Mountain views.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/pages/Reynolds-Mansion-Bed-and-Breakfast-Inn/111523802270435" target="_blank" rel="noopener" aria-label="Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/thereynoldsmansion/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        </div>
+      </div>
+      <div><div class="footer-col-title">Stay</div><ul class="footer-links"><li><a href="/reynolds-residence/">Reynolds Residence</a></li><li><a href="/carriage-house/">Carriage House</a></li><li><a href="/rooms/compare/">Compare Rooms</a></li><li><a href="/breakfast/">Breakfast</a></li><li><a href="/offers/">Special Offers</a></li><li><a href="/gift-certificates/">Gift Certificates</a></li></ul></div>
+      <div><div class="footer-col-title">Explore</div><ul class="footer-links"><li><a href="/our-story/">Our Story</a></li><li><a href="/history/">History</a></li><li><a href="/explore-asheville/">Asheville Attractions</a></li><li><a href="/reynolds-village/">Reynolds Village</a></li><li><a href="/reviews/">Guest Reviews</a></li></ul></div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <p class="footer-contact-item">100 Reynolds Heights<br>Asheville, NC 28804</p>
+        <p class="footer-contact-item"><a href="tel:8282581111">(828) 258-1111</a></p>
+        <p class="footer-contact-item" style="margin-bottom:24px;"><a href="mailto:innkeeper@thereynoldsmansion.com">innkeeper@thereynoldsmansion.com</a></p>
+        <div class="footer-col-title" style="margin-top:24px;">Stay in Touch</div>
+        <p class="footer-newsletter-label">Seasonal offers and availability updates.</p>
+        <div class="footer-newsletter-form"><label for="newsletter-email" class="sr-only">Email address</label><input type="email" id="newsletter-email" name="email" placeholder="Your email address" aria-label="Email address for newsletter updates" autocomplete="email"><button type="button">Join</button></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 The Reynolds Mansion Bed &amp; Breakfast Inn. All rights reserved.</p>
+      <div class="footer-badges">
+        <a href="https://www.tripadvisor.com/Hotel_Review-g60742-d80357-Reviews-The_Reynolds_Mansion-Asheville_North_Carolina.html" class="ta-badge" target="_blank" rel="noopener" aria-label="TripAdvisor"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="7.5" cy="14" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="7.5" cy="14" r="1" fill="currentColor"/><circle cx="16.5" cy="14" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="16.5" cy="14" r="1" fill="currentColor"/><path d="M4.5 14c0-4 3.5-7 7.5-7s7.5 3 7.5 7" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M12 7L12 4" stroke="currentColor" stroke-width="1.5"/><path d="M10 4h4" stroke="currentColor" stroke-width="1.5"/></svg><span>TripAdvisor</span></a>
+        <a href="https://www.google.com/maps/search/The+Reynolds+Mansion+Asheville" class="ta-badge" target="_blank" rel="noopener" aria-label="Google"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" opacity=".6"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" opacity=".7"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" opacity=".5"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" opacity=".8"/></svg><span>Google</span></a>
+        <span class="ta-badge footer-expedia-text">Expedia</span>
+        <a href="https://www.ashevillebba.com/the-reynolds-mansion" class="ta-badge" target="_blank" rel="noopener"><span>Asheville B&amp;B Association</span></a>
+        <a href="https://www.exploreasheville.com/asheville/listing/places-to-stay/reynolds-mansion-bed-and-breakfast-inn" class="ta-badge" target="_blank" rel="noopener"><span>Explore Asheville</span></a>
+      </div>
+      <div class="footer-legal"><a href="/policies/">Policies</a><a href="/getting-here/">Directions</a><a href="/contact/">Contact</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function openMobileNav() { document.getElementById('mobileNav').classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeMobileNav() { document.getElementById('mobileNav').classList.remove('open'); document.body.style.overflow = ''; }
+  document.getElementById('mobileNav').addEventListener('click', function(e) { if (e.target === this) closeMobileNav(); });
+</script>
+</body>
+</html>
