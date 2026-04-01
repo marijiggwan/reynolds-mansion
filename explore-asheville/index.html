@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior:smooth;">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,12 +15,77 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Libre+Franklin:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 <style>
+/* EXPLORE — PAGE HEADER EMPHASIS */
+.page-header-tagline {
+  display: block;
+  font-family: var(--ff-display);
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-weight: 400; font-style: italic;
+  color: var(--text-dark);
+  margin-top: 14px;
+}
+
+/* EXPLORE — ITINERARY NAV */
+.itinerary-nav {
+  max-width: 860px; margin: 0 auto;
+  padding: 40px 24px 12px;
+  text-align: center;
+}
+.itinerary-nav p {
+  font-family: var(--ff-body);
+  font-size: 13.5px; line-height: 1.7;
+  color: var(--text-mid);
+  margin-bottom: 20px;
+}
+.itinerary-nav-links {
+  display: flex; flex-wrap: wrap;
+  justify-content: center; gap: 12px;
+}
+.itinerary-nav-link {
+  display: inline-block;
+  font-family: var(--ff-display);
+  font-size: 15.5px; font-weight: 500;
+  color: var(--text-dark);
+  text-decoration: none;
+  padding: 12px 22px;
+  border: 1px solid var(--gold-line);
+  border-radius: 6px;
+  background: #fff;
+  transition: all 0.25s ease;
+}
+.itinerary-nav-link:hover {
+  border-color: var(--crimson);
+  color: var(--crimson);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transform: translateY(-1px);
+}
+.itinerary-nav-link .nav-link-nights {
+  display: block;
+  font-family: var(--ff-body);
+  font-size: 10.5px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--crimson);
+  margin-bottom: 2px;
+}
+
+/* EXPLORE — COMPACT FEATURE ROW */
+.feature-row--compact .feature-img {
+  max-height: 400px;
+}
+.feature-row--compact .feature-img img {
+  max-height: 400px;
+}
+
 /* EXPLORE — ITINERARY SECTIONS */
 .itinerary-section {
   max-width: 860px; margin: 0 auto;
   padding: 48px 24px 12px;
 }
 .itinerary-section:first-of-type { padding-top: 56px; }
+[id="quick-escape"],
+[id="long-weekend"],
+[id="full-week"],
+[id="undecided"] { scroll-margin-top: 80px; }
 .itinerary-tier-label {
   font-family: var(--ff-body);
   font-size: 11px; font-weight: 600;
@@ -143,11 +208,15 @@
 @media (max-width: 900px) {
   .explore-grid { grid-template-columns: repeat(2, 1fr); }
   .explore-atmosphere { height: 260px; }
+  .itinerary-nav-links { gap: 8px; }
+  .itinerary-nav-link { padding: 10px 16px; font-size: 14.5px; }
 }
 @media (max-width: 560px) {
   .explore-grid { grid-template-columns: 1fr; }
   .explore-atmosphere { height: 200px; }
   .itinerary-section { padding: 36px 20px 8px; }
+  .itinerary-nav-links { flex-direction: column; align-items: center; }
+  .itinerary-nav-link { width: 100%; max-width: 260px; }
 }
 </style>
 </head>
@@ -259,13 +328,14 @@
         <span class="ornament-diamond"></span>
       </div>
       <h1>Explore Asheville</h1>
-      <p>Your morning starts at the breakfast table with a four-course meal from a classically trained chef. Your evening ends on the porch with mountain views and a glass of something cold. Everything in between is yours to explore.</p>
+      <p>Your morning starts at the breakfast table with a four-course meal from a classically trained chef. Your evening ends on the porch with mountain views and a glass of something cold.</p>
+      <span class="page-header-tagline">Everything in between is yours to explore.</span>
     </div>
   </section>
 
   <!-- INNKEEPER WELCOME — FEATURE ROW -->
   <section class="damask-bg" style="padding: 0 0 4px;">
-    <div class="feature-row">
+    <div class="feature-row feature-row--compact">
       <div class="feature-img">
         <img src="/explore-asheville/images/paul-welcome.jpg"
              alt="Paul Manshon greeting guests at The Reynolds Mansion with a silver tray of lemon water — the personal welcome that begins every stay at this historic Asheville bed and breakfast"
@@ -280,11 +350,36 @@
     </div>
   </section>
 
-  <!-- ITINERARY: QUICK GETAWAY -->
+  <!-- ITINERARY NAVIGATION -->
   <section class="damask-bg" style="padding: 0;">
+    <div class="itinerary-nav">
+      <p>How much time do you have? Choose your adventure.</p>
+      <div class="itinerary-nav-links">
+        <a href="#quick-escape" class="itinerary-nav-link">
+          <span class="nav-link-nights">1–2 Nights</span>
+          The Quick Escape
+        </a>
+        <a href="#long-weekend" class="itinerary-nav-link">
+          <span class="nav-link-nights">3–4 Nights</span>
+          The Long Weekend
+        </a>
+        <a href="#full-week" class="itinerary-nav-link">
+          <span class="nav-link-nights">5+ Nights</span>
+          Explore Like a Local
+        </a>
+        <a href="#undecided" class="itinerary-nav-link">
+          <span class="nav-link-nights">Not Sure Yet?</span>
+          The Undecided
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ITINERARY: THE QUICK ESCAPE -->
+  <section class="damask-bg" style="padding: 0;" id="quick-escape">
     <div class="itinerary-section">
       <p class="itinerary-tier-label">1–2 Nights</p>
-      <h2>A Quick Getaway</h2>
+      <h2>The Quick Escape</h2>
       <div class="itinerary-prose">
         <p>A short stay is the perfect introduction to the mountains. Most of our weekend guests arrive on a Friday afternoon, settle in, and let the property itself set the pace — the gardens, the porches, the kind of quiet you forgot existed. Saturday, head to <a href="https://www.biltmore.com/" target="_blank" rel="noopener">Biltmore Estate</a>, about fifteen minutes south. Plan at least a half day for the house and grounds; if the weather cooperates, the gardens alone are worth the visit.</p>
         <p>For dinner, Asheville's nationally recognized food scene is ten minutes downtown. The city has more independent restaurants per capita than almost anywhere in the country, and the farm-to-table movement isn't a trend here — it's how people cook. On your way back, take the <a href="https://www.exploreasheville.com/iconic-asheville/blue-ridge-parkway/" target="_blank" rel="noopener">Blue Ridge Parkway</a> north from the Biltmore entrance for a sunset drive you'll be talking about at home.</p>
@@ -297,11 +392,11 @@
   <!-- ATMOSPHERE: CHAMPAGNE TOAST -->
   <div class="explore-atmosphere" style="background-image:url('/explore-asheville/images/champagne-toast.jpg'); background-position: center 60%;"></div>
 
-  <!-- ITINERARY: LONG WEEKEND -->
-  <section class="damask-bg" style="padding: 0;">
+  <!-- ITINERARY: THE LONG WEEKEND -->
+  <section class="damask-bg" style="padding: 0;" id="long-weekend">
     <div class="itinerary-section">
       <p class="itinerary-tier-label">3–4 Nights</p>
-      <h2>A Long Weekend</h2>
+      <h2>The Long Weekend</h2>
       <div class="itinerary-prose">
         <p>With a few more days, you can go deeper. Chase waterfalls at <a href="https://www.exploreasheville.com/things-to-do/outdoors/dupont-state-forest" target="_blank" rel="noopener">DuPont State Forest</a> — about forty-five minutes south, near Brevard. The hike to Triple Falls is moderate, roughly three miles round trip, and you'll see three waterfalls along the way. Pair it with lunch in Brevard and you'll be back on the porch by late afternoon with time to spare.</p>
         <p>Spend a morning at the <a href="https://www.ncarboretum.org/" target="_blank" rel="noopener">North Carolina Arboretum</a>, just fifteen minutes away. The bonsai garden is remarkable, the trails range from easy strolls to a real workout, and the café makes a good stop before or after. On Saturdays, the <a href="https://www.wncfarmersmarket.org/" target="_blank" rel="noopener">WNC Farmers Market</a> is worth a detour — local produce, mountain honey, and baked goods you won't find anywhere else.</p>
@@ -314,11 +409,11 @@
   <!-- ATMOSPHERE: PORCH BENCH -->
   <div class="explore-atmosphere" style="background-image:url('/explore-asheville/images/porch-bench.jpg'); background-position: center 55%;"></div>
 
-  <!-- ITINERARY: THE FULL WEEK -->
-  <section class="damask-bg" style="padding: 0;">
+  <!-- ITINERARY: EXPLORE LIKE A LOCAL -->
+  <section class="damask-bg" style="padding: 0;" id="full-week">
     <div class="itinerary-section">
       <p class="itinerary-tier-label">5+ Nights</p>
-      <h2>The Full Week</h2>
+      <h2>Explore Like a Local</h2>
       <div class="itinerary-prose">
         <p>A full week in the mountains means you can do things properly — and still have days with nothing on the agenda but the hammock and a good book. This is when you start exploring like a local.</p>
         <p>Drive up to <a href="https://www.nps.gov/maps/?site=mtmi" target="_blank" rel="noopener">Mt. Mitchell</a>, the tallest peak east of the Mississippi, about an hour north. You can drive to the summit, take in the view, and be back in time for an afternoon on the porch. For more of a full-day adventure, the <a href="https://gsmr.com/" target="_blank" rel="noopener">Great Smoky Mountains Railroad</a> runs from Bryson City to Dillsboro — roughly ninety minutes west. It's a four-hour round trip through mountain valleys and river gorges, with a layover for lunch in Dillsboro. Spectacular in the fall.</p>
@@ -346,11 +441,12 @@
     </div>
   </section>
 
-  <!-- EXPLORE ASHEVILLE LINKS -->
-  <section class="damask-bg" style="padding-top: 0;">
+  <!-- EXPLORE ASHEVILLE LINKS — THE UNDECIDED -->
+  <section class="damask-bg" style="padding-top: 0;" id="undecided">
     <div class="explore-links-intro">
-      <h2>Still Exploring?</h2>
-      <p>Here are a few of our favorite resources for planning your time in the mountains. These links go directly to Explore Asheville's curated guides — always up to date.</p>
+      <p class="itinerary-tier-label" style="margin-bottom:6px;">Not Sure Yet?</p>
+      <h2>The Undecided</h2>
+      <p>No itinerary? No problem. Browse our favorite Explore Asheville guides below — they're always up to date, and you might just find something that changes your plans.</p>
     </div>
 
     <!-- DINING & LIBATIONS -->
