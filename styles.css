@@ -210,6 +210,14 @@ nav {
   transform: translateX(-50%) translateY(8px);
   pointer-events: none;
 }
+.nav-dropdown::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+}
 .nav-links > li:hover .nav-dropdown {
   opacity: 1;
   visibility: visible;
