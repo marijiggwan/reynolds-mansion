@@ -25,6 +25,8 @@
   .story-prose h2 { font-family: var(--ff-display); font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 400; color: var(--text-dark); margin-bottom: 20px; line-height: 1.3; text-align: center; }
   .story-prose p { font-family: var(--ff-body); font-size: 15px; color: var(--text-mid); line-height: 1.85; margin-bottom: 18px; }
   .story-prose .pullquote { font-family: var(--ff-display); font-size: 1.4rem; font-style: italic; color: var(--text-dark); text-align: center; padding: 28px 0; margin: 28px 0; border-top: 1px solid var(--gold-line); border-bottom: 1px solid var(--gold-line); line-height: 1.5; }
+  .feature-row--compact .feature-img { max-height: 400px; }
+  .feature-row--compact .feature-img img { max-height: 400px; }
   @media (max-width: 768px) {
     .story-hero { height: 360px; }
     .story-prose { padding: 40px 20px 36px; }
@@ -49,26 +51,64 @@
   </div></div>
   <nav>
     <a href="/" class="nav-logo" aria-label="The Reynolds Mansion Home"><img src="https://thereynoldsmansion.com/wp-content/uploads/2019/11/Asheville-Bed-Breakfast-Luxury-Lodging.png" alt="The Reynolds Mansion Bed and Breakfast Inn — Asheville NC" height="52"></a>
-    <ul class="nav-links">
+        <ul class="nav-links">
       <li><a href="/">Home</a></li>
-      <li><a href="/our-story/" class="active">About <span class="caret">▾</span></a><ul class="nav-dropdown"><li><a href="/our-story/">Our Story</a></li><li><a href="/history/">History</a></li><li><a href="/reviews/">Reviews</a></li></ul></li>
-      <li><a href="/stay/">Stay</a></li>
+      <li>
+        <a href="/our-story/">About <span class="caret">▾</span></a>
+        <ul class="nav-dropdown">
+          <li><a href="/our-story/">Our Story</a></li>
+          <li><a href="/history/">History</a></li>
+          <li><a href="/reviews/">Reviews</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/stay/">Stay <span class="caret">▾</span></a>
+        <ul class="nav-dropdown">
+          <li><a href="/reynolds-residence/">Guest Rooms</a></li>
+          <li><a href="/carriage-house/">Carriage House</a></li>
+          <li><a href="/rooms/compare/">Compare Rooms</a></li>
+          <li><a href="/policies/">Policies</a></li>
+        </ul>
+      </li>
       <li><a href="/breakfast/">Breakfast</a></li>
       <li><a href="/explore-asheville/">Explore Asheville</a></li>
       <li><a href="/plan-your-stay/">Plan Your Stay</a></li>
       <li><a href="/contact/">Contact</a></li>
-      <li><a href="https://secure.thinkreservations.com/thereynoldsmansion/reservations/availability/" class="btn-reserve" target="_blank" rel="noopener"><img src="/ReynoldsR.png" class="r-logo" alt="R">eserve Now</a></li>
+      <li>
+        <a href="https://secure.thinkreservations.com/thereynoldsmansion/reservations/availability/"
+           class="btn-reserve" target="_blank" rel="noopener"><img src="/ReynoldsR.png" class="r-logo" alt="R">eserve Now</a>
+      </li>
     </ul>
+
     <button class="nav-hamburger" aria-label="Open menu" onclick="openMobileNav()"><span></span><span></span><span></span></button>
   </nav>
 </div>
 
 <div class="mobile-nav" id="mobileNav">
   <div class="mobile-nav-header"><img src="https://thereynoldsmansion.com/wp-content/uploads/2019/11/Asheville-Bed-Breakfast-Luxury-Lodging.png" alt="The Reynolds Mansion" height="44"><button class="mobile-nav-close" onclick="closeMobileNav()" aria-label="Close menu">×</button></div>
-  <ul class="mobile-nav-links">
+    <ul class="mobile-nav-links">
     <li><a href="/">Home</a></li>
-    <li><a href="/our-story/">About</a><ul class="mobile-nav-sub"><li><a href="/our-story/">Our Story</a></li><li><a href="/history/">History</a></li><li><a href="/reviews/">Reviews</a></li></ul></li>
-    <li><a href="/stay/">Stay</a></li><li><a href="/breakfast/">Breakfast</a></li><li><a href="/explore-asheville/">Explore Asheville</a></li><li><a href="/plan-your-stay/">Plan Your Stay</a></li><li><a href="/contact/">Contact</a></li>
+    <li>
+      <a href="/our-story/">About</a>
+      <ul class="mobile-nav-sub">
+        <li><a href="/our-story/">Our Story</a></li>
+        <li><a href="/history/">History</a></li>
+        <li><a href="/reviews/">Reviews</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="/stay/">Stay</a>
+      <ul class="mobile-nav-sub">
+        <li><a href="/reynolds-residence/">Guest Rooms</a></li>
+        <li><a href="/carriage-house/">Carriage House</a></li>
+        <li><a href="/rooms/compare/">Compare Rooms</a></li>
+        <li><a href="/policies/">Policies</a></li>
+      </ul>
+    </li>
+    <li><a href="/breakfast/">Breakfast</a></li>
+    <li><a href="/explore-asheville/">Explore Asheville</a></li>
+    <li><a href="/plan-your-stay/">Plan Your Stay</a></li>
+    <li><a href="/contact/">Contact</a></li>
   </ul>
   <a href="https://secure.thinkreservations.com/thereynoldsmansion/reservations/availability/" class="mobile-btn-reserve">Reserve Your Stay</a>
 </div>
@@ -98,7 +138,7 @@
 
   <!-- PAUL & MIRLIN TOGETHER -->
   <section class="damask-bg" style="padding:0 0 4px;">
-    <div class="feature-row">
+    <div class="feature-row feature-row--compact">
       <div class="feature-img">
         <img src="/images/people/ReynoldsHouse184.jpg" alt="Paul and Mirlin Manshon sitting on the front steps of The Reynolds Mansion — the 1847 brick, front door, and address number 100 visible behind them">
       </div>
@@ -114,7 +154,7 @@
 
   <!-- WHY THIS HOUSE -->
   <section class="damask-bg" style="padding:4px 0 0;">
-    <div class="feature-row reverse">
+    <div class="feature-row feature-row--compact reverse">
       <div class="feature-img">
         <img src="/images/people/ReynoldsHouse073.jpg" alt="Paul and Mirlin setting the breakfast table together in the grand dining room of The Reynolds Mansion">
       </div>
