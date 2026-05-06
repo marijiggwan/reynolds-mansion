@@ -2210,3 +2210,40 @@ input:focus-visible {
 @media (max-width: 768px) {
   .feature-row.reverse { grid-template-columns: 1fr; }
 }
+
+/* Reynolds Residence — Floor heading row with optional floor-plan link */
+.floor-heading-row {
+  position: relative;
+  border-bottom: 1px solid var(--gold-line);
+  margin-bottom: 36px;
+  padding: 40px 0 28px;
+}
+.floor-section > .floor-heading-row:first-of-type { padding-top: 12px; }
+.floor-heading-row .floor-heading {
+  padding: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+.floor-plan-link {
+  font-family: var(--ff-body);
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  color: var(--crimson);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.floor-plan-link:hover { border-bottom-color: var(--crimson); }
+.floor-heading-row .floor-plan-link {
+  position: absolute;
+  right: 0;
+  bottom: 28px;
+}
+@media (max-width: 600px) {
+  .floor-heading-row .floor-plan-link {
+    position: static;
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+  }
+}
