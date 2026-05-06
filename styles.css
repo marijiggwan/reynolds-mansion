@@ -1022,10 +1022,15 @@ nav {
   position: absolute;
   inset: 0;
   background: linear-gradient(to bottom,
-    rgba(0,0,0,0.25) 0%,
-    rgba(0,0,0,0.55) 50%,
-    rgba(0,0,0,0.70) 100%);
+    rgba(0,0,0,0.20) 0%,
+    rgba(0,0,0,0.50) 50%,
+    rgba(0,0,0,0.65) 100%);
 }
+.location-cta-band {
+  padding: 56px 24px;
+  text-align: center;
+}
+.location-cta-band .location-cta-row { margin-top: 0; }
 .location-content {
   position: relative;
   z-index: 1;
