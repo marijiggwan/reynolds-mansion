@@ -2176,3 +2176,37 @@ input:focus-visible {
   .compare-wrap { padding: 0 16px 48px; }
 }
 
+
+/* History page — Hope Diamond image pair (dark section) */
+.hope-diamond-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 32px 0 28px;
+}
+.hope-diamond-pair img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+}
+.hope-diamond-pair .hope-diamond-caption {
+  font-family: var(--ff-body);
+  font-size: 12px;
+  font-style: italic;
+  color: var(--text-cream-dim);
+  text-align: center;
+  margin: 10px 0 0 0;
+  line-height: 1.4;
+}
+@media (max-width: 640px) {
+  .hope-diamond-pair { grid-template-columns: 1fr; gap: 20px; }
+}
+
+/* History page — "Come Walk These Halls" image reduced ~30% */
+.feature-row.reverse {
+  grid-template-columns: 0.7fr 1.3fr;
+}
+@media (max-width: 768px) {
+  .feature-row.reverse { grid-template-columns: 1fr; }
+}
