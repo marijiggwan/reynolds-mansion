@@ -148,6 +148,30 @@
     .breakfast-intro { padding: 40px 20px 36px; }
     .faq-section { padding: 0 20px 36px; }
   }
+
+  /* Carousel inside .feature-img (Grand Dining Room) */
+  .feature-carousel {
+    position: absolute;
+    inset: 0;
+  }
+  .feature-carousel img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.45s ease;
+    pointer-events: none;
+  }
+  .feature-carousel img.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .feature-img:hover .room-carousel-arrow,
+  .feature-carousel:focus-within .room-carousel-arrow {
+    opacity: 1;
+  }
 </style>
 </head>
 
@@ -328,7 +352,15 @@
   <section class="damask-bg" style="padding: 4px 0 0;">
     <div class="feature-row reverse">
       <div class="feature-img">
-        <img src="/images/breakfast/ReynoldsHouse003.jpg" alt="The grand dining room at The Reynolds Mansion — mahogany table, crystal chandelier, fireplace, and period paintings">
+        <div class="feature-carousel" data-carousel>
+          <img src="/images/photos-2026/Reynolds_Mansion_Dining_Room_001.jpg" alt="The grand dining room at The Reynolds Mansion — fireplace, crystal chandelier, antique china cabinet, and mahogany table set for breakfast" class="active">
+          <img src="/images/photos-2026/Reynolds_Mansion_Dining_Room_002.jpg" alt="Antique mahogany dining table set with crystal stemware and china under the chandelier at The Reynolds Mansion">
+          <img src="/images/photos-2026/Reynolds_Mansion_Dining_Room_003.jpg" alt="Period portrait above the antique buffet in the grand dining room at The Reynolds Mansion">
+          <img src="/images/photos-2026/Reynolds_Mansion_Dining_Room_022.jpg" alt="Place setting detail — silver charger, hand-painted china teacup, and crystal stemware on the mahogany table at The Reynolds Mansion">
+          <button class="room-carousel-arrow prev" aria-label="Previous photo">&#8249;</button>
+          <button class="room-carousel-arrow next" aria-label="Next photo">&#8250;</button>
+          <div class="room-carousel-dots"></div>
+        </div>
       </div>
       <div class="feature-text">
         <span class="section-label">The Setting</span>
@@ -438,6 +470,35 @@
   function openMobileNav() { document.getElementById('mobileNav').classList.add('open'); document.body.style.overflow = 'hidden'; }
   function closeMobileNav() { document.getElementById('mobileNav').classList.remove('open'); document.body.style.overflow = ''; }
   document.getElementById('mobileNav').addEventListener('click', function(e) { if (e.target === this) closeMobileNav(); });
+
+  // Photo carousels (Grand Dining Room)
+  document.querySelectorAll('[data-carousel]').forEach(function(carousel) {
+    var imgs = carousel.querySelectorAll('img');
+    var dotsWrap = carousel.querySelector('.room-carousel-dots');
+    var idx = 0;
+    imgs.forEach(function(_, i) {
+      var dot = document.createElement('button');
+      dot.className = 'room-carousel-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Photo ' + (i + 1));
+      dot.addEventListener('click', function() { goTo(i); });
+      dotsWrap.appendChild(dot);
+    });
+    function goTo(n) {
+      imgs[idx].classList.remove('active');
+      dotsWrap.children[idx].classList.remove('active');
+      idx = (n + imgs.length) % imgs.length;
+      imgs[idx].classList.add('active');
+      dotsWrap.children[idx].classList.add('active');
+    }
+    carousel.querySelector('.prev').addEventListener('click', function() { goTo(idx - 1); });
+    carousel.querySelector('.next').addEventListener('click', function() { goTo(idx + 1); });
+    var startX = 0;
+    carousel.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, {passive: true});
+    carousel.addEventListener('touchend', function(e) {
+      var diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) goTo(diff > 0 ? idx + 1 : idx - 1);
+    }, {passive: true});
+  });
 </script>
 </body>
 </html>
