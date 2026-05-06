@@ -14,6 +14,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Libre+Franklin:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
+<style>
+  .ch-building-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  @media (max-width: 768px) {
+    .ch-building-gallery { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
 </head>
 
 <body>
@@ -128,6 +138,42 @@
     </div>
   </section>
 
+  <!-- A BUILDING OF ITS OWN -->
+  <section class="damask-bg" style="padding-top:0; padding-bottom:48px;">
+    <div style="max-width:1080px; margin:0 auto; padding:0 24px;">
+
+      <div style="text-align:center; margin-bottom:28px;">
+        <span class="section-label">Across the Courtyard</span>
+        <h2 style="font-family:var(--ff-display); font-size:clamp(1.5rem,3vw,2rem); font-weight:400; color:var(--text-dark); margin:8px 0 14px; line-height:1.3;">A Building of Its Own</h2>
+        <p style="max-width:680px; margin:0 auto; font-family:var(--ff-body); font-size:14.5px; color:var(--text-mid); line-height:1.75;">
+          Just steps from the main mansion, the Carriage House stands as its own building on the estate. The three suites share a covered porch with rocking chairs, a bistro table for morning coffee, and views across the property toward the mountains.
+        </p>
+      </div>
+
+      <!-- Lead exterior photo -->
+      <img src="/images/photos-2026/Carriage_House_Exterior_009.jpg"
+           alt="The Carriage House at twilight — full architectural view with covered porch and lit windows at The Reynolds Mansion, Asheville"
+           style="width:100%; height:clamp(300px,46vw,500px); object-fit:cover; display:block; margin-bottom:12px;">
+
+      <!-- 4-photo gallery row -->
+      <div class="ch-building-gallery">
+        <img src="/images/photos-2026/Carriage_House_Exterior_007.jpg"
+             alt="View from the Reynolds Mansion porch toward the Carriage House across the brick courtyard"
+             style="width:100%; height:200px; object-fit:cover; display:block;">
+        <img src="/images/photos-2026/Carriage_House_Porch_001.jpg"
+             alt="Carriage House covered porch with white rocking chairs and bistro seating overlooking the property"
+             style="width:100%; height:200px; object-fit:cover; display:block;">
+        <img src="/images/photos-2026/Carriage_House_Porch_002.jpg"
+             alt="Carriage House porch bistro table with mountain view at The Reynolds Mansion"
+             style="width:100%; height:200px; object-fit:cover; display:block;">
+        <img src="/images/photos-2026/Carriage_House_Porch_005.jpg"
+             alt="Row of white rocking chairs on the Carriage House covered porch"
+             style="width:100%; height:200px; object-fit:cover; display:block;">
+      </div>
+
+    </div>
+  </section>
+
   <!-- SUITES -->
   <section class="damask-bg" style="padding-bottom: 24px;">
     <div class="floor-section">
@@ -187,6 +233,7 @@
         <div class="room-card">
           <div class="room-carousel" data-carousel>
             <img src="/images/photos-2026/Carriage_House_Blue_Hydrangea_002.jpg" alt="Blue Hydrangea suite — king bed and sitting area with sofa at The Reynolds Mansion Carriage House, Asheville" class="active">
+            <img src="/images/photos-2026/Carriage_House_Blue_Hydrangea_012.jpg" alt="Blue Hydrangea suite — French doors open to private balcony with mountain view at The Reynolds Mansion">
             <img src="/images/photos-2026/Carriage_House_Blue_Hydrangea_003.jpg" alt="Blue Hydrangea suite — king bed with fireplace and oil painting at The Reynolds Mansion">
             <img src="/images/photos-2026/Carriage_House_Blue_Hydrangea_004.jpg" alt="Blue Hydrangea suite — king bed with marble fireplace and antique armoire at The Reynolds Mansion">
             <img src="/images/photos-2026/Carriage_House_Blue_Hydrangea_005.jpg" alt="Blue Hydrangea suite — sitting area with French doors to private balcony at The Reynolds Mansion">
