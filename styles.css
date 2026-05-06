@@ -2235,15 +2235,7 @@ input:focus-visible {
 }
 .floor-plan-link:hover { border-bottom-color: var(--crimson); }
 .floor-heading-row .floor-plan-link {
-  position: absolute;
-  right: 0;
-  bottom: 28px;
-}
-@media (max-width: 600px) {
-  .floor-heading-row .floor-plan-link {
-    position: static;
-    display: block;
-    text-align: center;
-    margin-top: 12px;
-  }
+  display: block;
+  text-align: center;
+  margin-top: 10px;
 }
