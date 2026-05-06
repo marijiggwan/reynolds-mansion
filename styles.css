@@ -1014,14 +1014,17 @@ nav {
 .location-bg {
   position: absolute;
   inset: 0;
-  background-image: url('images/photos-2026/Reynolds_Mansion_Sunset_Only_004.jpg');
+  background-image: url('images/photos-2026/Reynolds_Mansion_Drone_Day_Time__007.jpg');
   background-size: cover;
-  background-position: center 40%;
+  background-position: center 30%;
 }
 .location-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(10,7,3,0.62);
+  background: linear-gradient(to bottom,
+    rgba(0,0,0,0.25) 0%,
+    rgba(0,0,0,0.55) 50%,
+    rgba(0,0,0,0.70) 100%);
 }
 .location-content {
   position: relative;
