@@ -3,7 +3,10 @@
   publish = "."
   command = ""
 
+# ============================================================
 # 301 redirects from legacy WordPress blog URLs to new /blog/ structure
+# (Full WordPress slugs preserved for SEO equity)
+# ============================================================
 
 [[redirects]]
   from = "/meet-paul-and-mirlin-manshon-the-heart-behind-the-reynolds-mansion/"
@@ -34,3 +37,108 @@
   to = "/blog/"
   status = 301
   force = false
+
+# ============================================================
+# 301 redirects from legacy WordPress page URLs to new IA
+# ============================================================
+
+[[redirects]]
+  from = "/asheville-attractions/"
+  to = "/explore-asheville/"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/breakfast-at-reynolds-mansion/"
+  to = "/breakfast/"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/contact-us/"
+  to = "/contact/"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/gift-certificates/"
+  to = "/plan-your-stay/"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/press-praise/"
+  to = "/reviews/"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/rooms-comparison-chart/"
+  to = "/rooms/compare/"
+  status = 301
+  force = false
+
+# ============================================================
+# Resolution of "Decide" items from redirect_inventory.csv
+# (Per Mari + Claude review, May 12 2026)
+# ============================================================
+
+# ADA compliance page -> Policies (covers ADA note)
+[[redirects]]
+  from = "/ada-website-compliance/"
+  to = "/policies/"
+  status = 301
+  force = false
+
+# Old gallery -> Stay hub (visual discovery; Mood Gallery is v1.1)
+[[redirects]]
+  from = "/our-gallery/"
+  to = "/stay/"
+  status = 301
+  force = false
+
+# Valentine's seasonal post -> Romantic Things consolidated guide
+[[redirects]]
+  from = "/extend-your-valentines-stay-at-the-reynolds-mansion-a-romantic-escape-in-asheville/"
+  to = "/blog/romantic-things-to-do-in-asheville-nc-ultimate-guide-for-couples-in-2026/"
+  status = 301
+  force = false
+
+# ============================================================
+# 410 Gone — retired content with no SEO-valuable replacement
+# ============================================================
+
+[[redirects]]
+  from = "/reynolds-mansion-video-tour/"
+  to = "/"
+  status = 410
+
+[[redirects]]
+  from = "/a-letter-from-paul-and-mirlin-on-our-5-year-anniversary-october-25-2024/"
+  to = "/"
+  status = 410
+
+[[redirects]]
+  from = "/join-us-for-holiday-hearthside-stories-with-billy-at-reynolds-mansion-this-holiday-season/"
+  to = "/"
+  status = 410
+
+[[redirects]]
+  from = "/post-helene-update/"
+  to = "/"
+  status = 410
+
+[[redirects]]
+  from = "/reynolds-mansion-update/"
+  to = "/"
+  status = 410
+
+[[redirects]]
+  from = "/thanksgiving-2025/"
+  to = "/"
+  status = 410
+
+[[redirects]]
+  from = "/things-to-do-november-decemer-2025-asheville/"
+  to = "/"
+  status = 410
