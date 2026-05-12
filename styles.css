@@ -832,7 +832,7 @@ nav {
 .room-card-footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding-top: 16px;
   border-top: 1px solid var(--gold-line);
 }
