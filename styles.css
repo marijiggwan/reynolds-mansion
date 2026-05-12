@@ -1126,7 +1126,7 @@ nav {
   opacity: 0.22;
 }
 .review-stars {
-  color: var(--gold);
+  color: var(--crimson);
   font-size: 13px;
   letter-spacing: 2px;
   margin-bottom: 16px;
