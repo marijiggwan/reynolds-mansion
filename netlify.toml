@@ -2,3 +2,35 @@
   base    = ""
   publish = "."
   command = ""
+
+# 301 redirects from legacy WordPress blog URLs to new /blog/ structure
+
+[[redirects]]
+  from = "/meet-paul-and-mirlin-manshon-the-heart-behind-the-reynolds-mansion/"
+  to = "/blog/meet-paul-and-mirlin-manshon-the-heart-behind-the-reynolds-mansion/"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/road-trip-stopover-in-asheville-recharge-at-the-historic-reynolds-mansion/"
+  to = "/blog/road-trip-stopover-in-asheville-recharge-at-the-historic-reynolds-mansion/"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/romantic-things-to-do-in-asheville-nc-ultimate-guide-for-couples-in-2026/"
+  to = "/blog/romantic-things-to-do-in-asheville-nc-ultimate-guide-for-couples-in-2026/"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/antebellum-architecture-in-the-mountains-the-reynolds-mansions-unique-design/"
+  to = "/blog/antebellum-architecture-in-the-mountains-the-reynolds-mansions-unique-design/"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/blog"
+  to = "/blog/"
+  status = 301
+  force = false
