@@ -1,0 +1,10 @@
+# The Reynolds Mansion
+# robots.txt
+
+User-agent: *
+Allow: /
+
+# Disallow internal/utility paths if any added later
+# Disallow: /admin/
+
+Sitemap: https://thereynoldsmansion.com/sitemap.xml
