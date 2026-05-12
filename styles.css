@@ -22,7 +22,7 @@ a { text-decoration: none; }
   --dark:          #0E0B05;
   --text-dark:     #2A1E0F;
   --text-mid:      #5A4830;
-  --text-soft:     #8A7560;
+  --text-soft:     #7A6650;
   --text-cream:    #F0E4CE;
   --text-cream-dim:#B8A888;
   --ff-display:    'Cormorant Garamond', Georgia, serif;
@@ -1010,6 +1010,7 @@ nav {
   position: relative;
   padding: 120px 0;
   overflow: hidden;
+  background-color: var(--dark);
 }
 .location-bg {
   position: absolute;
@@ -1157,10 +1158,9 @@ nav {
 .review-source {
   font-family: var(--ff-body);
   font-size: 10px;
-  color: var(--text-cream-dim);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--crimson);
 }
 
 /* ============================================================
