@@ -368,9 +368,10 @@ nav {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(10,7,3,0.25) 0%,
-    rgba(10,7,3,0.35) 40%,
-    rgba(10,7,3,0.65) 100%
+    rgba(10,7,3,0.45) 0%,
+    rgba(10,7,3,0.15) 22%,
+    rgba(10,7,3,0.10) 58%,
+    rgba(10,7,3,0.70) 100%
   );
   z-index: 1;
 }
@@ -381,10 +382,16 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 60px 24px 40px;
+  justify-content: space-between;
+  padding: 44px 24px 50px;
   text-align: center;
   overflow: visible;
+}
+.hero-bottom-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
 }
 .hero-eyebrow {
   font-family: var(--ff-body);
@@ -421,7 +428,6 @@ nav {
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 36px;
 }
 .btn-primary {
   background: var(--crimson);
