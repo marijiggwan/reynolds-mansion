@@ -345,8 +345,8 @@ nav {
 .hero {
   position: relative;
   height: calc(100svh - var(--nav-h) - 36px);
-  min-height: 560px;
-  max-height: 900px;
+  min-height: 620px;
+  max-height: 1040px;
   overflow: hidden;
 }
 .hero-slides {
