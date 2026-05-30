@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Widget Preview — internal</title>
+  <title>Hero + Widget Preview — internal</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:wght@400;500;600&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="/images/photos-2026/hero-kb-1-day.webp">
   <link rel="stylesheet" href="/styles.css">
   <style>
     .pv-note{font-family:var(--ff-body);max-width:760px;margin:32px auto 18px;padding:0 24px;color:var(--text-dark);}
@@ -15,17 +16,34 @@
     .pv-note p{font-size:14px;line-height:1.6;margin:6px 0;}
     .pv-note .tag{display:inline-block;background:var(--gold-muted);color:var(--text-mid);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:6px;margin-bottom:12px;}
 
-    .pv-hero{position:relative;height:440px;overflow:hidden;}
-    .pv-hero .bg{position:absolute;inset:0;background-image:image-set(url('/images/photos-2026/reynolds-mansion-hero-1800.webp') type('image/webp'),url('/images/photos-2026/reynolds-mansion-hero-fallback.jpg') type('image/jpeg'));background-size:cover;background-position:center 40%;}
-    .pv-hero .ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,7,3,.20),rgba(10,7,3,.10) 40%,rgba(10,7,3,.78));}
-    .pv-hero .lbl{position:absolute;left:50%;bottom:28px;transform:translateX(-50%);z-index:2;font-family:var(--ff-body);color:var(--text-cream-dim);font-size:12px;letter-spacing:.18em;text-transform:uppercase;}
+    /* ===== KEN BURNS HERO ===== */
+    .kb-hero{position:relative;height:600px;min-height:520px;overflow:hidden;}
+    .kb-slides{position:absolute;inset:0;overflow:hidden;}
+    .kb-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;will-change:opacity,transform;animation:kbCycle 30s infinite;}
+    .kb-slide:nth-child(1){animation-delay:0s;}
+    .kb-slide:nth-child(2){animation-delay:7.5s;}
+    .kb-slide:nth-child(3){animation-delay:15s;}
+    .kb-slide:nth-child(4){animation-delay:22.5s;}
+    @keyframes kbCycle{
+      0%{opacity:0;transform:scale(1.00);}
+      5%{opacity:1;}
+      25%{opacity:1;transform:scale(1.08);}
+      30%{opacity:0;transform:scale(1.09);}
+      100%{opacity:0;transform:scale(1.00);}
+    }
+    .kb-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,7,3,.32) 0%,rgba(10,7,3,.10) 28%,rgba(10,7,3,.08) 62%,rgba(10,7,3,.34) 100%);}
+    @media (prefers-reduced-motion: reduce){
+      .kb-slide{animation:none;transform:none;}
+      .kb-slide:nth-child(1){opacity:1;}
+      .kb-slide:nth-child(n+2){opacity:0;}
+    }
 
-    /* ===== BOOKING BAND (proposed homepage insert, below hero) ===== */
+    /* ===== BOOKING BAND (live) ===== */
     .booking-band{padding:22px 32px;}
     .booking-band-inner{max-width:1100px;margin:0 auto;background:var(--dark);border:1px solid rgba(196,148,58,.22);padding:24px 40px 26px;text-align:center;}
     .booking-band .section-label-dark{display:block;margin-bottom:16px;}
 
-    /* ===== WIDGET OVERRIDE CSS (staged for styles.css) ===== */
+    /* ===== WIDGET OVERRIDES (live) ===== */
     body .tr-widget{width:100%;}
     body .tr-widget form,
     body .tr-widget div.tr-component.tr-check-availability{display:flex !important;flex-direction:row !important;align-items:flex-end !important;justify-content:center !important;flex-wrap:wrap !important;gap:14px !important;}
@@ -42,8 +60,8 @@
     body .tr-widget .tr-occupancy .tr-field:nth-child(2){display:none !important;}
     body .tr-widget div.tr-component.tr-check-availability button.tr-search{background-color:var(--crimson) !important;color:#fff !important;font-family:'EB Garamond',Georgia,serif !important;font-size:11px !important;font-weight:600 !important;letter-spacing:.16em !important;text-transform:uppercase !important;padding:15px 34px !important;border:0 none !important;border-radius:10px !important;cursor:pointer !important;height:auto !important;transition:background-color .2s,transform .15s !important;}
     body .tr-widget div.tr-component.tr-check-availability button.tr-search:hover{background-color:var(--crimson-hover) !important;transform:translateY(-1px) !important;}
-    body .tr-widget .tr-error{font-family:var(--ff-body) !important;font-size:12px !important;color:var(--crimson-light) !important;}
     @media (max-width:760px){
+      .booking-band{padding:18px 16px;}.booking-band-inner{padding:20px 18px;}
       body .tr-widget form,
       body .tr-widget div.tr-component.tr-check-availability,
       body .tr-widget .tr-search-dates,
@@ -57,34 +75,30 @@
 <body>
   <div class="pv-note">
     <span class="tag">Internal preview — not linked, noindexed</span>
-    <h1>Booking band — below the hero</h1>
-    <p>Hero on top (static here; becomes the Ken Burns slideshow later), the booking band directly below it, then the page continues into the promo strip and cream "Welcome" section. Children selector hidden (16+). Occupancy is a placeholder 4 adults pending Paul's confirmed max.</p>
+    <h1>New hero + booking band</h1>
+    <p>Ken Burns slideshow (day &rarr; front &rarr; golden-hour patio &rarr; twilight, 30s loop, slow zoom + crossfade), overlay button/link/text removed, then the booking band, promo strip, and "Welcome" section. Front, patio, and twilight frames are 1024px stand-ins here &mdash; they'll be sharper once the hi-res originals replace them.</p>
   </div>
 
-  <!-- HERO (representative) -->
-  <div class="pv-hero">
-    <div class="bg"></div><div class="ov"></div>
-    <span class="lbl">Hero image / future Ken Burns slideshow</span>
-  </div>
+  <section class="hero kb-hero" id="main-content">
+    <div class="kb-slides">
+      <div class="kb-slide" style="background-image:url('/images/photos-2026/hero-kb-1-day.webp');background-position:center 42%;"></div>
+      <div class="kb-slide" style="background-image:url('/images/photos-2026/hero-kb-2-front.webp');background-position:center 46%;"></div>
+      <div class="kb-slide" style="background-image:url('/images/photos-2026/hero-kb-3-patio.webp');background-position:center 54%;"></div>
+      <div class="kb-slide" style="background-image:url('/images/photos-2026/hero-kb-4-twilight.webp');background-position:center 42%;"></div>
+    </div>
+    <div class="kb-overlay"></div>
+    <h1 class="sr-only">The Reynolds Mansion — a historic Asheville bed and breakfast, built 1847, with a four-course gourmet breakfast by a classically trained chef.</h1>
+  </section>
 
-  <!-- BOOKING BAND (the proposed insert) -->
   <section class="booking-band filigree-bg" aria-label="Check availability">
     <div class="booking-band-inner">
       <span class="section-label section-label-dark">Plan Your Visit</span>
-      <div class="tr-widget"
-           data-tr-widget-type="check-availability"
-           data-tr-short-name="thereynoldsmansion"
-           data-tr-number-of-adults="4"
-           data-tr-number-of-children="2"></div>
+      <div class="tr-widget" data-tr-widget-type="check-availability" data-tr-short-name="thereynoldsmansion" data-tr-number-of-adults="2" data-tr-number-of-children="2"></div>
     </div>
   </section>
 
-  <!-- PROMO BANNER (existing) -->
-  <div class="promo-banner">
-    <a href="/offers/" class="promo-banner-link">Spring Availability Now Open — View Packages</a>
-  </div>
+  <div class="promo-banner"><a href="/offers/" class="promo-banner-link">Spring Availability Now Open — View Packages</a></div>
 
-  <!-- INTRO (existing, snippet) -->
   <section class="intro-section damask-bg">
     <div class="section-inner">
       <span class="section-label">Welcome to Reynolds Mansion</span>
