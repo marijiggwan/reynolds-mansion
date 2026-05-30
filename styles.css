@@ -2299,15 +2299,28 @@ body .tr-widget .tr-occupancy .tr-field:nth-child(2) { display: none !important;
 body .tr-widget div.tr-component.tr-check-availability button.tr-search { background-color: var(--crimson) !important; color: #fff !important; font-family: 'EB Garamond', Georgia, serif !important; font-size: 11px !important; font-weight: 600 !important; letter-spacing: 0.16em !important; text-transform: uppercase !important; padding: 15px 34px !important; border: 0 none !important; border-radius: 10px !important; cursor: pointer !important; height: auto !important; transition: background-color 0.2s, transform 0.15s !important; }
 body .tr-widget div.tr-component.tr-check-availability button.tr-search:hover { background-color: var(--crimson-hover) !important; transform: translateY(-1px) !important; }
 body .tr-widget .tr-error { font-family: var(--ff-body) !important; font-size: 12px !important; color: var(--crimson-light) !important; }
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   .booking-band { padding: 18px 16px; }
-  .booking-band-inner { padding: 20px 18px; }
+  .booking-band-inner { padding: 22px 18px; }
+  /* Stack every container full width, tight + centered */
   body .tr-widget form,
   body .tr-widget div.tr-component.tr-check-availability,
-  body .tr-widget .tr-search-dates,
-  body .tr-widget .tr-occupancy { flex-direction: column !important; align-items: stretch !important; width: 100% !important; }
-  body .tr-widget input[type=text].tr-date,
-  body .tr-widget .tr-occupancy select { min-width: 0 !important; width: 100% !important; }
+  body .tr-widget div.tr-component.tr-check-availability .tr-search-dates,
+  body .tr-widget div.tr-component.tr-check-availability .tr-occupancy {
+    display: flex !important; flex-direction: column !important;
+    align-items: stretch !important; gap: 14px !important; width: 100% !important;
+  }
+  /* Neutralize TR's float:left + 18px field padding */
+  body .tr-widget div.tr-component.tr-check-availability div.tr-search-dates div.tr-field,
+  body .tr-widget div.tr-component.tr-check-availability div.tr-occupancy div.tr-field {
+    float: none !important; padding: 0 !important; width: 100% !important; margin: 0 !important;
+  }
+  /* Override TR's fixed 142px / 83px widths at matching specificity */
+  body .tr-widget div.tr-component.tr-check-availability input[type=text].tr-date,
+  body .tr-widget div.tr-component.tr-check-availability select,
+  body .tr-widget div.tr-component.tr-check-availability div.tr-occupancy select.tr-number-of-adults {
+    width: 100% !important; min-width: 0 !important; box-sizing: border-box !important;
+  }
   body .tr-widget div.tr-component.tr-check-availability button.tr-search { width: 100% !important; }
 }
 
@@ -2350,3 +2363,10 @@ body .tr-widget .tr-error { font-family: var(--ff-body) !important; font-size: 1
 .booking-band-rating strong { color: var(--text-cream); font-weight: 600; }
 .bb-stars { color: var(--gold); letter-spacing: 2px; margin-right: 7px; }
 .bb-sep { opacity: 0.4; margin: 0 7px; }
+
+/* Hero: static first frame on mobile (no slideshow, no extra image loads) */
+@media (max-width: 768px) {
+  .kb-slide { animation: none !important; }
+  .kb-slide:nth-child(1) { opacity: 1 !important; transform: none !important; }
+  .kb-slide:nth-child(n+2) { display: none !important; }
+}
