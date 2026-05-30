@@ -19,16 +19,15 @@
     /* ===== KEN BURNS HERO ===== */
     .kb-hero{position:relative;height:calc(100vh - 120px);min-height:600px;max-height:1000px;overflow:hidden;}
     .kb-slides{position:absolute;inset:0;overflow:hidden;}
-    .kb-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;will-change:opacity,transform;animation:kbCycle 24s infinite;}
+    .kb-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;will-change:opacity,transform;animation:kbCycle 18s infinite;}
     .kb-slide:nth-child(1){animation-delay:0s;}
     .kb-slide:nth-child(2){animation-delay:6s;}
     .kb-slide:nth-child(3){animation-delay:12s;}
-    .kb-slide:nth-child(4){animation-delay:18s;}
     @keyframes kbCycle{
       0%{opacity:0;transform:scale(1.00);}
-      5%{opacity:1;}
-      25%{opacity:1;transform:scale(1.085);}
-      30%{opacity:0;transform:scale(1.09);}
+      8%{opacity:1;}
+      33%{opacity:1;transform:scale(1.085);}
+      41%{opacity:0;transform:scale(1.09);}
       100%{opacity:0;transform:scale(1.00);}
     }
     .kb-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,7,3,.32) 0%,rgba(10,7,3,.10) 28%,rgba(10,7,3,.08) 62%,rgba(10,7,3,.34) 100%);}
@@ -85,8 +84,7 @@
 
   <section class="hero kb-hero" id="main-content">
     <div class="kb-slides">
-      <div class="kb-slide" style="background-image:url('/images/photos-2026/hero-kb-1-day.webp');background-position:center 52%;"></div>
-      <div class="kb-slide" style="background-image:url('/images/photos-2026/hero-kb-2-front.webp');background-position:center 54%;"></div>
+      <div class="kb-slide" style="background-image:url('/images/photos-2026/hero-kb-1-day.webp');background-position:center 48%;"></div>
       <div class="kb-slide" style="background-image:url('/images/photos-2026/hero-kb-3-patio.webp');background-position:center 54%;"></div>
       <div class="kb-slide" style="background-image:url('/images/photos-2026/hero-kb-4-twilight.webp');background-position:center 42%;"></div>
     </div>
