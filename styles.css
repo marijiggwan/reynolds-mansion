@@ -23,8 +23,8 @@ a { text-decoration: none; }
   --text-dark:     #2A1E0F;
   --text-mid:      #5A4830;
   --text-soft:     #7A6650;
-  --text-cream:    #F0E4CE;
-  --text-cream-dim:#B8A888;
+  --text-cream:    #FFFFFF;
+  --text-cream-dim:#D6D6D6;
   --ff-display:    'Cormorant Garamond', Georgia, serif;
   --ff-body:       'Libre Franklin', 'Helvetica Neue', sans-serif;
   --nav-h:         80px;
@@ -430,19 +430,20 @@ nav {
   justify-content: center;
 }
 .btn-primary {
-  background: var(--crimson);
-  color: #fff;
+  background: transparent;
+  color: var(--crimson);
+  border: 1px solid var(--crimson);
   font-family: 'EB Garamond', Georgia, serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  padding: 15px 34px;
+  padding: 14px 33px;
   border-radius: 10px;
-  transition: background 0.2s, transform 0.15s;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
   display: inline-block;
 }
-.btn-primary:hover { background: var(--crimson-hover); transform: translateY(-1px); }
+.btn-primary:hover { background: var(--crimson); color: #fff; transform: translateY(-1px); }
 .btn-ghost {
   color: rgba(255,255,255,0.82);
   font-family: 'EB Garamond', Georgia, serif;
@@ -875,18 +876,19 @@ nav {
 }
 .btn-secondary {
   display: inline-block;
-  background: var(--crimson);
-  color: #fff;
+  background: transparent;
+  color: var(--crimson);
+  border: 1px solid var(--crimson);
   font-family: 'EB Garamond', Georgia, serif;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  padding: 13px 28px;
+  padding: 12px 27px;
   border-radius: 10px;
-  transition: background 0.2s;
+  transition: background 0.2s, color 0.2s;
 }
-.btn-secondary:hover { background: var(--crimson-hover); }
+.btn-secondary:hover { background: var(--crimson); color: #fff; }
 .btn-secondary-outline {
   display: inline-block;
   border: 1px solid var(--crimson);
@@ -1719,17 +1721,35 @@ input:focus-visible {
 }
 .btn-primary {
   display: inline-block;
-  padding: 12px 28px;
-  background: var(--crimson);
-  color: #fff;
+  padding: 11px 27px;
+  background: transparent;
+  color: var(--crimson);
+  border: 1px solid var(--crimson);
   font-family: 'EB Garamond', Georgia, serif;
   font-size: 14px;
   letter-spacing: 0.08em;
   border-radius: 10px;
-  transition: background 0.2s;
+  transition: background 0.2s, color 0.2s;
   white-space: nowrap;
 }
-.btn-primary:hover { background: var(--crimson-hover); color: #fff; }
+.btn-primary:hover { background: var(--crimson); color: #fff; }
+/* ── Track 2: dark-section solid buttons → gold outline (matches "Explore the Breakfast") ── */
+.filigree-bg .btn-primary,
+.dark-section-inner .btn-primary,
+.filigree-bg .btn-secondary,
+.dark-section-inner .btn-secondary {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid rgba(196,148,58,0.5);
+}
+.filigree-bg .btn-primary:hover,
+.dark-section-inner .btn-primary:hover,
+.filigree-bg .btn-secondary:hover,
+.dark-section-inner .btn-secondary:hover {
+  background: var(--crimson);
+  border-color: var(--crimson);
+  color: #fff;
+}
 .btn-outline {
   display: inline-block;
   padding: 11px 26px;
