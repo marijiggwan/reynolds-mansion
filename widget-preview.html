@@ -19,15 +19,15 @@
     /* ===== KEN BURNS HERO ===== */
     .kb-hero{position:relative;height:600px;min-height:520px;overflow:hidden;}
     .kb-slides{position:absolute;inset:0;overflow:hidden;}
-    .kb-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;will-change:opacity,transform;animation:kbCycle 30s infinite;}
+    .kb-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;will-change:opacity,transform;animation:kbCycle 24s infinite;}
     .kb-slide:nth-child(1){animation-delay:0s;}
-    .kb-slide:nth-child(2){animation-delay:7.5s;}
-    .kb-slide:nth-child(3){animation-delay:15s;}
-    .kb-slide:nth-child(4){animation-delay:22.5s;}
+    .kb-slide:nth-child(2){animation-delay:6s;}
+    .kb-slide:nth-child(3){animation-delay:12s;}
+    .kb-slide:nth-child(4){animation-delay:18s;}
     @keyframes kbCycle{
       0%{opacity:0;transform:scale(1.00);}
       5%{opacity:1;}
-      25%{opacity:1;transform:scale(1.08);}
+      25%{opacity:1;transform:scale(1.085);}
       30%{opacity:0;transform:scale(1.09);}
       100%{opacity:0;transform:scale(1.00);}
     }
@@ -42,6 +42,10 @@
     .booking-band{padding:22px 32px;}
     .booking-band-inner{max-width:1100px;margin:0 auto;background:var(--dark);border:1px solid rgba(196,148,58,.22);padding:24px 40px 26px;text-align:center;}
     .booking-band .section-label-dark{display:block;margin-bottom:16px;}
+    .booking-band-rating{margin-top:18px;font-family:var(--ff-body);font-size:13px;letter-spacing:.04em;color:var(--text-cream-dim);}
+    .booking-band-rating strong{color:var(--text-cream);font-weight:600;}
+    .bb-stars{color:var(--gold);letter-spacing:2px;margin-right:7px;}
+    .bb-sep{opacity:.4;margin:0 7px;}
 
     /* ===== WIDGET OVERRIDES (live) ===== */
     body .tr-widget{width:100%;}
@@ -94,6 +98,7 @@
     <div class="booking-band-inner">
       <span class="section-label section-label-dark">Plan Your Visit</span>
       <div class="tr-widget" data-tr-widget-type="check-availability" data-tr-short-name="thereynoldsmansion" data-tr-number-of-adults="2" data-tr-number-of-children="2"></div>
+      <div class="booking-band-rating"><span class="bb-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><strong>4.9</strong> on TripAdvisor<span class="bb-sep">&middot;</span>934 reviews</div>
     </div>
   </section>
 
