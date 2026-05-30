@@ -276,6 +276,18 @@
 
 </section>
 
+<!-- BOOKING BAND (ThinkReservations check-availability widget) -->
+<section class="booking-band filigree-bg" aria-label="Check availability">
+  <div class="booking-band-inner">
+    <span class="section-label section-label-dark">Plan Your Visit</span>
+    <div class="tr-widget"
+         data-tr-widget-type="check-availability"
+         data-tr-short-name="thereynoldsmansion"
+         data-tr-number-of-adults="2"
+         data-tr-number-of-children="2"></div>
+  </div>
+</section>
+
 <!-- PROMO BANNER (swappable slot) -->
 <div class="promo-banner">
   <a href="/offers/" class="promo-banner-link">Spring Availability Now Open — View Packages</a>
@@ -731,5 +743,6 @@
     if (e.target === this) closeMobileNav();
   });
 </script>
+<script src="/js/thinkreservations-widgets.js"></script>
 </body>
 </html>

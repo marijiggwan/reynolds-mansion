@@ -2245,3 +2245,48 @@ input:focus-visible {
   text-align: center;
   margin-top: 10px;
 }
+
+/* ============================================================
+   BOOKING BAND + THINKRESERVATIONS WIDGET (below hero)
+   ============================================================ */
+.booking-band { padding: 22px 32px; }
+.booking-band-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: var(--dark);
+  border: 1px solid rgba(196,148,58,0.22);
+  padding: 24px 40px 26px;
+  text-align: center;
+}
+.booking-band .section-label-dark { display: block; margin-bottom: 16px; }
+
+/* Widget overrides — TR defaults use !important + deep selectors,
+   so these match TR's full selector path, prepend `body`, and use !important. */
+body .tr-widget { width: 100%; }
+body .tr-widget form,
+body .tr-widget div.tr-component.tr-check-availability { display: flex !important; flex-direction: row !important; align-items: flex-end !important; justify-content: center !important; flex-wrap: wrap !important; gap: 14px !important; }
+body .tr-widget .tr-search-dates,
+body .tr-widget .tr-occupancy { display: flex !important; gap: 14px !important; align-items: flex-end !important; }
+body .tr-widget .tr-field { display: flex !important; flex-direction: column !important; gap: 6px !important; margin: 0 !important; }
+body .tr-widget .tr-field label { font-family: var(--ff-body) !important; font-size: 10px !important; font-weight: 600 !important; letter-spacing: 0.14em !important; text-transform: uppercase !important; color: var(--text-cream) !important; }
+body .tr-widget input[type=text].tr-date,
+body .tr-widget .tr-occupancy select { font-family: var(--ff-body) !important; font-size: 14px !important; color: var(--text-dark) !important; background: var(--ivory) !important; border: 1px solid var(--gold-line) !important; border-radius: 8px !important; padding: 12px 14px !important; min-width: 150px !important; height: auto !important; box-shadow: none !important; }
+body .tr-widget input[type=text].tr-date:focus,
+body .tr-widget .tr-occupancy select:focus { border-color: var(--gold) !important; outline: none !important; }
+body .tr-widget .tr-occupancy select.tr-number-of-children,
+body .tr-widget .tr-occupancy .tr-child-ages,
+body .tr-widget .tr-occupancy .tr-field:nth-child(2) { display: none !important; }
+body .tr-widget div.tr-component.tr-check-availability button.tr-search { background-color: var(--crimson) !important; color: #fff !important; font-family: 'EB Garamond', Georgia, serif !important; font-size: 11px !important; font-weight: 600 !important; letter-spacing: 0.16em !important; text-transform: uppercase !important; padding: 15px 34px !important; border: 0 none !important; border-radius: 10px !important; cursor: pointer !important; height: auto !important; transition: background-color 0.2s, transform 0.15s !important; }
+body .tr-widget div.tr-component.tr-check-availability button.tr-search:hover { background-color: var(--crimson-hover) !important; transform: translateY(-1px) !important; }
+body .tr-widget .tr-error { font-family: var(--ff-body) !important; font-size: 12px !important; color: var(--crimson-light) !important; }
+@media (max-width: 760px) {
+  .booking-band { padding: 18px 16px; }
+  .booking-band-inner { padding: 20px 18px; }
+  body .tr-widget form,
+  body .tr-widget div.tr-component.tr-check-availability,
+  body .tr-widget .tr-search-dates,
+  body .tr-widget .tr-occupancy { flex-direction: column !important; align-items: stretch !important; width: 100% !important; }
+  body .tr-widget input[type=text].tr-date,
+  body .tr-widget .tr-occupancy select { min-width: 0 !important; width: 100% !important; }
+  body .tr-widget div.tr-component.tr-check-availability button.tr-search { width: 100% !important; }
+}
