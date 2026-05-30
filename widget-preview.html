@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Widget Preview — internal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=EB+Garamond:wght@400;500;600&family=Libre+Franklin:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .preview-note{font-family:var(--ff-body);max-width:760px;margin:40px auto 20px;padding:0 24px;color:var(--text-dark);}
+    .preview-note h1{font-family:var(--ff-display);font-size:30px;color:var(--crimson);margin:0 0 8px;}
+    .preview-note p{font-size:15px;line-height:1.6;margin:6px 0;}
+    .preview-note .tag{display:inline-block;background:var(--gold-muted);color:var(--text-mid);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:6px;margin-bottom:14px;}
+
+    /* Faithful hero band, matched to the live homepage hero */
+    .preview-hero{position:relative;height:560px;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;}
+    .preview-hero .bg{position:absolute;inset:0;background-image:image-set(url('/images/photos-2026/reynolds-mansion-hero-1800.webp') type('image/webp'),url('/images/photos-2026/reynolds-mansion-hero-fallback.jpg') type('image/jpeg'));background-size:cover;background-position:center 40%;}
+    .preview-hero .ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,7,3,.20),rgba(10,7,3,.10) 40%,rgba(10,7,3,.78));}
+    .preview-hero .content{position:relative;z-index:2;width:100%;max-width:1000px;padding:0 24px 56px;text-align:center;}
+    .preview-hero .eyebrow{font-family:var(--ff-body);color:var(--text-cream-dim);font-size:12px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px;}
+
+    /* Glass panel that holds the date bar so it reads on the photo */
+    .widget-panel{display:inline-block;background:rgba(14,11,5,.42);backdrop-filter:blur(3px);border:1px solid var(--gold-line);border-radius:14px;padding:22px 26px;}
+
+    /* ===== WIDGET OVERRIDE CSS (staged for styles.css) ===== */
+    body .tr-widget{width:100%;}
+    body .tr-widget form,
+    body .tr-widget div.tr-component.tr-check-availability{display:flex !important;flex-direction:row !important;align-items:flex-end !important;justify-content:center !important;flex-wrap:wrap !important;gap:14px !important;}
+    body .tr-widget .tr-search-dates,
+    body .tr-widget .tr-occupancy{display:flex !important;gap:14px !important;align-items:flex-end !important;}
+    body .tr-widget .tr-field{display:flex !important;flex-direction:column !important;gap:6px !important;margin:0 !important;}
+    body .tr-widget .tr-field label{font-family:var(--ff-body) !important;font-size:10px !important;font-weight:600 !important;letter-spacing:.14em !important;text-transform:uppercase !important;color:var(--text-cream) !important;}
+    body .tr-widget input[type=text].tr-date,
+    body .tr-widget .tr-occupancy select{font-family:var(--ff-body) !important;font-size:14px !important;color:var(--text-dark) !important;background:var(--ivory) !important;border:1px solid var(--gold-line) !important;border-radius:8px !important;padding:12px 14px !important;min-width:150px !important;height:auto !important;box-shadow:none !important;}
+    body .tr-widget input[type=text].tr-date:focus,
+    body .tr-widget .tr-occupancy select:focus{border-color:var(--gold) !important;outline:none !important;}
+    body .tr-widget .tr-occupancy select.tr-number-of-children,
+    body .tr-widget .tr-occupancy .tr-child-ages,
+    body .tr-widget .tr-occupancy .tr-field:nth-child(2){display:none !important;}
+    body .tr-widget .tr-form-actions button,
+    body .tr-widget button.tr-search{background:var(--crimson) !important;color:#fff !important;font-family:'EB Garamond',Georgia,serif !important;font-size:11px !important;font-weight:600 !important;letter-spacing:.16em !important;text-transform:uppercase !important;padding:15px 34px !important;border:none !important;border-radius:10px !important;cursor:pointer !important;height:auto !important;transition:background .2s,transform .15s !important;}
+    body .tr-widget .tr-form-actions button:hover,
+    body .tr-widget button.tr-search:hover{background:var(--crimson-hover) !important;transform:translateY(-1px) !important;}
+    body .tr-widget .tr-error{font-family:var(--ff-body) !important;font-size:12px !important;color:var(--crimson-light) !important;}
+    @media (max-width:760px){
+      body .tr-widget form,
+      body .tr-widget div.tr-component.tr-check-availability,
+      body .tr-widget .tr-search-dates,
+      body .tr-widget .tr-occupancy{flex-direction:column !important;align-items:stretch !important;width:100% !important;}
+      body .tr-widget input[type=text].tr-date,
+      body .tr-widget .tr-occupancy select{min-width:0 !important;width:100% !important;}
+      body .tr-widget .tr-form-actions button,
+      body .tr-widget button.tr-search{width:100% !important;}
+    }
+  </style>
+</head>
+<body>
+  <div class="preview-note">
+    <span class="tag">Internal preview — not linked, noindexed</span>
+    <h1>ThinkReservations widget — placement preview</h1>
+    <p>Below is the live Option 1 widget, self-hosted and styled to the site's design system. Pick check-in / check-out and it sends you to the booking engine results page, exactly as it will in production.</p>
+    <p>The "children" selector is intentionally hidden (16+ property). Occupancy default is set to 4 adults as a placeholder — needs Paul's confirmed max.</p>
+  </div>
+
+  <div class="preview-hero">
+    <div class="bg"></div>
+    <div class="ov"></div>
+    <div class="content">
+      <p class="eyebrow">Recommended placement: bottom of the homepage hero</p>
+      <div class="widget-panel">
+        <div class="tr-widget"
+             data-tr-widget-type="check-availability"
+             data-tr-short-name="thereynoldsmansion"
+             data-tr-number-of-adults="4"
+             data-tr-number-of-children="2"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/thinkreservations-widgets.js"></script>
+</body>
+</html>
