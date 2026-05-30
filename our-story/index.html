@@ -59,7 +59,7 @@
 <link rel="stylesheet" href="/styles.css">
 <style>
   .story-hero { position: relative; height: 480px; overflow: hidden; }
-  .story-hero img { width: 100%; height: 100%; object-fit: cover; object-position: center 50%; }
+  .story-hero img { width: 100%; height: 100%; object-fit: cover; object-position: center 32%; }
   .story-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(14,11,5,0.05), rgba(14,11,5,0.45)); }
   .story-hero-text { position: absolute; bottom: 44px; left: 0; right: 0; text-align: center; z-index: 2; }
   .story-hero-text h1 { font-family: var(--ff-display); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 400; color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.3); margin-bottom: 6px; }
@@ -70,9 +70,12 @@
   .story-prose .pullquote { font-family: var(--ff-display); font-size: 1.4rem; font-style: italic; color: var(--text-dark); text-align: center; padding: 28px 0; margin: 28px 0; border-top: 1px solid var(--gold-line); border-bottom: 1px solid var(--gold-line); line-height: 1.5; }
   .feature-row--compact .feature-img { max-height: 400px; }
   .feature-row--compact .feature-img img { max-height: 400px; }
+  /* Why This House: balance columns so "A House That Chose Us" fits on one line */
+  .feature-row--compact.reverse { grid-template-columns: 1fr 1fr; }
   @media (max-width: 768px) {
     .story-hero { height: 360px; }
     .story-prose { padding: 40px 20px 36px; }
+    .feature-row--compact.reverse { grid-template-columns: 1fr; }
   }
 </style>
 <!-- MailerLite Universal -->
@@ -177,7 +180,7 @@
 
   <!-- HERO -->
   <div class="story-hero">
-    <img src="/images/people/ReynoldsHouse127.jpg" alt="Paul Manshon welcoming guests at the front door of The Reynolds Mansion with a silver welcome tray — the National Register of Historic Places plaque visible on the 1847 brick wall">
+    <img src="/images/people/ReynoldsHouse179.jpg" alt="Paul and Mirlin Manshon standing together on the front porch of The Reynolds Mansion, the green screen door and 1847 brick wall behind them">
     <div class="story-hero-overlay"></div>
     <div class="story-hero-text">
       <h1>Our Story</h1>
@@ -202,7 +205,7 @@
       <div class="feature-img">
         <img src="/images/people/ReynoldsHouse184.jpg" alt="Paul and Mirlin Manshon sitting on the front steps of The Reynolds Mansion — the 1847 brick, front door, and address number 100 visible behind them">
       </div>
-      <div class="feature-text">
+      <div class="feature-text" style="justify-content:flex-start;">
         <span class="section-label">Your Innkeepers</span>
         <h2>Paul &amp; Mirlin</h2>
         <p>We came to Asheville from very different corners of the world, drawn together by a shared love for hospitality and a belief that the best guest experiences happen in intimate settings, not ballrooms.</p>
@@ -218,7 +221,7 @@
       <div class="feature-img">
         <img src="/images/people/ReynoldsHouse073.jpg" alt="Paul and Mirlin setting the breakfast table together in the grand dining room of The Reynolds Mansion">
       </div>
-      <div class="feature-text">
+      <div class="feature-text" style="justify-content:flex-start;">
         <span class="section-label">Why This House</span>
         <h2>A House That Chose Us</h2>
         <p>When we first walked through The Reynolds Mansion, we were not looking for a project. We were looking for a home. But this house — built in 1847, one of fewer than ten pre-Civil War brick homes surviving in western North Carolina, listed on the National Register of Historic Places — this house had something to say.</p>
