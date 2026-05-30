@@ -72,6 +72,8 @@
   .feature-row--compact .feature-img img { max-height: 400px; }
   /* Why This House: balance columns so "A House That Chose Us" fits on one line */
   .feature-row--compact.reverse { grid-template-columns: 1fr 1fr; }
+  /* Align section headings with the top edge of the image */
+  .feature-row--compact .feature-text { padding-top: 0; justify-content: flex-start; }
   @media (max-width: 768px) {
     .story-hero { height: 360px; }
     .story-prose { padding: 40px 20px 36px; }
