@@ -65,6 +65,14 @@
   border-radius: 6px;
   padding: 36px 40px;
 }
+.offer-card-img {
+  display: block;
+  width: calc(100% + 80px);
+  margin: -36px -40px 26px;
+  height: clamp(200px, 32vw, 300px);
+  object-fit: cover;
+  border-radius: 6px 6px 0 0;
+}
 .offer-card-label {
   font-family: var(--ff-body);
   font-size: 10.5px; font-weight: 600;
@@ -94,6 +102,7 @@
 }
 @media (max-width: 560px) {
   .offer-card { padding: 24px 20px; margin-left: 16px; margin-right: 16px; }
+  .offer-card-img { width: calc(100% + 40px); margin: -24px -20px 20px; }
 }
 </style>
 <!-- MailerLite Universal -->
@@ -227,6 +236,7 @@
 
     <!-- BILTMORE -->
     <div class="offer-card">
+      <img class="offer-card-img" src="/images/offers/biltmore-gardens.jpg" alt="The walled garden at Biltmore Estate in full bloom with its pergola — fifteen minutes from The Reynolds Mansion in Asheville">
       <p class="offer-card-label">Guest Exclusive</p>
       <h2>Discounted Biltmore Estate Tickets</h2>
       <p>Guests with confirmed reservations at The Reynolds Mansion can purchase discounted tickets to Biltmore Estate — America's largest private home, just fifteen minutes south of the Mansion. Plan at least a half day for the house and gardens.</p>
@@ -245,6 +255,7 @@
 
     <!-- FLOWERS -->
     <div class="offer-card">
+      <img class="offer-card-img" src="/images/offers/flowers-room.jpg" alt="A fresh arrangement of roses and tulips ready to welcome guests to their room at The Reynolds Mansion">
       <p class="offer-card-label">Enhancement</p>
       <h2>Flowers for Your Room</h2>
       <p>Celebrating something special? We recommend <a href="https://www.ashevillesbest.com/" target="_blank" rel="noopener" style="color:var(--crimson);">Kaylynne's Briar Patch Florist</a>, located just down the hill in Reynolds Village. Order an arrangement to be delivered to the Mansion before your arrival, and we'll have it waiting in your room.</p>
