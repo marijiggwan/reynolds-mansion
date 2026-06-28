@@ -2451,13 +2451,14 @@ body .tr-widget .tr-error { font-family: var(--ff-body) !important; font-size: 1
   }
   .mbook-book {
     flex: 1 1 auto;
-    background: var(--crimson);
-    color: #fff;
+    background: transparent;
+    color: var(--crimson);
+    border: 1px solid var(--crimson);
     font-size: 14px;
     letter-spacing: 0.10em;
   }
   .mbook-call:active { background: var(--crimson); color: #fff; }
-  .mbook-book:active { background: var(--crimson-hover); }
+  .mbook-book:active { background: var(--crimson); color: #fff; }
   /* keep footer content clear of the fixed bar */
   body { padding-bottom: calc(74px + env(safe-area-inset-bottom)); }
 }
