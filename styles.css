@@ -2403,3 +2403,50 @@ body .tr-widget .tr-error { font-family: var(--ff-body) !important; font-size: 1
   .kb-slide:nth-child(1) { opacity: 1 !important; transform: none !important; }
   .kb-slide:nth-child(n+2) { display: none !important; }
 }
+
+/* ============================================================
+   MOBILE STICKY BOOKING BAR  (added — persistent booking CTA)
+   On mobile (<=768px) the nav "Reserve Now" button collapses into
+   the hamburger overlay, leaving no visible booking CTA while
+   scrolling. This pins a Check-Availability bar to the bottom.
+   Pure CSS: hidden on desktop; auto-hides when the mobile menu opens.
+   ============================================================ */
+.mbook { display: none; }
+
+@media (max-width: 768px) {
+  .mbook {
+    display: block;
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 150;
+    background: var(--ivory);
+    border-top: 1px solid var(--gold-line);
+    box-shadow: 0 -6px 18px rgba(14, 11, 5, 0.10);
+    padding: 10px 14px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom));
+  }
+  .mbook a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 52px;
+    background: var(--crimson);
+    color: #fff;
+    border-radius: 10px;
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .mbook a:active { background: var(--crimson-hover); }
+  /* keep footer content clear of the fixed bar */
+  body { padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
+}
+
+/* hide the bar while the full-screen mobile menu is open */
+.mobile-nav.open ~ .mbook { display: none; }
