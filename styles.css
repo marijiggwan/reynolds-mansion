@@ -2405,47 +2405,61 @@ body .tr-widget .tr-error { font-family: var(--ff-body) !important; font-size: 1
 }
 
 /* ============================================================
-   MOBILE STICKY BOOKING BAR  (added — persistent booking CTA)
+   MOBILE STICKY BOOKING BAR  (Call + Check Availability)
    On mobile (<=768px) the nav "Reserve Now" button collapses into
-   the hamburger overlay, leaving no visible booking CTA while
-   scrolling. This pins a Check-Availability bar to the bottom.
+   the hamburger overlay. This pins a two-button bar to the bottom:
+   outline Call (tel:) + solid Check Availability. Single accent
+   color (crimson), outline vs solid -> respects the 2-color rule.
    Pure CSS: hidden on desktop; auto-hides when the mobile menu opens.
    ============================================================ */
 .mbook { display: none; }
 
 @media (max-width: 768px) {
   .mbook {
-    display: block;
+    display: flex;
+    gap: 9px;
+    align-items: stretch;
     position: fixed;
     left: 0; right: 0; bottom: 0;
     z-index: 150;
     background: var(--ivory);
     border-top: 1px solid var(--gold-line);
     box-shadow: 0 -6px 18px rgba(14, 11, 5, 0.10);
-    padding: 10px 14px;
+    padding: 10px 12px;
     padding-bottom: calc(10px + env(safe-area-inset-bottom));
   }
   .mbook a {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    width: 100%;
+    gap: 8px;
     min-height: 52px;
-    background: var(--crimson);
-    color: #fff;
     border-radius: 10px;
     font-family: 'EB Garamond', Georgia, serif;
-    font-size: 15px;
     font-weight: 600;
-    letter-spacing: 0.12em;
     text-transform: uppercase;
     text-decoration: none;
-    transition: background 0.2s;
+    transition: background 0.2s, color 0.2s;
   }
-  .mbook a:active { background: var(--crimson-hover); }
+  .mbook-call {
+    flex: 0 0 30%;
+    background: transparent;
+    color: var(--crimson);
+    border: 1px solid var(--crimson);
+    font-size: 13px;
+    letter-spacing: 0.10em;
+  }
+  .mbook-book {
+    flex: 1 1 auto;
+    background: var(--crimson);
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 0.10em;
+  }
+  .mbook-call:active { background: var(--crimson); color: #fff; }
+  .mbook-book:active { background: var(--crimson-hover); }
   /* keep footer content clear of the fixed bar */
-  body { padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
+  body { padding-bottom: calc(74px + env(safe-area-inset-bottom)); }
 }
 
 /* hide the bar while the full-screen mobile menu is open */
