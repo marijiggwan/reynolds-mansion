@@ -2464,3 +2464,30 @@ body .tr-widget .tr-error { font-family: var(--ff-body) !important; font-size: 1
 
 /* hide the bar while the full-screen mobile menu is open */
 .mobile-nav.open ~ .mbook { display: none; }
+
+/* ============================================================
+   MOBILE HORIZONTAL-OVERFLOW FIXES
+   The footer badge row and the promo-banner link were rendering
+   wider than the viewport on phones (~593px on a 390px screen),
+   throwing the whole document left with a right gutter until a
+   scroll forced a repaint (the issue Paul reported). Root-caused
+   to those two components; guard added against future regressions.
+   ============================================================ */
+/* sticky-safe guard: clip (not hidden) so position:sticky/fixed still work */
+html { overflow-x: clip; }
+
+/* footer review badges: let the row wrap instead of forcing width */
+.footer-badges { flex-wrap: wrap; }
+
+@media (max-width: 768px) {
+  .promo-banner { padding: 14px 16px; }
+  .promo-banner-link {
+    white-space: normal;
+    text-align: center;
+    max-width: 100%;
+    padding: 11px 18px;
+    font-size: 10px;
+    letter-spacing: 0.10em;
+  }
+  .footer-copyright { font-size: 10px; }
+}
