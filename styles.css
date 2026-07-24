@@ -2568,6 +2568,12 @@ html { overflow-x: clip; }
    ============================================================ */
 .faq-section { padding: 56px 0; }
 .faq-section .section-inner { max-width: 780px; }
+.faq-section-dark { padding: 56px 32px; }
+.faq-dark-inner { max-width: 780px; padding: 40px 56px 48px; }
+@media (max-width: 768px) {
+  .faq-section-dark { padding: 40px 16px; }
+  .faq-dark-inner { padding: 28px 22px 32px; }
+}
 .faq-item { padding: 26px 0; border-bottom: 1px solid var(--gold-line); }
 .faq-item:last-child { border-bottom: none; }
 .faq-item h3 {
