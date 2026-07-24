@@ -2560,3 +2560,24 @@ html { overflow-x: clip; }
   }
   .footer-copyright { font-size: 10px; }
 }
+
+/* ============================================================
+   FAQ PAGE
+   Declarative Q&A sections — visible prose (no accordions) so
+   guests and AI search tools can read every answer directly.
+   ============================================================ */
+.faq-section { padding: 56px 0; }
+.faq-section .section-inner { max-width: 780px; }
+.faq-item { padding: 26px 0; border-bottom: 1px solid var(--gold-line); }
+.faq-item:last-child { border-bottom: none; }
+.faq-item h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 25px;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+.faq-item p { margin: 0; line-height: 1.75; }
+.faq-section-dark .faq-item h3 { color: #fff; }
+.faq-section-dark .faq-item p { color: rgba(255, 255, 255, 0.88); }
+.faq-section-dark .faq-item a { color: #fff; text-decoration: underline; }
+.faq-cta { padding: 64px 0 72px; }
