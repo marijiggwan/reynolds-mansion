@@ -2467,6 +2467,74 @@ body .tr-widget .tr-error { font-family: var(--ff-body) !important; font-size: 1
 .mobile-nav.open ~ .mbook { display: none; }
 
 /* ============================================================
+   DESKTOP STICKY CALL/BOOK BAR
+   Same two buttons as the mobile bar, shown on desktop as a
+   compact fixed pill (bottom-right) once the visitor scrolls
+   past the booking band (or past the hero on interior pages).
+   Revealed via .mbook-show class from /js/book-bar.js.
+   Crimson only (outline Call + solid Check Availability) ->
+   respects the 2-color rule.
+   ============================================================ */
+@media (min-width: 769px) {
+  .mbook.mbook-show {
+    display: flex;
+    gap: 9px;
+    align-items: stretch;
+    position: fixed;
+    left: auto;
+    right: 24px;
+    bottom: 24px;
+    z-index: 150;
+    background: var(--ivory);
+    border: 1px solid var(--gold-line);
+    border-radius: 14px;
+    box-shadow: 0 10px 28px rgba(14, 11, 5, 0.20);
+    padding: 10px 12px;
+    animation: mbook-rise 0.35s ease both;
+  }
+  .mbook.mbook-show a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 48px;
+    border-radius: 10px;
+    font-family: 'EB Garamond', Georgia, serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+  }
+  .mbook.mbook-show .mbook-call {
+    padding: 0 18px;
+    background: transparent;
+    color: var(--crimson);
+    border: 1px solid var(--crimson);
+    font-size: 13px;
+    letter-spacing: 0.10em;
+  }
+  .mbook.mbook-show .mbook-book {
+    padding: 0 22px;
+    background: var(--crimson);
+    color: #fff;
+    border: 1px solid var(--crimson);
+    font-size: 14px;
+    letter-spacing: 0.10em;
+  }
+  .mbook.mbook-show .mbook-call:hover { background: var(--crimson); color: #fff; }
+  .mbook.mbook-show .mbook-book:hover { background: transparent; color: var(--crimson); }
+}
+
+@keyframes mbook-rise {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mbook.mbook-show { animation: none; }
+}
+
+/* ============================================================
    MOBILE HORIZONTAL-OVERFLOW FIXES
    The footer badge row and the promo-banner link were rendering
    wider than the viewport on phones (~593px on a 390px screen),
