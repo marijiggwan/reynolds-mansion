@@ -57,6 +57,60 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Libre+Franklin:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
+<style>
+/* FAQ card layout — scoped to this page. Mirrors the explore-card /
+   course-card pattern used on Explore Asheville and Breakfast. */
+.faq-section .section-inner { max-width: 1080px; }
+.faq-dark-inner { max-width: 1080px; padding: 40px 48px 48px; }
+
+.faq-section .section-label { display: block; text-align: center; }
+.faq-section > div > h2 {
+  font-family: var(--ff-display);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-weight: 400;
+  color: var(--text-dark);
+  text-align: center;
+  margin: 6px 0 30px;
+  line-height: 1.3;
+}
+.faq-section-dark > div > h2 { color: #fff; }
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+.faq-grid .faq-item {
+  background: #fff;
+  border: 1px solid var(--gold-line);
+  border-bottom: 1px solid var(--gold-line);
+  border-radius: 6px;
+  padding: 24px 26px;
+  height: 100%;
+}
+.faq-grid .faq-item h3 {
+  font-size: 20px;
+  line-height: 1.32;
+  margin: 0 0 10px;
+  color: var(--text-dark);
+}
+.faq-grid .faq-item p { font-size: 14.5px; line-height: 1.75; color: var(--text-mid); }
+
+.faq-section-dark .faq-grid .faq-item {
+  background: rgba(255,255,255,0.045);
+  border-color: rgba(196,148,58,0.30);
+}
+.faq-section-dark .faq-grid .faq-item h3 { color: #fff; }
+.faq-section-dark .faq-grid .faq-item p { color: rgba(255,255,255,0.88); }
+
+@media (max-width: 768px) {
+  .faq-grid { grid-template-columns: 1fr; gap: 14px; }
+  .faq-grid .faq-item { padding: 20px 20px; }
+  .faq-dark-inner { padding: 32px 20px 36px; }
+}
+</style>
+
 <!-- MailerLite Universal -->
 <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
@@ -201,7 +255,9 @@
   <section class="damask-bg faq-section" aria-labelledby="faq-location">
     <div class="section-inner">
       <span class="section-label">Location &amp; Getting Here</span>
-      <h2 id="faq-location" class="sr-only">Location and Getting Here</h2>
+      <h2 id="faq-location">Location and Getting Here</h2>
+
+      <div class="faq-grid">
 
       <div class="faq-item">
         <h3>Where is The Reynolds Mansion located?</h3>
@@ -222,6 +278,7 @@
         <h3>Is parking available?</h3>
         <p>Yes — free private off-street parking is available for all guests, right on the property.</p>
       </div>
+      </div>
     </div>
   </section>
 
@@ -229,7 +286,9 @@
   <section class="filigree-bg faq-section faq-section-dark" aria-labelledby="faq-booking">
     <div class="dark-section-inner faq-dark-inner">
       <span class="section-label section-label-dark">Booking &amp; Policies</span>
-      <h2 id="faq-booking" class="sr-only">Booking and Policies</h2>
+      <h2 id="faq-booking">Booking and Policies</h2>
+
+      <div class="faq-grid">
 
       <div class="faq-item">
         <h3>What are the check-in and check-out times?</h3>
@@ -260,6 +319,7 @@
         <h3>Is the property non-smoking?</h3>
         <p>Yes. The Reynolds Mansion is a non-smoking property, including vaping, in all guest rooms, common areas, porches, and grounds.</p>
       </div>
+      </div>
     </div>
   </section>
 
@@ -267,7 +327,9 @@
   <section class="damask-bg faq-section" aria-labelledby="faq-stay">
     <div class="section-inner">
       <span class="section-label">Your Stay</span>
-      <h2 id="faq-stay" class="sr-only">Your Stay</h2>
+      <h2 id="faq-stay">Your Stay</h2>
+
+      <div class="faq-grid">
 
       <div class="faq-item">
         <h3>How many rooms does the mansion have?</h3>
@@ -288,6 +350,7 @@
         <h3>Is the mansion wheelchair accessible?</h3>
         <p>The Reynolds Mansion is a pre-Civil War home protected under a preservation easement, so structural modifications are not permitted, and all guest rooms and common areas in the main house require stairs. If you have mobility concerns, please call us before booking — we'll talk honestly about what will and won't work for your stay.</p>
       </div>
+      </div>
     </div>
   </section>
 
@@ -295,7 +358,9 @@
   <section class="filigree-bg faq-section faq-section-dark" aria-labelledby="faq-breakfast">
     <div class="dark-section-inner faq-dark-inner">
       <span class="section-label section-label-dark">Breakfast</span>
-      <h2 id="faq-breakfast" class="sr-only">Breakfast</h2>
+      <h2 id="faq-breakfast">Breakfast</h2>
+
+      <div class="faq-grid">
 
       <div class="faq-item">
         <h3>What is breakfast like at The Reynolds Mansion?</h3>
@@ -306,6 +371,7 @@
         <h3>Can you accommodate dietary restrictions?</h3>
         <p>Yes — tell us about dietary restrictions or food allergies before booking and Paul will plan your courses around them. Guests with restrictions eat as well as everyone else at this table.</p>
       </div>
+      </div>
     </div>
   </section>
 
@@ -313,7 +379,9 @@
   <section class="damask-bg faq-section" aria-labelledby="faq-history">
     <div class="section-inner">
       <span class="section-label">History</span>
-      <h2 id="faq-history" class="sr-only">History</h2>
+      <h2 id="faq-history">History</h2>
+
+      <div class="faq-grid">
 
       <div class="faq-item">
         <h3>How old is The Reynolds Mansion?</h3>
@@ -323,6 +391,7 @@
       <div class="faq-item">
         <h3>What is the mansion's connection to the Hope Diamond?</h3>
         <p>Through the Reynolds family — including Senator Robert Rice Reynolds, "Buncombe Bob" — the home has ties to the family of Evalyn Walsh McLean, the last private owner of the Hope Diamond. Senator Reynolds married her daughter in 1941. A replica of the diamond, with its Smithsonian provenance card, is on display in the mansion. It's one of the stories guests love hearing over breakfast, and it's told in full on our <a href="/history/">History</a> page.</p>
+      </div>
       </div>
     </div>
   </section>
