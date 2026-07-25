@@ -68,11 +68,12 @@
 .cluster-line { font-family: var(--ff-display); font-style:italic; font-weight:400; font-size: clamp(1.3rem,2.7vw,1.95rem); line-height:1.45; color: var(--text-dark); margin:0; }
 .cluster-lead { margin: 0 auto 16px; }
 .cluster-lead img { display:block; width:100%; height:auto; border-radius:5px; }
-.masonry { columns: 2; column-gap: 16px; }
-.masonry figure { break-inside: avoid; margin: 0 0 16px; }
-.masonry figure img { display:block; width:100%; height:auto; border-radius:5px; }
+.masonry { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; }
+.masonry figure { margin:0; }
+.masonry figure img { display:block; width:100%; height:clamp(280px,26vw,380px); object-fit:cover; object-position:center; border-radius:5px; }
 @media (max-width: 680px){
-  .masonry { columns: 1; }
+  .masonry { grid-template-columns:1fr; }
+  .masonry figure img { height:clamp(220px,55vw,300px); }
   .gallery-wrap, .gallery-lead-wrap { padding-left:16px; padding-right:16px; }
   .gallery-section { padding: 36px 0 12px; }
 }
