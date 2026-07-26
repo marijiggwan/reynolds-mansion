@@ -429,21 +429,8 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
 }
-.btn-primary {
-  background: transparent;
-  color: var(--crimson);
-  border: 1px solid var(--crimson);
-  font-family: 'EB Garamond', Georgia, serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  padding: 14px 33px;
-  border-radius: 10px;
-  transition: background 0.2s, color 0.2s, transform 0.15s;
-  display: inline-block;
-}
-.btn-primary:hover { background: var(--crimson); color: #fff; transform: translateY(-1px); }
+/* .btn-primary canonical definition lives in the FEATURE section below
+   (single source of truth — Reynolds Residence config, per Paul Jul 26) */
 .btn-ghost {
   color: rgba(255,255,255,0.82);
   font-family: 'EB Garamond', Georgia, serif;
@@ -874,34 +861,23 @@ nav {
   justify-content: center;
   flex-wrap: wrap;
 }
-.btn-secondary {
+/* Standardized to Reynolds Residence config (Paul, Jul 26) */
+.btn-secondary,
+.btn-secondary-outline {
   display: inline-block;
   background: transparent;
   color: var(--crimson);
   border: 1px solid var(--crimson);
   font-family: 'EB Garamond', Georgia, serif;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 12px 27px;
+  padding: 11px 27px;
   border-radius: 10px;
   transition: background 0.2s, color 0.2s;
 }
-.btn-secondary:hover { background: var(--crimson); color: #fff; }
-.btn-secondary-outline {
-  display: inline-block;
-  border: 1px solid var(--crimson);
-  color: var(--crimson);
-  font-family: 'EB Garamond', Georgia, serif;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  padding: 13px 28px;
-  border-radius: 10px;
-  transition: background 0.2s, color 0.2s;
-}
+.btn-secondary:hover,
 .btn-secondary-outline:hover { background: var(--crimson); color: #fff; }
 
 /* ============================================================
@@ -998,22 +974,23 @@ nav {
    LOCATION SECTION
    ============================================================ */
 .location-cta-row { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 32px; justify-content: center; }
+/* Standardized to Reynolds Residence config (Paul, Jul 26) */
 .btn-explore-village {
   display: inline-block;
-  background: var(--ivory);
-  color: var(--text-dark);
+  background: transparent;
+  color: var(--crimson);
+  border: 1px solid var(--crimson);
   font-family: 'EB Garamond', Georgia, serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 14px 28px;
-  border: 1px solid rgba(196,148,58,0.40);
+  padding: 11px 27px;
   border-radius: 10px;
   transition: background 0.2s, color 0.2s;
   text-decoration: none;
 }
-.btn-explore-village:hover { background: var(--gold); color: #fff; border-color: var(--gold); }
+.btn-explore-village:hover { background: var(--crimson); color: #fff; }
 .location-section {
   position: relative;
   padding: 120px 0;
@@ -1744,6 +1721,9 @@ input:focus-visible {
   gap: 12px;
   margin-top: 8px;
 }
+/* ── Canonical button: Reynolds Residence config (Paul, Jul 26) ──
+   Clear (transparent) + crimson border, fills crimson on hover.
+   All light-background buttons standardize to these metrics. */
 .btn-primary {
   display: inline-block;
   padding: 11px 27px;
@@ -1752,28 +1732,41 @@ input:focus-visible {
   border: 1px solid var(--crimson);
   font-family: 'EB Garamond', Georgia, serif;
   font-size: 14px;
+  font-weight: 600;
   letter-spacing: 0.08em;
+  text-transform: uppercase;
   border-radius: 10px;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
   white-space: nowrap;
 }
-.btn-primary:hover { background: var(--crimson); color: #fff; }
-/* ── Track 2: dark-section solid buttons → gold outline (matches "Explore the Breakfast") ── */
+.btn-primary:hover { background: var(--crimson); color: #fff; transform: translateY(-1px); }
+/* ── Dark/black backgrounds: full "Explore the Breakfast" config —
+   look, font size, and hover highlight (Paul, Jul 26) ── */
 .filigree-bg .btn-primary,
 .dark-section-inner .btn-primary,
 .filigree-bg .btn-secondary,
-.dark-section-inner .btn-secondary {
+.dark-section-inner .btn-secondary,
+.filigree-bg .btn-secondary-outline,
+.dark-section-inner .btn-secondary-outline {
   background: transparent;
   color: var(--gold);
   border: 1px solid rgba(196,148,58,0.5);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  padding: 12px 26px;
+  transform: none;
 }
 .filigree-bg .btn-primary:hover,
 .dark-section-inner .btn-primary:hover,
 .filigree-bg .btn-secondary:hover,
-.dark-section-inner .btn-secondary:hover {
+.dark-section-inner .btn-secondary:hover,
+.filigree-bg .btn-secondary-outline:hover,
+.dark-section-inner .btn-secondary-outline:hover {
   background: var(--crimson);
   border-color: var(--crimson);
   color: #fff;
+  transform: none;
 }
 .btn-outline {
   display: inline-block;
@@ -2446,8 +2439,8 @@ body .tr-widget .tr-error { font-family: var(--ff-body) !important; font-size: 1
     background: transparent;
     color: var(--crimson);
     border: 1px solid var(--crimson);
-    font-size: 13px;
-    letter-spacing: 0.10em;
+    font-size: 14px;
+    letter-spacing: 0.08em;
   }
   .mbook-book {
     flex: 1 1 auto;
@@ -2455,7 +2448,7 @@ body .tr-widget .tr-error { font-family: var(--ff-body) !important; font-size: 1
     color: var(--crimson);
     border: 1px solid var(--crimson);
     font-size: 14px;
-    letter-spacing: 0.10em;
+    letter-spacing: 0.08em;
   }
   .mbook-call:active { background: var(--crimson); color: #fff; }
   .mbook-book:active { background: var(--crimson); color: #fff; }
@@ -2505,24 +2498,25 @@ body .tr-widget .tr-error { font-family: var(--ff-body) !important; font-size: 1
     text-decoration: none;
     transition: background 0.2s, color 0.2s;
   }
+  /* Both clear w/ crimson border, fill crimson on hover (Paul, Jul 26) */
   .mbook.mbook-show .mbook-call {
     padding: 0 18px;
     background: transparent;
     color: var(--crimson);
     border: 1px solid var(--crimson);
-    font-size: 13px;
-    letter-spacing: 0.10em;
+    font-size: 14px;
+    letter-spacing: 0.08em;
   }
   .mbook.mbook-show .mbook-book {
     padding: 0 22px;
-    background: var(--crimson);
-    color: #fff;
+    background: transparent;
+    color: var(--crimson);
     border: 1px solid var(--crimson);
     font-size: 14px;
-    letter-spacing: 0.10em;
+    letter-spacing: 0.08em;
   }
   .mbook.mbook-show .mbook-call:hover { background: var(--crimson); color: #fff; }
-  .mbook.mbook-show .mbook-book:hover { background: transparent; color: var(--crimson); }
+  .mbook.mbook-show .mbook-book:hover { background: var(--crimson); color: #fff; }
 }
 
 @keyframes mbook-rise {
