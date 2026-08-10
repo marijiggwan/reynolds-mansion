@@ -14,9 +14,15 @@
   </url>
   <url>
     <loc>https://thereynoldsmansion.com/blog/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://thereynoldsmansion.com/blog/four-course-breakfast-fall-menu/</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://thereynoldsmansion.com/blog/asheville-fall-foliage-guide/</loc>
