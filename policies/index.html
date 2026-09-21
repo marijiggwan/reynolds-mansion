@@ -78,18 +78,27 @@
   margin-bottom: 12px;
 }
 .policy-section strong { color: var(--text-dark); }
-.policy-section h3 {
+.policy-block {
+  background: rgba(255,255,255,0.55);
+  border: 1px solid var(--gold-line);
+  border-radius: 4px;
+  padding: 22px 26px 8px;
+  margin: 22px 0 26px;
+}
+.policy-block h3 {
   font-family: var(--ff-display);
-  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-size: clamp(1.25rem, 2.6vw, 1.55rem);
   font-weight: 500; color: var(--text-dark);
-  margin: 28px 0 10px;
+  margin: 0 0 14px; padding-bottom: 10px;
+  border-bottom: 1px solid var(--gold-line);
 }
-.policy-section h4 {
+.policy-block h4 {
   font-family: var(--ff-body);
-  font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
-  font-weight: 600; color: var(--text-dark);
-  margin: 18px 0 6px;
+  font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase;
+  font-weight: 500; color: var(--text-mid); opacity: 0.85;
+  margin: 18px 0 4px;
 }
+.policy-block h4:first-of-type { margin-top: 4px; }
 .policy-section p.policy-note {
   font-style: italic; color: var(--text-dark);
   border-left: 3px solid var(--gold-line); padding-left: 14px;
@@ -252,6 +261,7 @@
       <h2 id="deposits-cancellations">Deposits &amp; Cancellations</h2>
       <p class="policy-note">Different deposit and cancellation terms apply to <a href="#october-stays">October stays</a> and to <a href="#group-reservations">group and private-event reservations</a>. If either applies to you, please see those sections below.</p>
 
+      <div class="policy-block">
       <h3 id="general-bookings">General Bookings</h3>
       <h4>Deposit</h4>
       <p>All reservations require a credit card deposit at the time of booking. Reservations of two or more nights and special packages require a deposit of <strong>50% of the total, including tax</strong>. Single-night reservations, when available, require payment in full.</p>
@@ -266,6 +276,9 @@
       <p>Cancellations made <strong>14 days or less</strong> before arrival incur a <strong>25%</strong> cancellation fee; the remaining <strong>75%</strong> is returned to your gift certificate, available until the certificate&rsquo;s expiration date.</p>
       <p>Cancellations must be made by phone: <strong>(828) 258-1111</strong>.</p>
 
+      </div>
+
+      <div class="policy-block">
       <h3 id="october-stays">October Stays</h3>
       <p>October is our busiest month, and these terms apply to any stay that includes a night in October.</p>
       <h4>Deposit</h4>
@@ -275,6 +288,9 @@
       <p>Cancellations made <strong>30 days or less</strong> before arrival are <strong>non-refundable</strong>. October stays are excluded from stay credits.</p>
       <p>Cancellations must be made by phone: <strong>(828) 258-1111</strong>.</p>
 
+      </div>
+
+      <div class="policy-block">
       <h3 id="group-reservations">Group Reservations &amp; Private Events</h3>
       <p>These terms apply to group reservations, whole-house and Carriage House buyouts, and private events.</p>
       <h4>Deposit</h4>
@@ -283,6 +299,8 @@
       <h4>Cancellation</h4>
       <p>Deposits for group reservations and private events are <strong>non-refundable</strong> and are excluded from stay credits. We are a small business and appreciate your understanding.</p>
       <p>Cancellations must be made by phone: <strong>(828) 258-1111</strong>.</p>
+
+      </div>
 
       <h2>Single-Night Stays</h2>
       <p>Weekends, holidays, and peak seasonal periods generally carry a <strong>two-night minimum</strong>, so single-night availability online may be limited. We can often accommodate a single night &mdash; call us at <strong>(828) 258-1111</strong> and we&rsquo;ll do our best to find you a room.</p>
